@@ -461,16 +461,8 @@
 			basedir="${service.base.dir}/service-classes"
 			destfile="${service.base.dir}/lib/${plugin.name}-service.jar"
 		/>
-		<!--
-		<copydir src="${service.base.dir}/service-classes"
-			   dest="${service.base.dir}/classes"
-		/>
-		-->
-		<copy todir="${service.base.dir}/classes" overwrite="true">
-		  <fileset dir="${service.base.dir}/service-classes"/>
-		</copy>
-		<delete dir="${service.base.dir}/service-classes" />
 
+		<delete dir="${service.base.dir}/service-classes" />
 	</target>
 
 	<target name="build-wsdd">
@@ -954,37 +946,4 @@ Include-Resource: WEB-INF/=server-config.wsdd,classes;filter:=*.wsdd
 			test.type="unit"
 		/>
 	</target>
-	
-	<target name="build-taglib">
-		<if>
-			<available file="docroot" />
-			<then>
-				<var name="service.base.dir" value="docroot/WEB-INF" />
-			</then>
-			<else>
-				<var name="service.base.dir" value="." />
-			</else>
-		</if>
-		<mkdir dir="${service.base.dir}/taglib-classes" />
-		<path id="service.classpath">
-			<path refid="lib.classpath" />
-			<fileset dir="${app.server.lib.global.dir}" includes="*.jar" />
-			<fileset dir="${sdk.dir}/dependencies/aQute.bnd/lib" includes="*.jar" />
-			<fileset dir="${service.base.dir}/lib" excludes="${plugin.name}-service.jar" includes="*.jar" />
-		</path>
-
-		<compile-java
-			javac.classpathref="service.classpath"
-			javac.destdir="${service.base.dir}/classes"
-			javac.srcdir="${service.base.dir}/util-taglib"
-		/>
-
-		<jar
-			basedir="${service.base.dir}/taglib-classes"
-			destfile="${service.base.dir}/lib/${plugin.name}-taglib.jar"
-		/>
-
-		<delete dir="${service.base.dir}/taglib-classes" />
-	</target>
 </project>
-
