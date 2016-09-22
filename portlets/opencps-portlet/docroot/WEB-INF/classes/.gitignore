@@ -1,2 +1,12 @@
 /service.properties
+/.gitignore
+/META-INF/
+/content/
+/custom-sql/
+/jasperreports.properties
 /org/
+/portal-ext.properties
+/portal.properties
+/portlet.properties
+/resource-actions/
+/service-ext.properties
