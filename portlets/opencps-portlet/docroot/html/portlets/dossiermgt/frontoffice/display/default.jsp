@@ -1,4 +1,6 @@
 
+<%@page import="org.opencps.util.WebKeys"%>
+<%@page import="com.liferay.portal.kernel.portlet.LiferayWindowState"%>
 <%
 /**
  * OpenCPS is the open source Core Public Services software
@@ -49,9 +51,9 @@
 <%@ include file="../../init.jsp"%>
 
 
-<liferay-util:include page='<%=templatePath + "toptabs.jsp" %>' servletContext="<%=application %>" />
-
 <liferay-ui:success  key="<%=MessageKeys.DEFAULT_SUCCESS_KEY %>" message="<%=MessageKeys.DEFAULT_SUCCESS_KEY %>"/>
+
+<liferay-ui:success  key="<%=MessageKeys.DEFAULT_SUCCESS_KEY_X %>" message="<%=MessageKeys.DEFAULT_SUCCESS_KEY_X %>"/>
 
 <liferay-ui:error 
 	exception="<%= NoSuchDossierException.class %>" 
@@ -70,7 +72,10 @@
 
 <%
 	String dossierStatus = ParamUtil.getString(request, DossierDisplayTerms.DOSSIER_STATUS, StringPool.BLANK);
+
 	int itemsToDisplay_cfg = GetterUtil.getInteger(portletPreferences.getValue("itemsToDisplay", "2"));
+	
+	int timeToReLoad_cfg = GetterUtil.getInteger(portletPreferences.getValue("timeToReLoad", "5"));
 	
 	long serviceDomainId = ParamUtil.getLong(request, "serviceDomainId");
 
@@ -142,7 +147,7 @@
 											<liferay-ui:message key="dossier-no"/>
 										</div>
 										
-										<div class="span9"><%= PortletUtil.intToString(dossier.getDossierId(), 15) %></div>
+										<div class="span9"><%= dossier.getDossierId() %></div>
 									</div>
 									
 									<div class="row-fluid">
@@ -327,7 +332,7 @@
 								<liferay-ui:message key="dossier-no"/>
 							</div>
 							
-							<div class="span9"><%= PortletUtil.intToString(dossier.getDossierId(), 15) %></div>
+							<div class="span9"><%= dossier.getDossierId() %></div>
 						</div>
 						
 						<div class="row-fluid">
@@ -441,6 +446,36 @@
 		
 	</liferay-ui:search-container>
 </div>
+
+<c:if test="<%= timeToReLoad_cfg > 0 %>">
+
+	<liferay-portlet:renderURL var="newDossierURL" portletName="<%=WebKeys.DOSSIER_MGT_PORTLET %>" windowState="<%=LiferayWindowState.EXCLUSIVE.toString() %>">
+		<liferay-portlet:param name="mvcPath" value="/html/portlets/dossiermgt/frontoffice/ajax/_default_new_dossier.jsp" />
+	</liferay-portlet:renderURL>
+	
+	<aui:script use="aui-base,aui-io-plugin">
+		
+		var timer = '<%=timeToReLoad_cfg * 1000 %>';
+	
+		AUI().ready(function(A){
+			
+			setInterval(function(){ 
+				
+				console.log("call new dossier list");
+	
+				$("#<portlet:namespace />is-hidden").load( '<%= newDossierURL %>', function () {
+					
+					selector: '#<portlet:namespace />is-hidden > .lfr-search-container'
+					
+				});
+				
+			}, timer);
+			
+		});
+	</aui:script>
+	
+</c:if>
+
 <%!
 	private Log _log = LogFactoryUtil.getLog("html.portlets.dossiermgt.frontoffice.frontofficedossierlist.jsp");
 %>
