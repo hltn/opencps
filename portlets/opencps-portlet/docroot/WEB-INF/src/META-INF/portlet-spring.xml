@@ -114,6 +114,7 @@
 	<bean id="org.opencps.datamgt.service.DictItemLocalService" class="org.opencps.datamgt.service.impl.DictItemLocalServiceImpl" />
 	<bean id="org.opencps.datamgt.service.DictItemService" class="org.opencps.datamgt.service.impl.DictItemServiceImpl" />
 	<bean id="org.opencps.datamgt.service.persistence.DictItemPersistence" class="org.opencps.datamgt.service.persistence.DictItemPersistenceImpl" parent="basePersistence" />
+	<bean id="org.opencps.datamgt.service.persistence.DictItemFinder" class="org.opencps.datamgt.service.persistence.DictItemFinderImpl" parent="basePersistence" />
 	<bean id="org.opencps.datamgt.service.DictVersionLocalService" class="org.opencps.datamgt.service.impl.DictVersionLocalServiceImpl" />
 	<bean id="org.opencps.datamgt.service.DictVersionService" class="org.opencps.datamgt.service.impl.DictVersionServiceImpl" />
 	<bean id="org.opencps.datamgt.service.persistence.DictVersionPersistence" class="org.opencps.datamgt.service.persistence.DictVersionPersistenceImpl" parent="basePersistence" />

@@ -462,6 +462,22 @@ public class TemplateFileLocalServiceWrapper implements TemplateFileLocalService
 	}
 
 	/**
+	* get templateFile by FileNo
+	*
+	* @param groupId
+	* @param fileName
+	* @return
+	* @throws PortalException
+	* @throws SystemException
+	*/
+	@Override
+	public org.opencps.servicemgt.model.TemplateFile getTemplateFileByNo(
+		long groupId, java.lang.String fileNo)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _templateFileLocalService.getTemplateFileByNo(groupId, fileNo);
+	}
+
+	/**
 	 * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
 	 */
 	public TemplateFileLocalService getWrappedTemplateFileLocalService() {

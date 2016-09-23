@@ -106,65 +106,65 @@ public class DictCollectionLocalServiceClpInvoker {
 				"org.opencps.datamgt.model.DictCollection"
 			};
 
-		_methodName46 = "getBeanIdentifier";
+		_methodName48 = "getBeanIdentifier";
 
-		_methodParameterTypes46 = new String[] {  };
+		_methodParameterTypes48 = new String[] {  };
 
-		_methodName47 = "setBeanIdentifier";
+		_methodName49 = "setBeanIdentifier";
 
-		_methodParameterTypes47 = new String[] { "java.lang.String" };
+		_methodParameterTypes49 = new String[] { "java.lang.String" };
 
-		_methodName52 = "addDictCollection";
+		_methodName54 = "addDictCollection";
 
-		_methodParameterTypes52 = new String[] {
+		_methodParameterTypes54 = new String[] {
 				"long", "java.lang.String", "java.util.Map", "java.lang.String",
 				"com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName53 = "countAll";
+		_methodName55 = "countAll";
 
-		_methodParameterTypes53 = new String[] {  };
+		_methodParameterTypes55 = new String[] {  };
 
-		_methodName54 = "countDictCollection";
+		_methodName56 = "countDictCollection";
 
-		_methodParameterTypes54 = new String[] { "long", "java.lang.String[][]" };
+		_methodParameterTypes56 = new String[] { "long", "java.lang.String[][]" };
 
-		_methodName55 = "deleteCollection";
+		_methodName57 = "deleteCollection";
 
-		_methodParameterTypes55 = new String[] { "long" };
+		_methodParameterTypes57 = new String[] { "long" };
 
-		_methodName56 = "getDictCollection";
+		_methodName58 = "getDictCollection";
 
-		_methodParameterTypes56 = new String[] { "long" };
+		_methodParameterTypes58 = new String[] { "long" };
 
-		_methodName57 = "getDictCollection";
+		_methodName59 = "getDictCollection";
 
-		_methodParameterTypes57 = new String[] { "long", "java.lang.String" };
-
-		_methodName58 = "getDictCollections";
-
-		_methodParameterTypes58 = new String[] {  };
-
-		_methodName59 = "getDictCollections";
-
-		_methodParameterTypes59 = new String[] {
-				"int", "int", "com.liferay.portal.kernel.util.OrderByComparator"
-			};
+		_methodParameterTypes59 = new String[] { "long", "java.lang.String" };
 
 		_methodName60 = "getDictCollections";
 
-		_methodParameterTypes60 = new String[] { "long" };
+		_methodParameterTypes60 = new String[] {  };
 
 		_methodName61 = "getDictCollections";
 
 		_methodParameterTypes61 = new String[] {
+				"int", "int", "com.liferay.portal.kernel.util.OrderByComparator"
+			};
+
+		_methodName62 = "getDictCollections";
+
+		_methodParameterTypes62 = new String[] { "long" };
+
+		_methodName63 = "getDictCollections";
+
+		_methodParameterTypes63 = new String[] {
 				"long", "java.lang.String[][]", "int", "int",
 				"com.liferay.portal.kernel.util.OrderByComparator"
 			};
 
-		_methodName62 = "updateDictCollection";
+		_methodName64 = "updateDictCollection";
 
-		_methodParameterTypes62 = new String[] {
+		_methodParameterTypes64 = new String[] {
 				"long", "long", "java.lang.String", "java.util.Map",
 				"java.lang.String", "com.liferay.portal.service.ServiceContext"
 			};
@@ -259,20 +259,20 @@ public class DictCollectionLocalServiceClpInvoker {
 			return DictCollectionLocalServiceUtil.updateDictCollection((org.opencps.datamgt.model.DictCollection)arguments[0]);
 		}
 
-		if (_methodName46.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes46, parameterTypes)) {
+		if (_methodName48.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes48, parameterTypes)) {
 			return DictCollectionLocalServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName47.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes47, parameterTypes)) {
+		if (_methodName49.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes49, parameterTypes)) {
 			DictCollectionLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
-		if (_methodName52.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes52, parameterTypes)) {
+		if (_methodName54.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes54, parameterTypes)) {
 			return DictCollectionLocalServiceUtil.addDictCollection(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1],
 				(java.util.Map<java.util.Locale, java.lang.String>)arguments[2],
@@ -280,54 +280,54 @@ public class DictCollectionLocalServiceClpInvoker {
 				(com.liferay.portal.service.ServiceContext)arguments[4]);
 		}
 
-		if (_methodName53.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes53, parameterTypes)) {
+		if (_methodName55.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes55, parameterTypes)) {
 			return DictCollectionLocalServiceUtil.countAll();
 		}
 
-		if (_methodName54.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes54, parameterTypes)) {
+		if (_methodName56.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes56, parameterTypes)) {
 			return DictCollectionLocalServiceUtil.countDictCollection(((Long)arguments[0]).longValue(),
 				(java.lang.String[])arguments[1]);
 		}
 
-		if (_methodName55.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes55, parameterTypes)) {
+		if (_methodName57.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes57, parameterTypes)) {
 			DictCollectionLocalServiceUtil.deleteCollection(((Long)arguments[0]).longValue());
 
 			return null;
 		}
 
-		if (_methodName56.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes56, parameterTypes)) {
-			return DictCollectionLocalServiceUtil.getDictCollection(((Long)arguments[0]).longValue());
-		}
-
-		if (_methodName57.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes57, parameterTypes)) {
-			return DictCollectionLocalServiceUtil.getDictCollection(((Long)arguments[0]).longValue(),
-				(java.lang.String)arguments[1]);
-		}
-
 		if (_methodName58.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes58, parameterTypes)) {
-			return DictCollectionLocalServiceUtil.getDictCollections();
+			return DictCollectionLocalServiceUtil.getDictCollection(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName59.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes59, parameterTypes)) {
+			return DictCollectionLocalServiceUtil.getDictCollection(((Long)arguments[0]).longValue(),
+				(java.lang.String)arguments[1]);
+		}
+
+		if (_methodName60.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes60, parameterTypes)) {
+			return DictCollectionLocalServiceUtil.getDictCollections();
+		}
+
+		if (_methodName61.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes61, parameterTypes)) {
 			return DictCollectionLocalServiceUtil.getDictCollections(((Integer)arguments[0]).intValue(),
 				((Integer)arguments[1]).intValue(),
 				(com.liferay.portal.kernel.util.OrderByComparator)arguments[2]);
 		}
 
-		if (_methodName60.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes60, parameterTypes)) {
+		if (_methodName62.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes62, parameterTypes)) {
 			return DictCollectionLocalServiceUtil.getDictCollections(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName61.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes61, parameterTypes)) {
+		if (_methodName63.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes63, parameterTypes)) {
 			return DictCollectionLocalServiceUtil.getDictCollections(((Long)arguments[0]).longValue(),
 				(java.lang.String[])arguments[1],
 				((Integer)arguments[2]).intValue(),
@@ -335,8 +335,8 @@ public class DictCollectionLocalServiceClpInvoker {
 				(com.liferay.portal.kernel.util.OrderByComparator)arguments[4]);
 		}
 
-		if (_methodName62.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes62, parameterTypes)) {
+		if (_methodName64.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes64, parameterTypes)) {
 			return DictCollectionLocalServiceUtil.updateDictCollection(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				(java.lang.String)arguments[2],
@@ -380,14 +380,10 @@ public class DictCollectionLocalServiceClpInvoker {
 	private String[] _methodParameterTypes14;
 	private String _methodName15;
 	private String[] _methodParameterTypes15;
-	private String _methodName46;
-	private String[] _methodParameterTypes46;
-	private String _methodName47;
-	private String[] _methodParameterTypes47;
-	private String _methodName52;
-	private String[] _methodParameterTypes52;
-	private String _methodName53;
-	private String[] _methodParameterTypes53;
+	private String _methodName48;
+	private String[] _methodParameterTypes48;
+	private String _methodName49;
+	private String[] _methodParameterTypes49;
 	private String _methodName54;
 	private String[] _methodParameterTypes54;
 	private String _methodName55;
@@ -406,4 +402,8 @@ public class DictCollectionLocalServiceClpInvoker {
 	private String[] _methodParameterTypes61;
 	private String _methodName62;
 	private String[] _methodParameterTypes62;
+	private String _methodName63;
+	private String[] _methodParameterTypes63;
+	private String _methodName64;
+	private String[] _methodParameterTypes64;
 }

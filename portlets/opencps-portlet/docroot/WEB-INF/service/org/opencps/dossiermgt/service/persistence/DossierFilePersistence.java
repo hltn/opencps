@@ -983,7 +983,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @return the matching dossier files
 	* @throws SystemException if a system exception occurred
 	*/
-	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByD_S_R(
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByDID_SS_R(
 		long dossierId, int syncStatus, int removed)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
@@ -1002,7 +1002,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @return the range of matching dossier files
 	* @throws SystemException if a system exception occurred
 	*/
-	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByD_S_R(
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByDID_SS_R(
 		long dossierId, int syncStatus, int removed, int start, int end)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
@@ -1022,7 +1022,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @return the ordered range of matching dossier files
 	* @throws SystemException if a system exception occurred
 	*/
-	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByD_S_R(
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByDID_SS_R(
 		long dossierId, int syncStatus, int removed, int start, int end,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException;
@@ -1038,7 +1038,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @throws org.opencps.dossiermgt.NoSuchDossierFileException if a matching dossier file could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public org.opencps.dossiermgt.model.DossierFile findByD_S_R_First(
+	public org.opencps.dossiermgt.model.DossierFile findByDID_SS_R_First(
 		long dossierId, int syncStatus, int removed,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
@@ -1054,7 +1054,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @return the first matching dossier file, or <code>null</code> if a matching dossier file could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public org.opencps.dossiermgt.model.DossierFile fetchByD_S_R_First(
+	public org.opencps.dossiermgt.model.DossierFile fetchByDID_SS_R_First(
 		long dossierId, int syncStatus, int removed,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException;
@@ -1070,7 +1070,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @throws org.opencps.dossiermgt.NoSuchDossierFileException if a matching dossier file could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public org.opencps.dossiermgt.model.DossierFile findByD_S_R_Last(
+	public org.opencps.dossiermgt.model.DossierFile findByDID_SS_R_Last(
 		long dossierId, int syncStatus, int removed,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
@@ -1086,7 +1086,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @return the last matching dossier file, or <code>null</code> if a matching dossier file could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public org.opencps.dossiermgt.model.DossierFile fetchByD_S_R_Last(
+	public org.opencps.dossiermgt.model.DossierFile fetchByDID_SS_R_Last(
 		long dossierId, int syncStatus, int removed,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException;
@@ -1103,7 +1103,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @throws org.opencps.dossiermgt.NoSuchDossierFileException if a dossier file with the primary key could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public org.opencps.dossiermgt.model.DossierFile[] findByD_S_R_PrevAndNext(
+	public org.opencps.dossiermgt.model.DossierFile[] findByDID_SS_R_PrevAndNext(
 		long dossierFileId, long dossierId, int syncStatus, int removed,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
@@ -1117,7 +1117,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @param removed the removed
 	* @throws SystemException if a system exception occurred
 	*/
-	public void removeByD_S_R(long dossierId, int syncStatus, int removed)
+	public void removeByDID_SS_R(long dossierId, int syncStatus, int removed)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	/**
@@ -1129,7 +1129,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @return the number of matching dossier files
 	* @throws SystemException if a system exception occurred
 	*/
-	public int countByD_S_R(long dossierId, int syncStatus, int removed)
+	public int countByDID_SS_R(long dossierId, int syncStatus, int removed)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	/**
@@ -1142,7 +1142,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @return the matching dossier files
 	* @throws SystemException if a system exception occurred
 	*/
-	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByF_D_S_R(
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByGFID_DID_SS_R(
 		long groupFileId, long dossierId, int syncStatus, int removed)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
@@ -1162,7 +1162,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @return the range of matching dossier files
 	* @throws SystemException if a system exception occurred
 	*/
-	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByF_D_S_R(
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByGFID_DID_SS_R(
 		long groupFileId, long dossierId, int syncStatus, int removed,
 		int start, int end)
 		throws com.liferay.portal.kernel.exception.SystemException;
@@ -1184,7 +1184,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @return the ordered range of matching dossier files
 	* @throws SystemException if a system exception occurred
 	*/
-	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByF_D_S_R(
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByGFID_DID_SS_R(
 		long groupFileId, long dossierId, int syncStatus, int removed,
 		int start, int end,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
@@ -1202,7 +1202,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @throws org.opencps.dossiermgt.NoSuchDossierFileException if a matching dossier file could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public org.opencps.dossiermgt.model.DossierFile findByF_D_S_R_First(
+	public org.opencps.dossiermgt.model.DossierFile findByGFID_DID_SS_R_First(
 		long groupFileId, long dossierId, int syncStatus, int removed,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
@@ -1219,7 +1219,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @return the first matching dossier file, or <code>null</code> if a matching dossier file could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public org.opencps.dossiermgt.model.DossierFile fetchByF_D_S_R_First(
+	public org.opencps.dossiermgt.model.DossierFile fetchByGFID_DID_SS_R_First(
 		long groupFileId, long dossierId, int syncStatus, int removed,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException;
@@ -1236,7 +1236,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @throws org.opencps.dossiermgt.NoSuchDossierFileException if a matching dossier file could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public org.opencps.dossiermgt.model.DossierFile findByF_D_S_R_Last(
+	public org.opencps.dossiermgt.model.DossierFile findByGFID_DID_SS_R_Last(
 		long groupFileId, long dossierId, int syncStatus, int removed,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
@@ -1253,7 +1253,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @return the last matching dossier file, or <code>null</code> if a matching dossier file could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public org.opencps.dossiermgt.model.DossierFile fetchByF_D_S_R_Last(
+	public org.opencps.dossiermgt.model.DossierFile fetchByGFID_DID_SS_R_Last(
 		long groupFileId, long dossierId, int syncStatus, int removed,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException;
@@ -1271,7 +1271,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @throws org.opencps.dossiermgt.NoSuchDossierFileException if a dossier file with the primary key could not be found
 	* @throws SystemException if a system exception occurred
 	*/
-	public org.opencps.dossiermgt.model.DossierFile[] findByF_D_S_R_PrevAndNext(
+	public org.opencps.dossiermgt.model.DossierFile[] findByGFID_DID_SS_R_PrevAndNext(
 		long dossierFileId, long groupFileId, long dossierId, int syncStatus,
 		int removed,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
@@ -1287,7 +1287,7 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @param removed the removed
 	* @throws SystemException if a system exception occurred
 	*/
-	public void removeByF_D_S_R(long groupFileId, long dossierId,
+	public void removeByGFID_DID_SS_R(long groupFileId, long dossierId,
 		int syncStatus, int removed)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
@@ -1301,8 +1301,182 @@ public interface DossierFilePersistence extends BasePersistence<DossierFile> {
 	* @return the number of matching dossier files
 	* @throws SystemException if a system exception occurred
 	*/
-	public int countByF_D_S_R(long groupFileId, long dossierId, int syncStatus,
-		int removed) throws com.liferay.portal.kernel.exception.SystemException;
+	public int countByGFID_DID_SS_R(long groupFileId, long dossierId,
+		int syncStatus, int removed)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	/**
+	* Returns all the dossier files where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	*
+	* @param dossierId the dossier ID
+	* @param syncStatus the sync status
+	* @param dossierPartId the dossier part ID
+	* @param removed the removed
+	* @return the matching dossier files
+	* @throws SystemException if a system exception occurred
+	*/
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByDID_SS_DPID_R(
+		long dossierId, int syncStatus, long dossierPartId, int removed)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	/**
+	* Returns a range of all the dossier files where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link org.opencps.dossiermgt.model.impl.DossierFileModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param dossierId the dossier ID
+	* @param syncStatus the sync status
+	* @param dossierPartId the dossier part ID
+	* @param removed the removed
+	* @param start the lower bound of the range of dossier files
+	* @param end the upper bound of the range of dossier files (not inclusive)
+	* @return the range of matching dossier files
+	* @throws SystemException if a system exception occurred
+	*/
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByDID_SS_DPID_R(
+		long dossierId, int syncStatus, long dossierPartId, int removed,
+		int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	/**
+	* Returns an ordered range of all the dossier files where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link org.opencps.dossiermgt.model.impl.DossierFileModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param dossierId the dossier ID
+	* @param syncStatus the sync status
+	* @param dossierPartId the dossier part ID
+	* @param removed the removed
+	* @param start the lower bound of the range of dossier files
+	* @param end the upper bound of the range of dossier files (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching dossier files
+	* @throws SystemException if a system exception occurred
+	*/
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByDID_SS_DPID_R(
+		long dossierId, int syncStatus, long dossierPartId, int removed,
+		int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	/**
+	* Returns the first dossier file in the ordered set where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	*
+	* @param dossierId the dossier ID
+	* @param syncStatus the sync status
+	* @param dossierPartId the dossier part ID
+	* @param removed the removed
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching dossier file
+	* @throws org.opencps.dossiermgt.NoSuchDossierFileException if a matching dossier file could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public org.opencps.dossiermgt.model.DossierFile findByDID_SS_DPID_R_First(
+		long dossierId, int syncStatus, long dossierPartId, int removed,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException,
+			org.opencps.dossiermgt.NoSuchDossierFileException;
+
+	/**
+	* Returns the first dossier file in the ordered set where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	*
+	* @param dossierId the dossier ID
+	* @param syncStatus the sync status
+	* @param dossierPartId the dossier part ID
+	* @param removed the removed
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching dossier file, or <code>null</code> if a matching dossier file could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public org.opencps.dossiermgt.model.DossierFile fetchByDID_SS_DPID_R_First(
+		long dossierId, int syncStatus, long dossierPartId, int removed,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	/**
+	* Returns the last dossier file in the ordered set where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	*
+	* @param dossierId the dossier ID
+	* @param syncStatus the sync status
+	* @param dossierPartId the dossier part ID
+	* @param removed the removed
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching dossier file
+	* @throws org.opencps.dossiermgt.NoSuchDossierFileException if a matching dossier file could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public org.opencps.dossiermgt.model.DossierFile findByDID_SS_DPID_R_Last(
+		long dossierId, int syncStatus, long dossierPartId, int removed,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException,
+			org.opencps.dossiermgt.NoSuchDossierFileException;
+
+	/**
+	* Returns the last dossier file in the ordered set where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	*
+	* @param dossierId the dossier ID
+	* @param syncStatus the sync status
+	* @param dossierPartId the dossier part ID
+	* @param removed the removed
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching dossier file, or <code>null</code> if a matching dossier file could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public org.opencps.dossiermgt.model.DossierFile fetchByDID_SS_DPID_R_Last(
+		long dossierId, int syncStatus, long dossierPartId, int removed,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	/**
+	* Returns the dossier files before and after the current dossier file in the ordered set where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	*
+	* @param dossierFileId the primary key of the current dossier file
+	* @param dossierId the dossier ID
+	* @param syncStatus the sync status
+	* @param dossierPartId the dossier part ID
+	* @param removed the removed
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the previous, current, and next dossier file
+	* @throws org.opencps.dossiermgt.NoSuchDossierFileException if a dossier file with the primary key could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public org.opencps.dossiermgt.model.DossierFile[] findByDID_SS_DPID_R_PrevAndNext(
+		long dossierFileId, long dossierId, int syncStatus, long dossierPartId,
+		int removed,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException,
+			org.opencps.dossiermgt.NoSuchDossierFileException;
+
+	/**
+	* Removes all the dossier files where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63; from the database.
+	*
+	* @param dossierId the dossier ID
+	* @param syncStatus the sync status
+	* @param dossierPartId the dossier part ID
+	* @param removed the removed
+	* @throws SystemException if a system exception occurred
+	*/
+	public void removeByDID_SS_DPID_R(long dossierId, int syncStatus,
+		long dossierPartId, int removed)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	/**
+	* Returns the number of dossier files where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	*
+	* @param dossierId the dossier ID
+	* @param syncStatus the sync status
+	* @param dossierPartId the dossier part ID
+	* @param removed the removed
+	* @return the number of matching dossier files
+	* @throws SystemException if a system exception occurred
+	*/
+	public int countByDID_SS_DPID_R(long dossierId, int syncStatus,
+		long dossierPartId, int removed)
+		throws com.liferay.portal.kernel.exception.SystemException;
 
 	/**
 	* Caches the dossier file in the entity cache if it is enabled.

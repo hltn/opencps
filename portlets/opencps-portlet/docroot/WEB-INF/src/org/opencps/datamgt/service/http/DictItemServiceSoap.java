@@ -248,5 +248,21 @@ public class DictItemServiceSoap {
 		}
 	}
 
+	public static java.lang.String getDictItemsByItemCodeDataSourceFitter(
+		java.lang.String collectionCode, java.lang.String itemCode,
+		java.lang.String keywords, long groupId) throws RemoteException {
+		try {
+			com.liferay.portal.kernel.json.JSONObject returnValue = DictItemServiceUtil.getDictItemsByItemCodeDataSourceFitter(collectionCode,
+					itemCode, keywords, groupId);
+
+			return returnValue.toString();
+		}
+		catch (Exception e) {
+			_log.error(e, e);
+
+			throw new RemoteException(e.getMessage());
+		}
+	}
+
 	private static Log _log = LogFactoryUtil.getLog(DictItemServiceSoap.class);
 }

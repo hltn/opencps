@@ -1873,7 +1873,7 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	}
 
 	private static final String _FINDER_COLUMN_DOSSIERFILEINUSE_DOSSIERID_2 = "dossierFile.dossierId = ? AND ";
-	private static final String _FINDER_COLUMN_DOSSIERFILEINUSE_DOSSIERPARTID_2 = "dossierFile.dossierPartId = ? AND dossierFile.removed=0";
+	private static final String _FINDER_COLUMN_DOSSIERFILEINUSE_DOSSIERPARTID_2 = "dossierFile.dossierPartId = ? AND dossierFile.removed=0 AND dossierFile.syncStatus=2";
 	public static final FinderPath FINDER_PATH_WITH_PAGINATION_FIND_BY_D_DP_GF = new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
 			DossierFileModelImpl.FINDER_CACHE_ENABLED, DossierFileImpl.class,
 			FINDER_CLASS_NAME_LIST_WITH_PAGINATION, "findByD_DP_GF",
@@ -2718,7 +2718,7 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	private static final String _FINDER_COLUMN_DOSSIERFILEINUSEBYGROUPFILEID_DOSSIERPARTID_2 =
 		"dossierFile.dossierPartId = ? AND ";
 	private static final String _FINDER_COLUMN_DOSSIERFILEINUSEBYGROUPFILEID_GROUPFILEID_2 =
-		"dossierFile.groupFileId = ? AND dossierFile.removed=0";
+		"dossierFile.groupFileId = ? AND dossierFile.removed=0 AND dossierFile.syncStatus=2";
 	public static final FinderPath FINDER_PATH_WITH_PAGINATION_FIND_BY_TEMPLATEFILENODOSSIERID =
 		new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
 			DossierFileModelImpl.FINDER_CACHE_ENABLED, DossierFileImpl.class,
@@ -3557,9 +3557,9 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	private static final String _FINDER_COLUMN_OID_OID_1 = "dossierFile.oid IS NULL";
 	private static final String _FINDER_COLUMN_OID_OID_2 = "dossierFile.oid = ?";
 	private static final String _FINDER_COLUMN_OID_OID_3 = "(dossierFile.oid IS NULL OR dossierFile.oid = '')";
-	public static final FinderPath FINDER_PATH_WITH_PAGINATION_FIND_BY_D_S_R = new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
+	public static final FinderPath FINDER_PATH_WITH_PAGINATION_FIND_BY_DID_SS_R = new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
 			DossierFileModelImpl.FINDER_CACHE_ENABLED, DossierFileImpl.class,
-			FINDER_CLASS_NAME_LIST_WITH_PAGINATION, "findByD_S_R",
+			FINDER_CLASS_NAME_LIST_WITH_PAGINATION, "findByDID_SS_R",
 			new String[] {
 				Long.class.getName(), Integer.class.getName(),
 				Integer.class.getName(),
@@ -3567,9 +3567,10 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 			Integer.class.getName(), Integer.class.getName(),
 				OrderByComparator.class.getName()
 			});
-	public static final FinderPath FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_D_S_R = new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
+	public static final FinderPath FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DID_SS_R =
+		new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
 			DossierFileModelImpl.FINDER_CACHE_ENABLED, DossierFileImpl.class,
-			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "findByD_S_R",
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "findByDID_SS_R",
 			new String[] {
 				Long.class.getName(), Integer.class.getName(),
 				Integer.class.getName()
@@ -3577,9 +3578,9 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 			DossierFileModelImpl.DOSSIERID_COLUMN_BITMASK |
 			DossierFileModelImpl.SYNCSTATUS_COLUMN_BITMASK |
 			DossierFileModelImpl.REMOVED_COLUMN_BITMASK);
-	public static final FinderPath FINDER_PATH_COUNT_BY_D_S_R = new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
+	public static final FinderPath FINDER_PATH_COUNT_BY_DID_SS_R = new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
 			DossierFileModelImpl.FINDER_CACHE_ENABLED, Long.class,
-			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countByD_S_R",
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countByDID_SS_R",
 			new String[] {
 				Long.class.getName(), Integer.class.getName(),
 				Integer.class.getName()
@@ -3595,10 +3596,10 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public List<DossierFile> findByD_S_R(long dossierId, int syncStatus,
+	public List<DossierFile> findByDID_SS_R(long dossierId, int syncStatus,
 		int removed) throws SystemException {
-		return findByD_S_R(dossierId, syncStatus, removed, QueryUtil.ALL_POS,
-			QueryUtil.ALL_POS, null);
+		return findByDID_SS_R(dossierId, syncStatus, removed,
+			QueryUtil.ALL_POS, QueryUtil.ALL_POS, null);
 	}
 
 	/**
@@ -3617,9 +3618,9 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public List<DossierFile> findByD_S_R(long dossierId, int syncStatus,
+	public List<DossierFile> findByDID_SS_R(long dossierId, int syncStatus,
 		int removed, int start, int end) throws SystemException {
-		return findByD_S_R(dossierId, syncStatus, removed, start, end, null);
+		return findByDID_SS_R(dossierId, syncStatus, removed, start, end, null);
 	}
 
 	/**
@@ -3639,7 +3640,7 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public List<DossierFile> findByD_S_R(long dossierId, int syncStatus,
+	public List<DossierFile> findByDID_SS_R(long dossierId, int syncStatus,
 		int removed, int start, int end, OrderByComparator orderByComparator)
 		throws SystemException {
 		boolean pagination = true;
@@ -3649,11 +3650,11 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
 				(orderByComparator == null)) {
 			pagination = false;
-			finderPath = FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_D_S_R;
+			finderPath = FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DID_SS_R;
 			finderArgs = new Object[] { dossierId, syncStatus, removed };
 		}
 		else {
-			finderPath = FINDER_PATH_WITH_PAGINATION_FIND_BY_D_S_R;
+			finderPath = FINDER_PATH_WITH_PAGINATION_FIND_BY_DID_SS_R;
 			finderArgs = new Object[] {
 					dossierId, syncStatus, removed,
 					
@@ -3689,11 +3690,11 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 
 			query.append(_SQL_SELECT_DOSSIERFILE_WHERE);
 
-			query.append(_FINDER_COLUMN_D_S_R_DOSSIERID_2);
+			query.append(_FINDER_COLUMN_DID_SS_R_DOSSIERID_2);
 
-			query.append(_FINDER_COLUMN_D_S_R_SYNCSTATUS_2);
+			query.append(_FINDER_COLUMN_DID_SS_R_SYNCSTATUS_2);
 
-			query.append(_FINDER_COLUMN_D_S_R_REMOVED_2);
+			query.append(_FINDER_COLUMN_DID_SS_R_REMOVED_2);
 
 			if (orderByComparator != null) {
 				appendOrderByComparator(query, _ORDER_BY_ENTITY_ALIAS,
@@ -3763,10 +3764,10 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public DossierFile findByD_S_R_First(long dossierId, int syncStatus,
+	public DossierFile findByDID_SS_R_First(long dossierId, int syncStatus,
 		int removed, OrderByComparator orderByComparator)
 		throws NoSuchDossierFileException, SystemException {
-		DossierFile dossierFile = fetchByD_S_R_First(dossierId, syncStatus,
+		DossierFile dossierFile = fetchByDID_SS_R_First(dossierId, syncStatus,
 				removed, orderByComparator);
 
 		if (dossierFile != null) {
@@ -3802,11 +3803,11 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public DossierFile fetchByD_S_R_First(long dossierId, int syncStatus,
+	public DossierFile fetchByDID_SS_R_First(long dossierId, int syncStatus,
 		int removed, OrderByComparator orderByComparator)
 		throws SystemException {
-		List<DossierFile> list = findByD_S_R(dossierId, syncStatus, removed, 0,
-				1, orderByComparator);
+		List<DossierFile> list = findByDID_SS_R(dossierId, syncStatus, removed,
+				0, 1, orderByComparator);
 
 		if (!list.isEmpty()) {
 			return list.get(0);
@@ -3827,10 +3828,10 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public DossierFile findByD_S_R_Last(long dossierId, int syncStatus,
+	public DossierFile findByDID_SS_R_Last(long dossierId, int syncStatus,
 		int removed, OrderByComparator orderByComparator)
 		throws NoSuchDossierFileException, SystemException {
-		DossierFile dossierFile = fetchByD_S_R_Last(dossierId, syncStatus,
+		DossierFile dossierFile = fetchByDID_SS_R_Last(dossierId, syncStatus,
 				removed, orderByComparator);
 
 		if (dossierFile != null) {
@@ -3866,16 +3867,16 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public DossierFile fetchByD_S_R_Last(long dossierId, int syncStatus,
+	public DossierFile fetchByDID_SS_R_Last(long dossierId, int syncStatus,
 		int removed, OrderByComparator orderByComparator)
 		throws SystemException {
-		int count = countByD_S_R(dossierId, syncStatus, removed);
+		int count = countByDID_SS_R(dossierId, syncStatus, removed);
 
 		if (count == 0) {
 			return null;
 		}
 
-		List<DossierFile> list = findByD_S_R(dossierId, syncStatus, removed,
+		List<DossierFile> list = findByDID_SS_R(dossierId, syncStatus, removed,
 				count - 1, count, orderByComparator);
 
 		if (!list.isEmpty()) {
@@ -3898,7 +3899,7 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public DossierFile[] findByD_S_R_PrevAndNext(long dossierFileId,
+	public DossierFile[] findByDID_SS_R_PrevAndNext(long dossierFileId,
 		long dossierId, int syncStatus, int removed,
 		OrderByComparator orderByComparator)
 		throws NoSuchDossierFileException, SystemException {
@@ -3911,13 +3912,13 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 
 			DossierFile[] array = new DossierFileImpl[3];
 
-			array[0] = getByD_S_R_PrevAndNext(session, dossierFile, dossierId,
-					syncStatus, removed, orderByComparator, true);
+			array[0] = getByDID_SS_R_PrevAndNext(session, dossierFile,
+					dossierId, syncStatus, removed, orderByComparator, true);
 
 			array[1] = dossierFile;
 
-			array[2] = getByD_S_R_PrevAndNext(session, dossierFile, dossierId,
-					syncStatus, removed, orderByComparator, false);
+			array[2] = getByDID_SS_R_PrevAndNext(session, dossierFile,
+					dossierId, syncStatus, removed, orderByComparator, false);
 
 			return array;
 		}
@@ -3929,7 +3930,7 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 		}
 	}
 
-	protected DossierFile getByD_S_R_PrevAndNext(Session session,
+	protected DossierFile getByDID_SS_R_PrevAndNext(Session session,
 		DossierFile dossierFile, long dossierId, int syncStatus, int removed,
 		OrderByComparator orderByComparator, boolean previous) {
 		StringBundler query = null;
@@ -3944,11 +3945,11 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 
 		query.append(_SQL_SELECT_DOSSIERFILE_WHERE);
 
-		query.append(_FINDER_COLUMN_D_S_R_DOSSIERID_2);
+		query.append(_FINDER_COLUMN_DID_SS_R_DOSSIERID_2);
 
-		query.append(_FINDER_COLUMN_D_S_R_SYNCSTATUS_2);
+		query.append(_FINDER_COLUMN_DID_SS_R_SYNCSTATUS_2);
 
-		query.append(_FINDER_COLUMN_D_S_R_REMOVED_2);
+		query.append(_FINDER_COLUMN_DID_SS_R_REMOVED_2);
 
 		if (orderByComparator != null) {
 			String[] orderByConditionFields = orderByComparator.getOrderByConditionFields();
@@ -4051,9 +4052,9 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public void removeByD_S_R(long dossierId, int syncStatus, int removed)
+	public void removeByDID_SS_R(long dossierId, int syncStatus, int removed)
 		throws SystemException {
-		for (DossierFile dossierFile : findByD_S_R(dossierId, syncStatus,
+		for (DossierFile dossierFile : findByDID_SS_R(dossierId, syncStatus,
 				removed, QueryUtil.ALL_POS, QueryUtil.ALL_POS, null)) {
 			remove(dossierFile);
 		}
@@ -4069,9 +4070,9 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public int countByD_S_R(long dossierId, int syncStatus, int removed)
+	public int countByDID_SS_R(long dossierId, int syncStatus, int removed)
 		throws SystemException {
-		FinderPath finderPath = FINDER_PATH_COUNT_BY_D_S_R;
+		FinderPath finderPath = FINDER_PATH_COUNT_BY_DID_SS_R;
 
 		Object[] finderArgs = new Object[] { dossierId, syncStatus, removed };
 
@@ -4083,11 +4084,11 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 
 			query.append(_SQL_COUNT_DOSSIERFILE_WHERE);
 
-			query.append(_FINDER_COLUMN_D_S_R_DOSSIERID_2);
+			query.append(_FINDER_COLUMN_DID_SS_R_DOSSIERID_2);
 
-			query.append(_FINDER_COLUMN_D_S_R_SYNCSTATUS_2);
+			query.append(_FINDER_COLUMN_DID_SS_R_SYNCSTATUS_2);
 
-			query.append(_FINDER_COLUMN_D_S_R_REMOVED_2);
+			query.append(_FINDER_COLUMN_DID_SS_R_REMOVED_2);
 
 			String sql = query.toString();
 
@@ -4123,12 +4124,13 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 		return count.intValue();
 	}
 
-	private static final String _FINDER_COLUMN_D_S_R_DOSSIERID_2 = "dossierFile.dossierId = ? AND ";
-	private static final String _FINDER_COLUMN_D_S_R_SYNCSTATUS_2 = "dossierFile.syncStatus = ? AND ";
-	private static final String _FINDER_COLUMN_D_S_R_REMOVED_2 = "dossierFile.removed = ?";
-	public static final FinderPath FINDER_PATH_WITH_PAGINATION_FIND_BY_F_D_S_R = new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
+	private static final String _FINDER_COLUMN_DID_SS_R_DOSSIERID_2 = "dossierFile.dossierId = ? AND ";
+	private static final String _FINDER_COLUMN_DID_SS_R_SYNCSTATUS_2 = "dossierFile.syncStatus = ? AND ";
+	private static final String _FINDER_COLUMN_DID_SS_R_REMOVED_2 = "dossierFile.removed = ?";
+	public static final FinderPath FINDER_PATH_WITH_PAGINATION_FIND_BY_GFID_DID_SS_R =
+		new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
 			DossierFileModelImpl.FINDER_CACHE_ENABLED, DossierFileImpl.class,
-			FINDER_CLASS_NAME_LIST_WITH_PAGINATION, "findByF_D_S_R",
+			FINDER_CLASS_NAME_LIST_WITH_PAGINATION, "findByGFID_DID_SS_R",
 			new String[] {
 				Long.class.getName(), Long.class.getName(),
 				Integer.class.getName(), Integer.class.getName(),
@@ -4136,10 +4138,10 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 			Integer.class.getName(), Integer.class.getName(),
 				OrderByComparator.class.getName()
 			});
-	public static final FinderPath FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_F_D_S_R =
+	public static final FinderPath FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_GFID_DID_SS_R =
 		new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
 			DossierFileModelImpl.FINDER_CACHE_ENABLED, DossierFileImpl.class,
-			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "findByF_D_S_R",
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "findByGFID_DID_SS_R",
 			new String[] {
 				Long.class.getName(), Long.class.getName(),
 				Integer.class.getName(), Integer.class.getName()
@@ -4148,9 +4150,9 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 			DossierFileModelImpl.DOSSIERID_COLUMN_BITMASK |
 			DossierFileModelImpl.SYNCSTATUS_COLUMN_BITMASK |
 			DossierFileModelImpl.REMOVED_COLUMN_BITMASK);
-	public static final FinderPath FINDER_PATH_COUNT_BY_F_D_S_R = new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
+	public static final FinderPath FINDER_PATH_COUNT_BY_GFID_DID_SS_R = new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
 			DossierFileModelImpl.FINDER_CACHE_ENABLED, Long.class,
-			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countByF_D_S_R",
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countByGFID_DID_SS_R",
 			new String[] {
 				Long.class.getName(), Long.class.getName(),
 				Integer.class.getName(), Integer.class.getName()
@@ -4167,9 +4169,9 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public List<DossierFile> findByF_D_S_R(long groupFileId, long dossierId,
-		int syncStatus, int removed) throws SystemException {
-		return findByF_D_S_R(groupFileId, dossierId, syncStatus, removed,
+	public List<DossierFile> findByGFID_DID_SS_R(long groupFileId,
+		long dossierId, int syncStatus, int removed) throws SystemException {
+		return findByGFID_DID_SS_R(groupFileId, dossierId, syncStatus, removed,
 			QueryUtil.ALL_POS, QueryUtil.ALL_POS, null);
 	}
 
@@ -4190,10 +4192,10 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public List<DossierFile> findByF_D_S_R(long groupFileId, long dossierId,
-		int syncStatus, int removed, int start, int end)
+	public List<DossierFile> findByGFID_DID_SS_R(long groupFileId,
+		long dossierId, int syncStatus, int removed, int start, int end)
 		throws SystemException {
-		return findByF_D_S_R(groupFileId, dossierId, syncStatus, removed,
+		return findByGFID_DID_SS_R(groupFileId, dossierId, syncStatus, removed,
 			start, end, null);
 	}
 
@@ -4215,8 +4217,8 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public List<DossierFile> findByF_D_S_R(long groupFileId, long dossierId,
-		int syncStatus, int removed, int start, int end,
+	public List<DossierFile> findByGFID_DID_SS_R(long groupFileId,
+		long dossierId, int syncStatus, int removed, int start, int end,
 		OrderByComparator orderByComparator) throws SystemException {
 		boolean pagination = true;
 		FinderPath finderPath = null;
@@ -4225,13 +4227,13 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
 				(orderByComparator == null)) {
 			pagination = false;
-			finderPath = FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_F_D_S_R;
+			finderPath = FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_GFID_DID_SS_R;
 			finderArgs = new Object[] {
 					groupFileId, dossierId, syncStatus, removed
 				};
 		}
 		else {
-			finderPath = FINDER_PATH_WITH_PAGINATION_FIND_BY_F_D_S_R;
+			finderPath = FINDER_PATH_WITH_PAGINATION_FIND_BY_GFID_DID_SS_R;
 			finderArgs = new Object[] {
 					groupFileId, dossierId, syncStatus, removed,
 					
@@ -4268,13 +4270,13 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 
 			query.append(_SQL_SELECT_DOSSIERFILE_WHERE);
 
-			query.append(_FINDER_COLUMN_F_D_S_R_GROUPFILEID_2);
+			query.append(_FINDER_COLUMN_GFID_DID_SS_R_GROUPFILEID_2);
 
-			query.append(_FINDER_COLUMN_F_D_S_R_DOSSIERID_2);
+			query.append(_FINDER_COLUMN_GFID_DID_SS_R_DOSSIERID_2);
 
-			query.append(_FINDER_COLUMN_F_D_S_R_SYNCSTATUS_2);
+			query.append(_FINDER_COLUMN_GFID_DID_SS_R_SYNCSTATUS_2);
 
-			query.append(_FINDER_COLUMN_F_D_S_R_REMOVED_2);
+			query.append(_FINDER_COLUMN_GFID_DID_SS_R_REMOVED_2);
 
 			if (orderByComparator != null) {
 				appendOrderByComparator(query, _ORDER_BY_ENTITY_ALIAS,
@@ -4347,11 +4349,12 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public DossierFile findByF_D_S_R_First(long groupFileId, long dossierId,
-		int syncStatus, int removed, OrderByComparator orderByComparator)
+	public DossierFile findByGFID_DID_SS_R_First(long groupFileId,
+		long dossierId, int syncStatus, int removed,
+		OrderByComparator orderByComparator)
 		throws NoSuchDossierFileException, SystemException {
-		DossierFile dossierFile = fetchByF_D_S_R_First(groupFileId, dossierId,
-				syncStatus, removed, orderByComparator);
+		DossierFile dossierFile = fetchByGFID_DID_SS_R_First(groupFileId,
+				dossierId, syncStatus, removed, orderByComparator);
 
 		if (dossierFile != null) {
 			return dossierFile;
@@ -4390,10 +4393,10 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public DossierFile fetchByF_D_S_R_First(long groupFileId, long dossierId,
-		int syncStatus, int removed, OrderByComparator orderByComparator)
-		throws SystemException {
-		List<DossierFile> list = findByF_D_S_R(groupFileId, dossierId,
+	public DossierFile fetchByGFID_DID_SS_R_First(long groupFileId,
+		long dossierId, int syncStatus, int removed,
+		OrderByComparator orderByComparator) throws SystemException {
+		List<DossierFile> list = findByGFID_DID_SS_R(groupFileId, dossierId,
 				syncStatus, removed, 0, 1, orderByComparator);
 
 		if (!list.isEmpty()) {
@@ -4416,11 +4419,12 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public DossierFile findByF_D_S_R_Last(long groupFileId, long dossierId,
-		int syncStatus, int removed, OrderByComparator orderByComparator)
+	public DossierFile findByGFID_DID_SS_R_Last(long groupFileId,
+		long dossierId, int syncStatus, int removed,
+		OrderByComparator orderByComparator)
 		throws NoSuchDossierFileException, SystemException {
-		DossierFile dossierFile = fetchByF_D_S_R_Last(groupFileId, dossierId,
-				syncStatus, removed, orderByComparator);
+		DossierFile dossierFile = fetchByGFID_DID_SS_R_Last(groupFileId,
+				dossierId, syncStatus, removed, orderByComparator);
 
 		if (dossierFile != null) {
 			return dossierFile;
@@ -4459,16 +4463,17 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public DossierFile fetchByF_D_S_R_Last(long groupFileId, long dossierId,
-		int syncStatus, int removed, OrderByComparator orderByComparator)
-		throws SystemException {
-		int count = countByF_D_S_R(groupFileId, dossierId, syncStatus, removed);
+	public DossierFile fetchByGFID_DID_SS_R_Last(long groupFileId,
+		long dossierId, int syncStatus, int removed,
+		OrderByComparator orderByComparator) throws SystemException {
+		int count = countByGFID_DID_SS_R(groupFileId, dossierId, syncStatus,
+				removed);
 
 		if (count == 0) {
 			return null;
 		}
 
-		List<DossierFile> list = findByF_D_S_R(groupFileId, dossierId,
+		List<DossierFile> list = findByGFID_DID_SS_R(groupFileId, dossierId,
 				syncStatus, removed, count - 1, count, orderByComparator);
 
 		if (!list.isEmpty()) {
@@ -4492,7 +4497,7 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public DossierFile[] findByF_D_S_R_PrevAndNext(long dossierFileId,
+	public DossierFile[] findByGFID_DID_SS_R_PrevAndNext(long dossierFileId,
 		long groupFileId, long dossierId, int syncStatus, int removed,
 		OrderByComparator orderByComparator)
 		throws NoSuchDossierFileException, SystemException {
@@ -4505,13 +4510,13 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 
 			DossierFile[] array = new DossierFileImpl[3];
 
-			array[0] = getByF_D_S_R_PrevAndNext(session, dossierFile,
+			array[0] = getByGFID_DID_SS_R_PrevAndNext(session, dossierFile,
 					groupFileId, dossierId, syncStatus, removed,
 					orderByComparator, true);
 
 			array[1] = dossierFile;
 
-			array[2] = getByF_D_S_R_PrevAndNext(session, dossierFile,
+			array[2] = getByGFID_DID_SS_R_PrevAndNext(session, dossierFile,
 					groupFileId, dossierId, syncStatus, removed,
 					orderByComparator, false);
 
@@ -4525,7 +4530,7 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 		}
 	}
 
-	protected DossierFile getByF_D_S_R_PrevAndNext(Session session,
+	protected DossierFile getByGFID_DID_SS_R_PrevAndNext(Session session,
 		DossierFile dossierFile, long groupFileId, long dossierId,
 		int syncStatus, int removed, OrderByComparator orderByComparator,
 		boolean previous) {
@@ -4541,13 +4546,13 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 
 		query.append(_SQL_SELECT_DOSSIERFILE_WHERE);
 
-		query.append(_FINDER_COLUMN_F_D_S_R_GROUPFILEID_2);
+		query.append(_FINDER_COLUMN_GFID_DID_SS_R_GROUPFILEID_2);
 
-		query.append(_FINDER_COLUMN_F_D_S_R_DOSSIERID_2);
+		query.append(_FINDER_COLUMN_GFID_DID_SS_R_DOSSIERID_2);
 
-		query.append(_FINDER_COLUMN_F_D_S_R_SYNCSTATUS_2);
+		query.append(_FINDER_COLUMN_GFID_DID_SS_R_SYNCSTATUS_2);
 
-		query.append(_FINDER_COLUMN_F_D_S_R_REMOVED_2);
+		query.append(_FINDER_COLUMN_GFID_DID_SS_R_REMOVED_2);
 
 		if (orderByComparator != null) {
 			String[] orderByConditionFields = orderByComparator.getOrderByConditionFields();
@@ -4653,10 +4658,11 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public void removeByF_D_S_R(long groupFileId, long dossierId,
+	public void removeByGFID_DID_SS_R(long groupFileId, long dossierId,
 		int syncStatus, int removed) throws SystemException {
-		for (DossierFile dossierFile : findByF_D_S_R(groupFileId, dossierId,
-				syncStatus, removed, QueryUtil.ALL_POS, QueryUtil.ALL_POS, null)) {
+		for (DossierFile dossierFile : findByGFID_DID_SS_R(groupFileId,
+				dossierId, syncStatus, removed, QueryUtil.ALL_POS,
+				QueryUtil.ALL_POS, null)) {
 			remove(dossierFile);
 		}
 	}
@@ -4672,9 +4678,9 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public int countByF_D_S_R(long groupFileId, long dossierId, int syncStatus,
-		int removed) throws SystemException {
-		FinderPath finderPath = FINDER_PATH_COUNT_BY_F_D_S_R;
+	public int countByGFID_DID_SS_R(long groupFileId, long dossierId,
+		int syncStatus, int removed) throws SystemException {
+		FinderPath finderPath = FINDER_PATH_COUNT_BY_GFID_DID_SS_R;
 
 		Object[] finderArgs = new Object[] {
 				groupFileId, dossierId, syncStatus, removed
@@ -4688,13 +4694,13 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 
 			query.append(_SQL_COUNT_DOSSIERFILE_WHERE);
 
-			query.append(_FINDER_COLUMN_F_D_S_R_GROUPFILEID_2);
+			query.append(_FINDER_COLUMN_GFID_DID_SS_R_GROUPFILEID_2);
 
-			query.append(_FINDER_COLUMN_F_D_S_R_DOSSIERID_2);
+			query.append(_FINDER_COLUMN_GFID_DID_SS_R_DOSSIERID_2);
 
-			query.append(_FINDER_COLUMN_F_D_S_R_SYNCSTATUS_2);
+			query.append(_FINDER_COLUMN_GFID_DID_SS_R_SYNCSTATUS_2);
 
-			query.append(_FINDER_COLUMN_F_D_S_R_REMOVED_2);
+			query.append(_FINDER_COLUMN_GFID_DID_SS_R_REMOVED_2);
 
 			String sql = query.toString();
 
@@ -4732,10 +4738,625 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 		return count.intValue();
 	}
 
-	private static final String _FINDER_COLUMN_F_D_S_R_GROUPFILEID_2 = "dossierFile.groupFileId = ? AND ";
-	private static final String _FINDER_COLUMN_F_D_S_R_DOSSIERID_2 = "dossierFile.dossierId = ? AND ";
-	private static final String _FINDER_COLUMN_F_D_S_R_SYNCSTATUS_2 = "dossierFile.syncStatus = ? AND ";
-	private static final String _FINDER_COLUMN_F_D_S_R_REMOVED_2 = "dossierFile.removed = ?";
+	private static final String _FINDER_COLUMN_GFID_DID_SS_R_GROUPFILEID_2 = "dossierFile.groupFileId = ? AND ";
+	private static final String _FINDER_COLUMN_GFID_DID_SS_R_DOSSIERID_2 = "dossierFile.dossierId = ? AND ";
+	private static final String _FINDER_COLUMN_GFID_DID_SS_R_SYNCSTATUS_2 = "dossierFile.syncStatus = ? AND ";
+	private static final String _FINDER_COLUMN_GFID_DID_SS_R_REMOVED_2 = "dossierFile.removed = ?";
+	public static final FinderPath FINDER_PATH_WITH_PAGINATION_FIND_BY_DID_SS_DPID_R =
+		new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
+			DossierFileModelImpl.FINDER_CACHE_ENABLED, DossierFileImpl.class,
+			FINDER_CLASS_NAME_LIST_WITH_PAGINATION, "findByDID_SS_DPID_R",
+			new String[] {
+				Long.class.getName(), Integer.class.getName(),
+				Long.class.getName(), Integer.class.getName(),
+				
+			Integer.class.getName(), Integer.class.getName(),
+				OrderByComparator.class.getName()
+			});
+	public static final FinderPath FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DID_SS_DPID_R =
+		new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
+			DossierFileModelImpl.FINDER_CACHE_ENABLED, DossierFileImpl.class,
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "findByDID_SS_DPID_R",
+			new String[] {
+				Long.class.getName(), Integer.class.getName(),
+				Long.class.getName(), Integer.class.getName()
+			},
+			DossierFileModelImpl.DOSSIERID_COLUMN_BITMASK |
+			DossierFileModelImpl.SYNCSTATUS_COLUMN_BITMASK |
+			DossierFileModelImpl.DOSSIERPARTID_COLUMN_BITMASK |
+			DossierFileModelImpl.REMOVED_COLUMN_BITMASK);
+	public static final FinderPath FINDER_PATH_COUNT_BY_DID_SS_DPID_R = new FinderPath(DossierFileModelImpl.ENTITY_CACHE_ENABLED,
+			DossierFileModelImpl.FINDER_CACHE_ENABLED, Long.class,
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countByDID_SS_DPID_R",
+			new String[] {
+				Long.class.getName(), Integer.class.getName(),
+				Long.class.getName(), Integer.class.getName()
+			});
+
+	/**
+	 * Returns all the dossier files where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	 *
+	 * @param dossierId the dossier ID
+	 * @param syncStatus the sync status
+	 * @param dossierPartId the dossier part ID
+	 * @param removed the removed
+	 * @return the matching dossier files
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public List<DossierFile> findByDID_SS_DPID_R(long dossierId,
+		int syncStatus, long dossierPartId, int removed)
+		throws SystemException {
+		return findByDID_SS_DPID_R(dossierId, syncStatus, dossierPartId,
+			removed, QueryUtil.ALL_POS, QueryUtil.ALL_POS, null);
+	}
+
+	/**
+	 * Returns a range of all the dossier files where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link org.opencps.dossiermgt.model.impl.DossierFileModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	 * </p>
+	 *
+	 * @param dossierId the dossier ID
+	 * @param syncStatus the sync status
+	 * @param dossierPartId the dossier part ID
+	 * @param removed the removed
+	 * @param start the lower bound of the range of dossier files
+	 * @param end the upper bound of the range of dossier files (not inclusive)
+	 * @return the range of matching dossier files
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public List<DossierFile> findByDID_SS_DPID_R(long dossierId,
+		int syncStatus, long dossierPartId, int removed, int start, int end)
+		throws SystemException {
+		return findByDID_SS_DPID_R(dossierId, syncStatus, dossierPartId,
+			removed, start, end, null);
+	}
+
+	/**
+	 * Returns an ordered range of all the dossier files where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link org.opencps.dossiermgt.model.impl.DossierFileModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	 * </p>
+	 *
+	 * @param dossierId the dossier ID
+	 * @param syncStatus the sync status
+	 * @param dossierPartId the dossier part ID
+	 * @param removed the removed
+	 * @param start the lower bound of the range of dossier files
+	 * @param end the upper bound of the range of dossier files (not inclusive)
+	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	 * @return the ordered range of matching dossier files
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public List<DossierFile> findByDID_SS_DPID_R(long dossierId,
+		int syncStatus, long dossierPartId, int removed, int start, int end,
+		OrderByComparator orderByComparator) throws SystemException {
+		boolean pagination = true;
+		FinderPath finderPath = null;
+		Object[] finderArgs = null;
+
+		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
+				(orderByComparator == null)) {
+			pagination = false;
+			finderPath = FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DID_SS_DPID_R;
+			finderArgs = new Object[] {
+					dossierId, syncStatus, dossierPartId, removed
+				};
+		}
+		else {
+			finderPath = FINDER_PATH_WITH_PAGINATION_FIND_BY_DID_SS_DPID_R;
+			finderArgs = new Object[] {
+					dossierId, syncStatus, dossierPartId, removed,
+					
+					start, end, orderByComparator
+				};
+		}
+
+		List<DossierFile> list = (List<DossierFile>)FinderCacheUtil.getResult(finderPath,
+				finderArgs, this);
+
+		if ((list != null) && !list.isEmpty()) {
+			for (DossierFile dossierFile : list) {
+				if ((dossierId != dossierFile.getDossierId()) ||
+						(syncStatus != dossierFile.getSyncStatus()) ||
+						(dossierPartId != dossierFile.getDossierPartId()) ||
+						(removed != dossierFile.getRemoved())) {
+					list = null;
+
+					break;
+				}
+			}
+		}
+
+		if (list == null) {
+			StringBundler query = null;
+
+			if (orderByComparator != null) {
+				query = new StringBundler(6 +
+						(orderByComparator.getOrderByFields().length * 3));
+			}
+			else {
+				query = new StringBundler(6);
+			}
+
+			query.append(_SQL_SELECT_DOSSIERFILE_WHERE);
+
+			query.append(_FINDER_COLUMN_DID_SS_DPID_R_DOSSIERID_2);
+
+			query.append(_FINDER_COLUMN_DID_SS_DPID_R_SYNCSTATUS_2);
+
+			query.append(_FINDER_COLUMN_DID_SS_DPID_R_DOSSIERPARTID_2);
+
+			query.append(_FINDER_COLUMN_DID_SS_DPID_R_REMOVED_2);
+
+			if (orderByComparator != null) {
+				appendOrderByComparator(query, _ORDER_BY_ENTITY_ALIAS,
+					orderByComparator);
+			}
+			else
+			 if (pagination) {
+				query.append(DossierFileModelImpl.ORDER_BY_JPQL);
+			}
+
+			String sql = query.toString();
+
+			Session session = null;
+
+			try {
+				session = openSession();
+
+				Query q = session.createQuery(sql);
+
+				QueryPos qPos = QueryPos.getInstance(q);
+
+				qPos.add(dossierId);
+
+				qPos.add(syncStatus);
+
+				qPos.add(dossierPartId);
+
+				qPos.add(removed);
+
+				if (!pagination) {
+					list = (List<DossierFile>)QueryUtil.list(q, getDialect(),
+							start, end, false);
+
+					Collections.sort(list);
+
+					list = new UnmodifiableList<DossierFile>(list);
+				}
+				else {
+					list = (List<DossierFile>)QueryUtil.list(q, getDialect(),
+							start, end);
+				}
+
+				cacheResult(list);
+
+				FinderCacheUtil.putResult(finderPath, finderArgs, list);
+			}
+			catch (Exception e) {
+				FinderCacheUtil.removeResult(finderPath, finderArgs);
+
+				throw processException(e);
+			}
+			finally {
+				closeSession(session);
+			}
+		}
+
+		return list;
+	}
+
+	/**
+	 * Returns the first dossier file in the ordered set where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	 *
+	 * @param dossierId the dossier ID
+	 * @param syncStatus the sync status
+	 * @param dossierPartId the dossier part ID
+	 * @param removed the removed
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the first matching dossier file
+	 * @throws org.opencps.dossiermgt.NoSuchDossierFileException if a matching dossier file could not be found
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public DossierFile findByDID_SS_DPID_R_First(long dossierId,
+		int syncStatus, long dossierPartId, int removed,
+		OrderByComparator orderByComparator)
+		throws NoSuchDossierFileException, SystemException {
+		DossierFile dossierFile = fetchByDID_SS_DPID_R_First(dossierId,
+				syncStatus, dossierPartId, removed, orderByComparator);
+
+		if (dossierFile != null) {
+			return dossierFile;
+		}
+
+		StringBundler msg = new StringBundler(10);
+
+		msg.append(_NO_SUCH_ENTITY_WITH_KEY);
+
+		msg.append("dossierId=");
+		msg.append(dossierId);
+
+		msg.append(", syncStatus=");
+		msg.append(syncStatus);
+
+		msg.append(", dossierPartId=");
+		msg.append(dossierPartId);
+
+		msg.append(", removed=");
+		msg.append(removed);
+
+		msg.append(StringPool.CLOSE_CURLY_BRACE);
+
+		throw new NoSuchDossierFileException(msg.toString());
+	}
+
+	/**
+	 * Returns the first dossier file in the ordered set where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	 *
+	 * @param dossierId the dossier ID
+	 * @param syncStatus the sync status
+	 * @param dossierPartId the dossier part ID
+	 * @param removed the removed
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the first matching dossier file, or <code>null</code> if a matching dossier file could not be found
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public DossierFile fetchByDID_SS_DPID_R_First(long dossierId,
+		int syncStatus, long dossierPartId, int removed,
+		OrderByComparator orderByComparator) throws SystemException {
+		List<DossierFile> list = findByDID_SS_DPID_R(dossierId, syncStatus,
+				dossierPartId, removed, 0, 1, orderByComparator);
+
+		if (!list.isEmpty()) {
+			return list.get(0);
+		}
+
+		return null;
+	}
+
+	/**
+	 * Returns the last dossier file in the ordered set where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	 *
+	 * @param dossierId the dossier ID
+	 * @param syncStatus the sync status
+	 * @param dossierPartId the dossier part ID
+	 * @param removed the removed
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the last matching dossier file
+	 * @throws org.opencps.dossiermgt.NoSuchDossierFileException if a matching dossier file could not be found
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public DossierFile findByDID_SS_DPID_R_Last(long dossierId, int syncStatus,
+		long dossierPartId, int removed, OrderByComparator orderByComparator)
+		throws NoSuchDossierFileException, SystemException {
+		DossierFile dossierFile = fetchByDID_SS_DPID_R_Last(dossierId,
+				syncStatus, dossierPartId, removed, orderByComparator);
+
+		if (dossierFile != null) {
+			return dossierFile;
+		}
+
+		StringBundler msg = new StringBundler(10);
+
+		msg.append(_NO_SUCH_ENTITY_WITH_KEY);
+
+		msg.append("dossierId=");
+		msg.append(dossierId);
+
+		msg.append(", syncStatus=");
+		msg.append(syncStatus);
+
+		msg.append(", dossierPartId=");
+		msg.append(dossierPartId);
+
+		msg.append(", removed=");
+		msg.append(removed);
+
+		msg.append(StringPool.CLOSE_CURLY_BRACE);
+
+		throw new NoSuchDossierFileException(msg.toString());
+	}
+
+	/**
+	 * Returns the last dossier file in the ordered set where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	 *
+	 * @param dossierId the dossier ID
+	 * @param syncStatus the sync status
+	 * @param dossierPartId the dossier part ID
+	 * @param removed the removed
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the last matching dossier file, or <code>null</code> if a matching dossier file could not be found
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public DossierFile fetchByDID_SS_DPID_R_Last(long dossierId,
+		int syncStatus, long dossierPartId, int removed,
+		OrderByComparator orderByComparator) throws SystemException {
+		int count = countByDID_SS_DPID_R(dossierId, syncStatus, dossierPartId,
+				removed);
+
+		if (count == 0) {
+			return null;
+		}
+
+		List<DossierFile> list = findByDID_SS_DPID_R(dossierId, syncStatus,
+				dossierPartId, removed, count - 1, count, orderByComparator);
+
+		if (!list.isEmpty()) {
+			return list.get(0);
+		}
+
+		return null;
+	}
+
+	/**
+	 * Returns the dossier files before and after the current dossier file in the ordered set where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	 *
+	 * @param dossierFileId the primary key of the current dossier file
+	 * @param dossierId the dossier ID
+	 * @param syncStatus the sync status
+	 * @param dossierPartId the dossier part ID
+	 * @param removed the removed
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the previous, current, and next dossier file
+	 * @throws org.opencps.dossiermgt.NoSuchDossierFileException if a dossier file with the primary key could not be found
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public DossierFile[] findByDID_SS_DPID_R_PrevAndNext(long dossierFileId,
+		long dossierId, int syncStatus, long dossierPartId, int removed,
+		OrderByComparator orderByComparator)
+		throws NoSuchDossierFileException, SystemException {
+		DossierFile dossierFile = findByPrimaryKey(dossierFileId);
+
+		Session session = null;
+
+		try {
+			session = openSession();
+
+			DossierFile[] array = new DossierFileImpl[3];
+
+			array[0] = getByDID_SS_DPID_R_PrevAndNext(session, dossierFile,
+					dossierId, syncStatus, dossierPartId, removed,
+					orderByComparator, true);
+
+			array[1] = dossierFile;
+
+			array[2] = getByDID_SS_DPID_R_PrevAndNext(session, dossierFile,
+					dossierId, syncStatus, dossierPartId, removed,
+					orderByComparator, false);
+
+			return array;
+		}
+		catch (Exception e) {
+			throw processException(e);
+		}
+		finally {
+			closeSession(session);
+		}
+	}
+
+	protected DossierFile getByDID_SS_DPID_R_PrevAndNext(Session session,
+		DossierFile dossierFile, long dossierId, int syncStatus,
+		long dossierPartId, int removed, OrderByComparator orderByComparator,
+		boolean previous) {
+		StringBundler query = null;
+
+		if (orderByComparator != null) {
+			query = new StringBundler(6 +
+					(orderByComparator.getOrderByFields().length * 6));
+		}
+		else {
+			query = new StringBundler(3);
+		}
+
+		query.append(_SQL_SELECT_DOSSIERFILE_WHERE);
+
+		query.append(_FINDER_COLUMN_DID_SS_DPID_R_DOSSIERID_2);
+
+		query.append(_FINDER_COLUMN_DID_SS_DPID_R_SYNCSTATUS_2);
+
+		query.append(_FINDER_COLUMN_DID_SS_DPID_R_DOSSIERPARTID_2);
+
+		query.append(_FINDER_COLUMN_DID_SS_DPID_R_REMOVED_2);
+
+		if (orderByComparator != null) {
+			String[] orderByConditionFields = orderByComparator.getOrderByConditionFields();
+
+			if (orderByConditionFields.length > 0) {
+				query.append(WHERE_AND);
+			}
+
+			for (int i = 0; i < orderByConditionFields.length; i++) {
+				query.append(_ORDER_BY_ENTITY_ALIAS);
+				query.append(orderByConditionFields[i]);
+
+				if ((i + 1) < orderByConditionFields.length) {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(WHERE_GREATER_THAN_HAS_NEXT);
+					}
+					else {
+						query.append(WHERE_LESSER_THAN_HAS_NEXT);
+					}
+				}
+				else {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(WHERE_GREATER_THAN);
+					}
+					else {
+						query.append(WHERE_LESSER_THAN);
+					}
+				}
+			}
+
+			query.append(ORDER_BY_CLAUSE);
+
+			String[] orderByFields = orderByComparator.getOrderByFields();
+
+			for (int i = 0; i < orderByFields.length; i++) {
+				query.append(_ORDER_BY_ENTITY_ALIAS);
+				query.append(orderByFields[i]);
+
+				if ((i + 1) < orderByFields.length) {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(ORDER_BY_ASC_HAS_NEXT);
+					}
+					else {
+						query.append(ORDER_BY_DESC_HAS_NEXT);
+					}
+				}
+				else {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(ORDER_BY_ASC);
+					}
+					else {
+						query.append(ORDER_BY_DESC);
+					}
+				}
+			}
+		}
+		else {
+			query.append(DossierFileModelImpl.ORDER_BY_JPQL);
+		}
+
+		String sql = query.toString();
+
+		Query q = session.createQuery(sql);
+
+		q.setFirstResult(0);
+		q.setMaxResults(2);
+
+		QueryPos qPos = QueryPos.getInstance(q);
+
+		qPos.add(dossierId);
+
+		qPos.add(syncStatus);
+
+		qPos.add(dossierPartId);
+
+		qPos.add(removed);
+
+		if (orderByComparator != null) {
+			Object[] values = orderByComparator.getOrderByConditionValues(dossierFile);
+
+			for (Object value : values) {
+				qPos.add(value);
+			}
+		}
+
+		List<DossierFile> list = q.list();
+
+		if (list.size() == 2) {
+			return list.get(1);
+		}
+		else {
+			return null;
+		}
+	}
+
+	/**
+	 * Removes all the dossier files where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63; from the database.
+	 *
+	 * @param dossierId the dossier ID
+	 * @param syncStatus the sync status
+	 * @param dossierPartId the dossier part ID
+	 * @param removed the removed
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public void removeByDID_SS_DPID_R(long dossierId, int syncStatus,
+		long dossierPartId, int removed) throws SystemException {
+		for (DossierFile dossierFile : findByDID_SS_DPID_R(dossierId,
+				syncStatus, dossierPartId, removed, QueryUtil.ALL_POS,
+				QueryUtil.ALL_POS, null)) {
+			remove(dossierFile);
+		}
+	}
+
+	/**
+	 * Returns the number of dossier files where dossierId = &#63; and syncStatus = &#63; and dossierPartId = &#63; and removed = &#63;.
+	 *
+	 * @param dossierId the dossier ID
+	 * @param syncStatus the sync status
+	 * @param dossierPartId the dossier part ID
+	 * @param removed the removed
+	 * @return the number of matching dossier files
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public int countByDID_SS_DPID_R(long dossierId, int syncStatus,
+		long dossierPartId, int removed) throws SystemException {
+		FinderPath finderPath = FINDER_PATH_COUNT_BY_DID_SS_DPID_R;
+
+		Object[] finderArgs = new Object[] {
+				dossierId, syncStatus, dossierPartId, removed
+			};
+
+		Long count = (Long)FinderCacheUtil.getResult(finderPath, finderArgs,
+				this);
+
+		if (count == null) {
+			StringBundler query = new StringBundler(5);
+
+			query.append(_SQL_COUNT_DOSSIERFILE_WHERE);
+
+			query.append(_FINDER_COLUMN_DID_SS_DPID_R_DOSSIERID_2);
+
+			query.append(_FINDER_COLUMN_DID_SS_DPID_R_SYNCSTATUS_2);
+
+			query.append(_FINDER_COLUMN_DID_SS_DPID_R_DOSSIERPARTID_2);
+
+			query.append(_FINDER_COLUMN_DID_SS_DPID_R_REMOVED_2);
+
+			String sql = query.toString();
+
+			Session session = null;
+
+			try {
+				session = openSession();
+
+				Query q = session.createQuery(sql);
+
+				QueryPos qPos = QueryPos.getInstance(q);
+
+				qPos.add(dossierId);
+
+				qPos.add(syncStatus);
+
+				qPos.add(dossierPartId);
+
+				qPos.add(removed);
+
+				count = (Long)q.uniqueResult();
+
+				FinderCacheUtil.putResult(finderPath, finderArgs, count);
+			}
+			catch (Exception e) {
+				FinderCacheUtil.removeResult(finderPath, finderArgs);
+
+				throw processException(e);
+			}
+			finally {
+				closeSession(session);
+			}
+		}
+
+		return count.intValue();
+	}
+
+	private static final String _FINDER_COLUMN_DID_SS_DPID_R_DOSSIERID_2 = "dossierFile.dossierId = ? AND ";
+	private static final String _FINDER_COLUMN_DID_SS_DPID_R_SYNCSTATUS_2 = "dossierFile.syncStatus = ? AND ";
+	private static final String _FINDER_COLUMN_DID_SS_DPID_R_DOSSIERPARTID_2 = "dossierFile.dossierPartId = ? AND ";
+	private static final String _FINDER_COLUMN_DID_SS_DPID_R_REMOVED_2 = "dossierFile.removed = ?";
 
 	public DossierFilePersistenceImpl() {
 		setModelClass(DossierFile.class);
@@ -5219,15 +5840,15 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 			}
 
 			if ((dossierFileModelImpl.getColumnBitmask() &
-					FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_D_S_R.getColumnBitmask()) != 0) {
+					FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DID_SS_R.getColumnBitmask()) != 0) {
 				Object[] args = new Object[] {
 						dossierFileModelImpl.getOriginalDossierId(),
 						dossierFileModelImpl.getOriginalSyncStatus(),
 						dossierFileModelImpl.getOriginalRemoved()
 					};
 
-				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_D_S_R, args);
-				FinderCacheUtil.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_D_S_R,
+				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_DID_SS_R, args);
+				FinderCacheUtil.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DID_SS_R,
 					args);
 
 				args = new Object[] {
@@ -5236,13 +5857,13 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 						dossierFileModelImpl.getRemoved()
 					};
 
-				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_D_S_R, args);
-				FinderCacheUtil.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_D_S_R,
+				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_DID_SS_R, args);
+				FinderCacheUtil.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DID_SS_R,
 					args);
 			}
 
 			if ((dossierFileModelImpl.getColumnBitmask() &
-					FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_F_D_S_R.getColumnBitmask()) != 0) {
+					FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_GFID_DID_SS_R.getColumnBitmask()) != 0) {
 				Object[] args = new Object[] {
 						dossierFileModelImpl.getOriginalGroupFileId(),
 						dossierFileModelImpl.getOriginalDossierId(),
@@ -5250,8 +5871,9 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 						dossierFileModelImpl.getOriginalRemoved()
 					};
 
-				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_F_D_S_R, args);
-				FinderCacheUtil.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_F_D_S_R,
+				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_GFID_DID_SS_R,
+					args);
+				FinderCacheUtil.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_GFID_DID_SS_R,
 					args);
 
 				args = new Object[] {
@@ -5261,8 +5883,36 @@ public class DossierFilePersistenceImpl extends BasePersistenceImpl<DossierFile>
 						dossierFileModelImpl.getRemoved()
 					};
 
-				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_F_D_S_R, args);
-				FinderCacheUtil.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_F_D_S_R,
+				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_GFID_DID_SS_R,
+					args);
+				FinderCacheUtil.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_GFID_DID_SS_R,
+					args);
+			}
+
+			if ((dossierFileModelImpl.getColumnBitmask() &
+					FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DID_SS_DPID_R.getColumnBitmask()) != 0) {
+				Object[] args = new Object[] {
+						dossierFileModelImpl.getOriginalDossierId(),
+						dossierFileModelImpl.getOriginalSyncStatus(),
+						dossierFileModelImpl.getOriginalDossierPartId(),
+						dossierFileModelImpl.getOriginalRemoved()
+					};
+
+				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_DID_SS_DPID_R,
+					args);
+				FinderCacheUtil.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DID_SS_DPID_R,
+					args);
+
+				args = new Object[] {
+						dossierFileModelImpl.getDossierId(),
+						dossierFileModelImpl.getSyncStatus(),
+						dossierFileModelImpl.getDossierPartId(),
+						dossierFileModelImpl.getRemoved()
+					};
+
+				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_DID_SS_DPID_R,
+					args);
+				FinderCacheUtil.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DID_SS_DPID_R,
 					args);
 			}
 		}

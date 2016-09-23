@@ -207,6 +207,10 @@ public class DossierLogLocalServiceClpInvoker {
 		_methodParameterTypes105 = new String[] {
 				"java.util.Date", "java.util.Date", "int", "java.lang.String"
 			};
+
+		_methodName106 = "findDossierByRequestCommand";
+
+		_methodParameterTypes106 = new String[] { "long", "java.lang.String" };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -452,6 +456,12 @@ public class DossierLogLocalServiceClpInvoker {
 				(java.lang.String)arguments[3]);
 		}
 
+		if (_methodName106.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes106, parameterTypes)) {
+			return DossierLogLocalServiceUtil.findDossierByRequestCommand(((Long)arguments[0]).longValue(),
+				(java.lang.String)arguments[1]);
+		}
+
 		throw new UnsupportedOperationException();
 	}
 
@@ -523,4 +533,6 @@ public class DossierLogLocalServiceClpInvoker {
 	private String[] _methodParameterTypes104;
 	private String _methodName105;
 	private String[] _methodParameterTypes105;
+	private String _methodName106;
+	private String[] _methodParameterTypes106;
 }

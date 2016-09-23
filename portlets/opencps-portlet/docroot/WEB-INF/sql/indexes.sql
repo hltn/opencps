@@ -65,6 +65,7 @@ create index IX_A490E01D on opencps_dossier_file (dossierId);
 create index IX_67263BCC on opencps_dossier_file (dossierId, dossierPartId);
 create index IX_8A78397A on opencps_dossier_file (dossierId, dossierPartId, groupFileId);
 create index IX_75A4E0C9 on opencps_dossier_file (dossierId, groupFileId);
+create index IX_A19FA465 on opencps_dossier_file (dossierId, syncStatus, dossierPartId, removed);
 create index IX_F19A3712 on opencps_dossier_file (dossierId, syncStatus, removed);
 create index IX_F6264B48 on opencps_dossier_file (dossierId, templateFileNo);
 create index IX_71A2C206 on opencps_dossier_file (groupFileId, dossierId, syncStatus, removed);

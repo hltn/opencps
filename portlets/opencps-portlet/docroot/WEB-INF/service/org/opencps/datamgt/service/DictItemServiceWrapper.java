@@ -161,6 +161,16 @@ public class DictItemServiceWrapper implements DictItemService,
 			itemCode, groupId);
 	}
 
+	@Override
+	public com.liferay.portal.kernel.json.JSONObject getDictItemsByItemCodeDataSourceFitter(
+		java.lang.String collectionCode, java.lang.String itemCode,
+		java.lang.String keywords, long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _dictItemService.getDictItemsByItemCodeDataSourceFitter(collectionCode,
+			itemCode, keywords, groupId);
+	}
+
 	/**
 	 * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
 	 */

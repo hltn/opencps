@@ -341,81 +341,71 @@ public class DossierLocalServiceClpInvoker {
 		_methodName151 = "updateDossierStatus";
 
 		_methodParameterTypes151 = new String[] {
-				"long", "long", "int", "java.util.List"
-			};
-
-		_methodName152 = "updateDossierStatus";
-
-		_methodParameterTypes152 = new String[] { "long", "long", "long", "int" };
-
-		_methodName153 = "updateDossierStatus";
-
-		_methodParameterTypes153 = new String[] {
 				"long", "long", "long", "long", "long", "java.lang.String",
 				"java.util.Date", "java.util.Date", "java.util.Date",
 				"java.lang.String", "java.lang.String", "java.lang.String"
 			};
 
-		_methodName154 = "updateDossierStatus";
+		_methodName152 = "updateDossierStatus";
 
-		_methodParameterTypes154 = new String[] {
+		_methodParameterTypes152 = new String[] {
 				"long", "long", "long", "java.lang.String", "int", "long", "int",
 				"java.util.Locale"
 			};
 
-		_methodName155 = "updateDossierStatus";
+		_methodName153 = "updateDossierStatus";
 
-		_methodParameterTypes155 = new String[] {
+		_methodParameterTypes153 = new String[] {
 				"long", "long", "long", "java.lang.String", "int", "long", "int",
 				"java.util.Locale", "int", "long", "java.lang.String"
 			};
 
-		_methodName156 = "updateDossierStatus";
+		_methodName154 = "updateDossierStatus";
 
-		_methodParameterTypes156 = new String[] {
+		_methodParameterTypes154 = new String[] {
 				"long", "long", "java.lang.String", "java.lang.String",
 				"java.util.Date", "java.util.Date", "java.util.Date",
 				"java.util.Date", "int", "long", "java.lang.String",
 				"java.lang.String", "java.lang.String", "java.lang.String"
 			};
 
-		_methodName157 = "updateDossierStatus";
+		_methodName155 = "updateDossierStatus";
 
-		_methodParameterTypes157 = new String[] {
+		_methodParameterTypes155 = new String[] {
 				"long", "long", "java.lang.String", "int", "long",
 				"java.lang.String", "java.lang.String", "java.lang.String",
 				"java.lang.String", "int", "int"
 			};
 
-		_methodName158 = "updateSyncStatus";
+		_methodName156 = "updateSyncStatus";
 
-		_methodParameterTypes158 = new String[] {
+		_methodParameterTypes156 = new String[] {
 				"java.lang.String", "java.util.List", "int"
 			};
 
-		_methodName159 = "getDossiersByServiceInfo";
+		_methodName157 = "getDossiersByServiceInfo";
 
-		_methodParameterTypes159 = new String[] { "long" };
+		_methodParameterTypes157 = new String[] { "long" };
 
-		_methodName160 = "getDossierByG_DS_U";
+		_methodName158 = "getDossierByG_DS_U";
 
-		_methodParameterTypes160 = new String[] {
+		_methodParameterTypes158 = new String[] {
 				"long", "java.lang.String", "long", "int", "int"
 			};
 
-		_methodName161 = "countDossierByG_DS_U";
+		_methodName159 = "countDossierByG_DS_U";
 
-		_methodParameterTypes161 = new String[] {
+		_methodParameterTypes159 = new String[] {
 				"long", "java.lang.String", "long"
 			};
 
-		_methodName162 = "countDossierByUserNewRequest";
+		_methodName160 = "countDossierByUserNewRequest";
 
-		_methodParameterTypes162 = new String[] { "long", "long" };
+		_methodParameterTypes160 = new String[] { "long", "long" };
 
-		_methodName163 = "getDossierByUserNewRequest";
+		_methodName161 = "getDossierByUserNewRequest";
 
-		_methodParameterTypes163 = new String[] {
+		_methodParameterTypes161 = new String[] {
 				"long", "long", "int", "int",
 				"com.liferay.portal.kernel.util.OrderByComparator"
 			};
@@ -842,26 +832,6 @@ public class DossierLocalServiceClpInvoker {
 				Arrays.deepEquals(_methodParameterTypes151, parameterTypes)) {
 			DossierLocalServiceUtil.updateDossierStatus(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
-				((Integer)arguments[2]).intValue(),
-				(java.util.List<org.opencps.processmgt.model.WorkflowOutput>)arguments[3]);
-
-			return null;
-		}
-
-		if (_methodName152.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes152, parameterTypes)) {
-			DossierLocalServiceUtil.updateDossierStatus(((Long)arguments[0]).longValue(),
-				((Long)arguments[1]).longValue(),
-				((Long)arguments[2]).longValue(),
-				((Integer)arguments[3]).intValue());
-
-			return null;
-		}
-
-		if (_methodName153.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes153, parameterTypes)) {
-			DossierLocalServiceUtil.updateDossierStatus(((Long)arguments[0]).longValue(),
-				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue(),
 				((Long)arguments[3]).longValue(),
 				((Long)arguments[4]).longValue(),
@@ -873,8 +843,8 @@ public class DossierLocalServiceClpInvoker {
 			return null;
 		}
 
-		if (_methodName154.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes154, parameterTypes)) {
+		if (_methodName152.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes152, parameterTypes)) {
 			return DossierLocalServiceUtil.updateDossierStatus(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue(),
@@ -885,8 +855,8 @@ public class DossierLocalServiceClpInvoker {
 				(java.util.Locale)arguments[7]);
 		}
 
-		if (_methodName155.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes155, parameterTypes)) {
+		if (_methodName153.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes153, parameterTypes)) {
 			return DossierLocalServiceUtil.updateDossierStatus(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue(),
@@ -900,8 +870,8 @@ public class DossierLocalServiceClpInvoker {
 				(java.lang.String)arguments[10]);
 		}
 
-		if (_methodName156.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes156, parameterTypes)) {
+		if (_methodName154.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes154, parameterTypes)) {
 			return DossierLocalServiceUtil.updateDossierStatus(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				(java.lang.String)arguments[2], (java.lang.String)arguments[3],
@@ -914,8 +884,8 @@ public class DossierLocalServiceClpInvoker {
 				(java.lang.String)arguments[12], (java.lang.String)arguments[13]);
 		}
 
-		if (_methodName157.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes157, parameterTypes)) {
+		if (_methodName155.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes155, parameterTypes)) {
 			DossierLocalServiceUtil.updateDossierStatus(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				(java.lang.String)arguments[2],
@@ -929,8 +899,8 @@ public class DossierLocalServiceClpInvoker {
 			return null;
 		}
 
-		if (_methodName158.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes158, parameterTypes)) {
+		if (_methodName156.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes156, parameterTypes)) {
 			DossierLocalServiceUtil.updateSyncStatus((java.lang.String)arguments[0],
 				(java.util.List<java.lang.Long>)arguments[1],
 				((Integer)arguments[2]).intValue());
@@ -938,13 +908,13 @@ public class DossierLocalServiceClpInvoker {
 			return null;
 		}
 
-		if (_methodName159.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes159, parameterTypes)) {
+		if (_methodName157.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes157, parameterTypes)) {
 			return DossierLocalServiceUtil.getDossiersByServiceInfo(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName160.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes160, parameterTypes)) {
+		if (_methodName158.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes158, parameterTypes)) {
 			return DossierLocalServiceUtil.getDossierByG_DS_U(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1],
 				((Long)arguments[2]).longValue(),
@@ -952,20 +922,20 @@ public class DossierLocalServiceClpInvoker {
 				((Integer)arguments[4]).intValue());
 		}
 
-		if (_methodName161.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes161, parameterTypes)) {
+		if (_methodName159.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes159, parameterTypes)) {
 			return DossierLocalServiceUtil.countDossierByG_DS_U(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1], ((Long)arguments[2]).longValue());
 		}
 
-		if (_methodName162.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes162, parameterTypes)) {
+		if (_methodName160.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes160, parameterTypes)) {
 			return DossierLocalServiceUtil.countDossierByUserNewRequest(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue());
 		}
 
-		if (_methodName163.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes163, parameterTypes)) {
+		if (_methodName161.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes161, parameterTypes)) {
 			return DossierLocalServiceUtil.getDossierByUserNewRequest(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Integer)arguments[2]).intValue(),
@@ -1100,8 +1070,4 @@ public class DossierLocalServiceClpInvoker {
 	private String[] _methodParameterTypes160;
 	private String _methodName161;
 	private String[] _methodParameterTypes161;
-	private String _methodName162;
-	private String[] _methodParameterTypes162;
-	private String _methodName163;
-	private String[] _methodParameterTypes163;
 }

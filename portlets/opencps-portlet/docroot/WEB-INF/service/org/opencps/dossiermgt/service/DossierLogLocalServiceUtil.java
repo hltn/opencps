@@ -522,6 +522,14 @@ public class DossierLogLocalServiceUtil {
 			dossierStatus);
 	}
 
+	public static java.util.List<org.opencps.dossiermgt.model.DossierLog> findDossierByRequestCommand(
+		long dossierId, java.lang.String requestCommand)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return getService()
+				   .findDossierByRequestCommand(dossierId, requestCommand);
+	}
+
 	public static void clearService() {
 		_service = null;
 	}

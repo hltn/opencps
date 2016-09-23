@@ -341,81 +341,71 @@ public class DossierLocalServiceClp implements DossierLocalService {
 		_methodName52 = "updateDossierStatus";
 
 		_methodParameterTypes52 = new String[] {
-				"long", "long", "int", "java.util.List"
-			};
-
-		_methodName53 = "updateDossierStatus";
-
-		_methodParameterTypes53 = new String[] { "long", "long", "long", "int" };
-
-		_methodName54 = "updateDossierStatus";
-
-		_methodParameterTypes54 = new String[] {
 				"long", "long", "long", "long", "long", "java.lang.String",
 				"java.util.Date", "java.util.Date", "java.util.Date",
 				"java.lang.String", "java.lang.String", "java.lang.String"
 			};
 
-		_methodName55 = "updateDossierStatus";
+		_methodName53 = "updateDossierStatus";
 
-		_methodParameterTypes55 = new String[] {
+		_methodParameterTypes53 = new String[] {
 				"long", "long", "long", "java.lang.String", "int", "long", "int",
 				"java.util.Locale"
 			};
 
-		_methodName56 = "updateDossierStatus";
+		_methodName54 = "updateDossierStatus";
 
-		_methodParameterTypes56 = new String[] {
+		_methodParameterTypes54 = new String[] {
 				"long", "long", "long", "java.lang.String", "int", "long", "int",
 				"java.util.Locale", "int", "long", "java.lang.String"
 			};
 
-		_methodName57 = "updateDossierStatus";
+		_methodName55 = "updateDossierStatus";
 
-		_methodParameterTypes57 = new String[] {
+		_methodParameterTypes55 = new String[] {
 				"long", "long", "java.lang.String", "java.lang.String",
 				"java.util.Date", "java.util.Date", "java.util.Date",
 				"java.util.Date", "int", "long", "java.lang.String",
 				"java.lang.String", "java.lang.String", "java.lang.String"
 			};
 
-		_methodName58 = "updateDossierStatus";
+		_methodName56 = "updateDossierStatus";
 
-		_methodParameterTypes58 = new String[] {
+		_methodParameterTypes56 = new String[] {
 				"long", "long", "java.lang.String", "int", "long",
 				"java.lang.String", "java.lang.String", "java.lang.String",
 				"java.lang.String", "int", "int"
 			};
 
-		_methodName59 = "updateSyncStatus";
+		_methodName57 = "updateSyncStatus";
 
-		_methodParameterTypes59 = new String[] {
+		_methodParameterTypes57 = new String[] {
 				"java.lang.String", "java.util.List", "int"
 			};
 
-		_methodName60 = "getDossiersByServiceInfo";
+		_methodName58 = "getDossiersByServiceInfo";
 
-		_methodParameterTypes60 = new String[] { "long" };
+		_methodParameterTypes58 = new String[] { "long" };
 
-		_methodName61 = "getDossierByG_DS_U";
+		_methodName59 = "getDossierByG_DS_U";
 
-		_methodParameterTypes61 = new String[] {
+		_methodParameterTypes59 = new String[] {
 				"long", "java.lang.String", "long", "int", "int"
 			};
 
-		_methodName62 = "countDossierByG_DS_U";
+		_methodName60 = "countDossierByG_DS_U";
 
-		_methodParameterTypes62 = new String[] {
+		_methodParameterTypes60 = new String[] {
 				"long", "java.lang.String", "long"
 			};
 
-		_methodName63 = "countDossierByUserNewRequest";
+		_methodName61 = "countDossierByUserNewRequest";
 
-		_methodParameterTypes63 = new String[] { "long", "long" };
+		_methodParameterTypes61 = new String[] { "long", "long" };
 
-		_methodName64 = "getDossierByUserNewRequest";
+		_methodName62 = "getDossierByUserNewRequest";
 
-		_methodParameterTypes64 = new String[] {
+		_methodParameterTypes62 = new String[] {
 				"long", "long", "int", "int",
 				"com.liferay.portal.kernel.util.OrderByComparator"
 			};
@@ -2383,87 +2373,6 @@ public class DossierLocalServiceClp implements DossierLocalService {
 	}
 
 	@Override
-	public void updateDossierStatus(long userId, long dossierId,
-		int syncStatus,
-		java.util.List<org.opencps.processmgt.model.WorkflowOutput> worklows)
-		throws com.liferay.portal.kernel.exception.PortalException,
-			com.liferay.portal.kernel.exception.SystemException,
-			org.opencps.dossiermgt.NoSuchDossierStatusException {
-		try {
-			_invokableLocalService.invokeMethod(_methodName52,
-				_methodParameterTypes52,
-				new Object[] {
-					userId,
-					
-				dossierId,
-					
-				syncStatus,
-					
-				ClpSerializer.translateInput(worklows)
-				});
-		}
-		catch (Throwable t) {
-			t = ClpSerializer.translateThrowable(t);
-
-			if (t instanceof com.liferay.portal.kernel.exception.PortalException) {
-				throw (com.liferay.portal.kernel.exception.PortalException)t;
-			}
-
-			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
-				throw (com.liferay.portal.kernel.exception.SystemException)t;
-			}
-
-			if (t instanceof org.opencps.dossiermgt.NoSuchDossierStatusException) {
-				throw (org.opencps.dossiermgt.NoSuchDossierStatusException)t;
-			}
-
-			if (t instanceof RuntimeException) {
-				throw (RuntimeException)t;
-			}
-			else {
-				throw new RuntimeException(t.getClass().getName() +
-					" is not a valid exception");
-			}
-		}
-	}
-
-	@Override
-	public void updateDossierStatus(long userId, long dossierId,
-		long fileGroupId, int syncStatus)
-		throws com.liferay.portal.kernel.exception.PortalException,
-			com.liferay.portal.kernel.exception.SystemException,
-			org.opencps.dossiermgt.NoSuchDossierStatusException {
-		try {
-			_invokableLocalService.invokeMethod(_methodName53,
-				_methodParameterTypes53,
-				new Object[] { userId, dossierId, fileGroupId, syncStatus });
-		}
-		catch (Throwable t) {
-			t = ClpSerializer.translateThrowable(t);
-
-			if (t instanceof com.liferay.portal.kernel.exception.PortalException) {
-				throw (com.liferay.portal.kernel.exception.PortalException)t;
-			}
-
-			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
-				throw (com.liferay.portal.kernel.exception.SystemException)t;
-			}
-
-			if (t instanceof org.opencps.dossiermgt.NoSuchDossierStatusException) {
-				throw (org.opencps.dossiermgt.NoSuchDossierStatusException)t;
-			}
-
-			if (t instanceof RuntimeException) {
-				throw (RuntimeException)t;
-			}
-			else {
-				throw new RuntimeException(t.getClass().getName() +
-					" is not a valid exception");
-			}
-		}
-	}
-
-	@Override
 	public void updateDossierStatus(long userId, long groupId, long companyId,
 		long dossierId, long fileGroupId, java.lang.String receptionNo,
 		java.util.Date estimateDatetime, java.util.Date receiveDatetime,
@@ -2472,8 +2381,8 @@ public class DossierLocalServiceClp implements DossierLocalService {
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
 		try {
-			_invokableLocalService.invokeMethod(_methodName54,
-				_methodParameterTypes54,
+			_invokableLocalService.invokeMethod(_methodName52,
+				_methodParameterTypes52,
 				new Object[] {
 					userId,
 					
@@ -2532,8 +2441,8 @@ public class DossierLocalServiceClp implements DossierLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName55,
-					_methodParameterTypes55,
+			returnObj = _invokableLocalService.invokeMethod(_methodName53,
+					_methodParameterTypes53,
 					new Object[] {
 						userId,
 						
@@ -2591,8 +2500,8 @@ public class DossierLocalServiceClp implements DossierLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName56,
-					_methodParameterTypes56,
+			returnObj = _invokableLocalService.invokeMethod(_methodName54,
+					_methodParameterTypes54,
 					new Object[] {
 						userId,
 						
@@ -2655,8 +2564,8 @@ public class DossierLocalServiceClp implements DossierLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName57,
-					_methodParameterTypes57,
+			returnObj = _invokableLocalService.invokeMethod(_methodName55,
+					_methodParameterTypes55,
 					new Object[] {
 						dossierId,
 						
@@ -2711,8 +2620,8 @@ public class DossierLocalServiceClp implements DossierLocalService {
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
 		try {
-			_invokableLocalService.invokeMethod(_methodName58,
-				_methodParameterTypes58,
+			_invokableLocalService.invokeMethod(_methodName56,
+				_methodParameterTypes56,
 				new Object[] {
 					dossierId,
 					
@@ -2765,8 +2674,8 @@ public class DossierLocalServiceClp implements DossierLocalService {
 			com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.dossiermgt.NoSuchDossierStatusException {
 		try {
-			_invokableLocalService.invokeMethod(_methodName59,
-				_methodParameterTypes59,
+			_invokableLocalService.invokeMethod(_methodName57,
+				_methodParameterTypes57,
 				new Object[] {
 					ClpSerializer.translateInput(oId),
 					
@@ -2807,8 +2716,8 @@ public class DossierLocalServiceClp implements DossierLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName60,
-					_methodParameterTypes60, new Object[] { serviceinfoId });
+			returnObj = _invokableLocalService.invokeMethod(_methodName58,
+					_methodParameterTypes58, new Object[] { serviceinfoId });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -2836,8 +2745,8 @@ public class DossierLocalServiceClp implements DossierLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName61,
-					_methodParameterTypes61,
+			returnObj = _invokableLocalService.invokeMethod(_methodName59,
+					_methodParameterTypes59,
 					new Object[] {
 						groupId,
 						
@@ -2876,8 +2785,8 @@ public class DossierLocalServiceClp implements DossierLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName62,
-					_methodParameterTypes62,
+			returnObj = _invokableLocalService.invokeMethod(_methodName60,
+					_methodParameterTypes60,
 					new Object[] {
 						groupId,
 						
@@ -2910,8 +2819,8 @@ public class DossierLocalServiceClp implements DossierLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName63,
-					_methodParameterTypes63, new Object[] { groupId, userId });
+			returnObj = _invokableLocalService.invokeMethod(_methodName61,
+					_methodParameterTypes61, new Object[] { groupId, userId });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -2934,8 +2843,8 @@ public class DossierLocalServiceClp implements DossierLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName64,
-					_methodParameterTypes64,
+			returnObj = _invokableLocalService.invokeMethod(_methodName62,
+					_methodParameterTypes62,
 					new Object[] {
 						groupId,
 						
@@ -3088,8 +2997,4 @@ public class DossierLocalServiceClp implements DossierLocalService {
 	private String[] _methodParameterTypes61;
 	private String _methodName62;
 	private String[] _methodParameterTypes62;
-	private String _methodName63;
-	private String[] _methodParameterTypes63;
-	private String _methodName64;
-	private String[] _methodParameterTypes64;
 }

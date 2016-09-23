@@ -95,6 +95,13 @@ public class DictItemServiceClp implements DictItemService {
 		_methodParameterTypes14 = new String[] {
 				"java.lang.String", "java.lang.String", "long"
 			};
+
+		_methodName15 = "getDictItemsByItemCodeDataSourceFitter";
+
+		_methodParameterTypes15 = new String[] {
+				"java.lang.String", "java.lang.String", "java.lang.String",
+				"long"
+			};
 	}
 
 	@Override
@@ -595,6 +602,50 @@ public class DictItemServiceClp implements DictItemService {
 		return (com.liferay.portal.kernel.json.JSONObject)ClpSerializer.translateOutput(returnObj);
 	}
 
+	@Override
+	public com.liferay.portal.kernel.json.JSONObject getDictItemsByItemCodeDataSourceFitter(
+		java.lang.String collectionCode, java.lang.String itemCode,
+		java.lang.String keywords, long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableService.invokeMethod(_methodName15,
+					_methodParameterTypes15,
+					new Object[] {
+						ClpSerializer.translateInput(collectionCode),
+						
+					ClpSerializer.translateInput(itemCode),
+						
+					ClpSerializer.translateInput(keywords),
+						
+					groupId
+					});
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof com.liferay.portal.kernel.exception.PortalException) {
+				throw (com.liferay.portal.kernel.exception.PortalException)t;
+			}
+
+			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
+				throw (com.liferay.portal.kernel.exception.SystemException)t;
+			}
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return (com.liferay.portal.kernel.json.JSONObject)ClpSerializer.translateOutput(returnObj);
+	}
+
 	private InvokableService _invokableService;
 	private String _methodName0;
 	private String[] _methodParameterTypes0;
@@ -624,4 +675,6 @@ public class DictItemServiceClp implements DictItemService {
 	private String[] _methodParameterTypes13;
 	private String _methodName14;
 	private String[] _methodParameterTypes14;
+	private String _methodName15;
+	private String[] _methodParameterTypes15;
 }

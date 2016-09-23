@@ -151,7 +151,8 @@ public interface ServiceFileTemplatePersistence extends BasePersistence<ServiceF
 	* @throws SystemException if a system exception occurred
 	*/
 	public org.opencps.servicemgt.model.ServiceFileTemplate[] findByServiceinfoId_PrevAndNext(
-		ServiceFileTemplatePK serviceFileTemplatePK, long serviceinfoId,
+		org.opencps.servicemgt.service.persistence.ServiceFileTemplatePK serviceFileTemplatePK,
+		long serviceinfoId,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.servicemgt.NoSuchServiceFileTemplateException;
@@ -289,7 +290,8 @@ public interface ServiceFileTemplatePersistence extends BasePersistence<ServiceF
 	* @throws SystemException if a system exception occurred
 	*/
 	public org.opencps.servicemgt.model.ServiceFileTemplate[] findByTemplatefileId_PrevAndNext(
-		ServiceFileTemplatePK serviceFileTemplatePK, long templatefileId,
+		org.opencps.servicemgt.service.persistence.ServiceFileTemplatePK serviceFileTemplatePK,
+		long templatefileId,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.servicemgt.NoSuchServiceFileTemplateException;
@@ -336,7 +338,7 @@ public interface ServiceFileTemplatePersistence extends BasePersistence<ServiceF
 	* @return the new service file template
 	*/
 	public org.opencps.servicemgt.model.ServiceFileTemplate create(
-		ServiceFileTemplatePK serviceFileTemplatePK);
+		org.opencps.servicemgt.service.persistence.ServiceFileTemplatePK serviceFileTemplatePK);
 
 	/**
 	* Removes the service file template with the primary key from the database. Also notifies the appropriate model listeners.
@@ -347,7 +349,7 @@ public interface ServiceFileTemplatePersistence extends BasePersistence<ServiceF
 	* @throws SystemException if a system exception occurred
 	*/
 	public org.opencps.servicemgt.model.ServiceFileTemplate remove(
-		ServiceFileTemplatePK serviceFileTemplatePK)
+		org.opencps.servicemgt.service.persistence.ServiceFileTemplatePK serviceFileTemplatePK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.servicemgt.NoSuchServiceFileTemplateException;
 
@@ -364,7 +366,7 @@ public interface ServiceFileTemplatePersistence extends BasePersistence<ServiceF
 	* @throws SystemException if a system exception occurred
 	*/
 	public org.opencps.servicemgt.model.ServiceFileTemplate findByPrimaryKey(
-		ServiceFileTemplatePK serviceFileTemplatePK)
+		org.opencps.servicemgt.service.persistence.ServiceFileTemplatePK serviceFileTemplatePK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.servicemgt.NoSuchServiceFileTemplateException;
 
@@ -376,7 +378,7 @@ public interface ServiceFileTemplatePersistence extends BasePersistence<ServiceF
 	* @throws SystemException if a system exception occurred
 	*/
 	public org.opencps.servicemgt.model.ServiceFileTemplate fetchByPrimaryKey(
-		ServiceFileTemplatePK serviceFileTemplatePK)
+		org.opencps.servicemgt.service.persistence.ServiceFileTemplatePK serviceFileTemplatePK)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	/**

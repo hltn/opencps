@@ -685,6 +685,16 @@ public class DictItemLocalServiceUtil {
 		return getService().getDictItemByCode(itemCode);
 	}
 
+	public static java.util.List<org.opencps.datamgt.model.DictItem> searchDictItemByName_like(
+		java.lang.String collectionCode, java.lang.String itemCode,
+		java.lang.String keyword, long groupId, int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator obc)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService()
+				   .searchDictItemByName_like(collectionCode, itemCode,
+			keyword, groupId, start, end, obc);
+	}
+
 	public static void clearService() {
 		_service = null;
 	}

@@ -215,84 +215,98 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 
 		_methodParameterTypes32 = new String[] { "long", "long" };
 
-		_methodName33 = "findByF_D_S_R";
+		_methodName33 = "getDossierFileByGFID_DID_SS_R";
 
 		_methodParameterTypes33 = new String[] { "long", "long", "int", "int" };
 
-		_methodName34 = "getDossierFileByD_GF";
+		_methodName34 = "getDossierFileByDID_SS_DPID_R";
 
-		_methodParameterTypes34 = new String[] { "long", "long" };
+		_methodParameterTypes34 = new String[] { "long", "int", "long", "int" };
 
-		_methodName35 = "getDossierFileByDossierId";
+		_methodName35 = "getDossierFileByD_GF";
 
-		_methodParameterTypes35 = new String[] { "long" };
+		_methodParameterTypes35 = new String[] { "long", "long" };
 
-		_methodName36 = "getDossierFileByD_S_R";
+		_methodName36 = "getDossierFileByDossierId";
 
-		_methodParameterTypes36 = new String[] { "long", "int", "int" };
+		_methodParameterTypes36 = new String[] { "long" };
 
-		_methodName37 = "getDossierFileInUse";
+		_methodName37 = "getDossierFileByDID_SS_R";
 
-		_methodParameterTypes37 = new String[] { "long", "long" };
+		_methodParameterTypes37 = new String[] { "long", "int", "int" };
 
-		_methodName38 = "getDossierFileInUseByGroupFileId";
+		_methodName38 = "getDossierFileInUse";
 
-		_methodParameterTypes38 = new String[] { "long", "long", "long" };
+		_methodParameterTypes38 = new String[] { "long", "long" };
 
-		_methodName39 = "searchDossierFile";
+		_methodName39 = "getDossierFileInUseByGroupFileId";
 
-		_methodParameterTypes39 = new String[] {
+		_methodParameterTypes39 = new String[] { "long", "long", "long" };
+
+		_methodName40 = "searchDossierFile";
+
+		_methodParameterTypes40 = new String[] {
 				"long", "long", "long", "java.lang.String", "java.lang.String",
 				"int", "int", "int",
 				"com.liferay.portal.kernel.util.OrderByComparator"
 			};
 
-		_methodName40 = "searchDossierFile";
+		_methodName41 = "searchDossierFile";
 
-		_methodParameterTypes40 = new String[] {
+		_methodParameterTypes41 = new String[] {
 				"long", "java.lang.String", "long", "long", "boolean", "int",
 				"int", "com.liferay.portal.kernel.util.OrderByComparator"
 			};
 
-		_methodName41 = "searchDossierFileAdvance";
+		_methodName42 = "searchDossierFileAdvance";
 
-		_methodParameterTypes41 = new String[] {
+		_methodParameterTypes42 = new String[] {
 				"long", "long", "long", "java.lang.String", "java.lang.String",
 				"int", "int", "int", "int", "int",
 				"com.liferay.portal.kernel.util.OrderByComparator"
 			};
 
-		_methodName42 = "updateDossierFile";
-
-		_methodParameterTypes42 = new String[] {
-				"long", "long", "long", "long", "java.lang.String"
-			};
-
 		_methodName43 = "updateDossierFile";
 
 		_methodParameterTypes43 = new String[] {
+				"long", "long", "long", "long", "java.lang.String"
+			};
+
+		_methodName44 = "updateDossierFile";
+
+		_methodParameterTypes44 = new String[] {
 				"long", "long", "long", "long", "java.lang.String", "long",
 				"long", "long", "java.lang.String", "java.lang.String", "long",
 				"int", "int", "java.lang.String", "java.util.Date", "int", "int",
 				"com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName44 = "updateDossierFile";
+		_methodName45 = "updateDossierFile";
 
-		_methodParameterTypes44 = new String[] {
+		_methodParameterTypes45 = new String[] {
 				"long", "long", "java.lang.String", "java.lang.String",
 				"java.lang.String", "java.lang.String", "java.lang.String",
 				"java.io.InputStream", "long",
 				"com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName45 = "fetchByTemplateFileNoDossierId_First";
+		_methodName46 = "updateDossierFileSyncStatus";
 
-		_methodParameterTypes45 = new String[] { "long", "java.lang.String" };
+		_methodParameterTypes46 = new String[] {
+				"long", "long", "int", "java.util.List"
+			};
 
-		_methodName46 = "getByOid";
+		_methodName47 = "updateDossierFileSyncStatus";
 
-		_methodParameterTypes46 = new String[] { "java.lang.String" };
+		_methodParameterTypes47 = new String[] { "long", "long", "long", "int" };
+
+		_methodName48 = "fetchByTemplateFileNoDossierId_First";
+
+		_methodParameterTypes48 = new String[] { "long", "java.lang.String" };
+
+		_methodName49 = "getByOid";
+
+		_methodParameterTypes49 = new String[] { "java.lang.String" };
 	}
 
 	@Override
@@ -1580,7 +1594,7 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 	}
 
 	@Override
-	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByF_D_S_R(
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> getDossierFileByGFID_DID_SS_R(
 		long fileGroupId, long dossierId, int syncStatus, int removed)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
@@ -1610,14 +1624,44 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 	}
 
 	@Override
-	public java.util.List<org.opencps.dossiermgt.model.DossierFile> getDossierFileByD_GF(
-		long dossierId, long groupFileId)
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> getDossierFileByDID_SS_DPID_R(
+		long dossierId, int syncStatus, long dossierPartId, int removed)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
 
 		try {
 			returnObj = _invokableLocalService.invokeMethod(_methodName34,
 					_methodParameterTypes34,
+					new Object[] { dossierId, syncStatus, dossierPartId, removed });
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
+				throw (com.liferay.portal.kernel.exception.SystemException)t;
+			}
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return (java.util.List<org.opencps.dossiermgt.model.DossierFile>)ClpSerializer.translateOutput(returnObj);
+	}
+
+	@Override
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> getDossierFileByD_GF(
+		long dossierId, long groupFileId)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName35,
+					_methodParameterTypes35,
 					new Object[] { dossierId, groupFileId });
 		}
 		catch (Throwable t) {
@@ -1646,8 +1690,8 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName35,
-					_methodParameterTypes35, new Object[] { dossierId });
+			returnObj = _invokableLocalService.invokeMethod(_methodName36,
+					_methodParameterTypes36, new Object[] { dossierId });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -1669,14 +1713,14 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 	}
 
 	@Override
-	public java.util.List<org.opencps.dossiermgt.model.DossierFile> getDossierFileByD_S_R(
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> getDossierFileByDID_SS_R(
 		long dossierId, int syncStatus, int removed)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName36,
-					_methodParameterTypes36,
+			returnObj = _invokableLocalService.invokeMethod(_methodName37,
+					_methodParameterTypes37,
 					new Object[] { dossierId, syncStatus, removed });
 		}
 		catch (Throwable t) {
@@ -1706,8 +1750,8 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName37,
-					_methodParameterTypes37,
+			returnObj = _invokableLocalService.invokeMethod(_methodName38,
+					_methodParameterTypes38,
 					new Object[] { dossierId, dossierPartId });
 		}
 		catch (Throwable t) {
@@ -1741,8 +1785,8 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName38,
-					_methodParameterTypes38,
+			returnObj = _invokableLocalService.invokeMethod(_methodName39,
+					_methodParameterTypes39,
 					new Object[] { dossierId, dossierPartId, groupFileId });
 		}
 		catch (Throwable t) {
@@ -1777,8 +1821,8 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName39,
-					_methodParameterTypes39,
+			returnObj = _invokableLocalService.invokeMethod(_methodName40,
+					_methodParameterTypes40,
 					new Object[] {
 						groupId,
 						
@@ -1827,8 +1871,8 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName40,
-					_methodParameterTypes40,
+			returnObj = _invokableLocalService.invokeMethod(_methodName41,
+					_methodParameterTypes41,
 					new Object[] {
 						groupId,
 						
@@ -1876,8 +1920,8 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName41,
-					_methodParameterTypes41,
+			returnObj = _invokableLocalService.invokeMethod(_methodName42,
+					_methodParameterTypes42,
 					new Object[] {
 						groupId,
 						
@@ -1931,8 +1975,8 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName42,
-					_methodParameterTypes42,
+			returnObj = _invokableLocalService.invokeMethod(_methodName43,
+					_methodParameterTypes43,
 					new Object[] {
 						dossierFileId,
 						
@@ -1986,8 +2030,8 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName43,
-					_methodParameterTypes43,
+			returnObj = _invokableLocalService.invokeMethod(_methodName44,
+					_methodParameterTypes44,
 					new Object[] {
 						dossierFileId,
 						
@@ -2061,8 +2105,8 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName44,
-					_methodParameterTypes44,
+			returnObj = _invokableLocalService.invokeMethod(_methodName45,
+					_methodParameterTypes45,
 					new Object[] {
 						dossierFileId,
 						
@@ -2109,14 +2153,95 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 	}
 
 	@Override
+	public void updateDossierFileSyncStatus(long userId, long dossierId,
+		int syncStatus,
+		java.util.List<org.opencps.processmgt.model.WorkflowOutput> worklows)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException,
+			org.opencps.dossiermgt.NoSuchDossierStatusException {
+		try {
+			_invokableLocalService.invokeMethod(_methodName46,
+				_methodParameterTypes46,
+				new Object[] {
+					userId,
+					
+				dossierId,
+					
+				syncStatus,
+					
+				ClpSerializer.translateInput(worklows)
+				});
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof com.liferay.portal.kernel.exception.PortalException) {
+				throw (com.liferay.portal.kernel.exception.PortalException)t;
+			}
+
+			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
+				throw (com.liferay.portal.kernel.exception.SystemException)t;
+			}
+
+			if (t instanceof org.opencps.dossiermgt.NoSuchDossierStatusException) {
+				throw (org.opencps.dossiermgt.NoSuchDossierStatusException)t;
+			}
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+	}
+
+	@Override
+	public void updateDossierFileSyncStatus(long userId, long dossierId,
+		long fileGroupId, int syncStatus)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException,
+			org.opencps.dossiermgt.NoSuchDossierStatusException {
+		try {
+			_invokableLocalService.invokeMethod(_methodName47,
+				_methodParameterTypes47,
+				new Object[] { userId, dossierId, fileGroupId, syncStatus });
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof com.liferay.portal.kernel.exception.PortalException) {
+				throw (com.liferay.portal.kernel.exception.PortalException)t;
+			}
+
+			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
+				throw (com.liferay.portal.kernel.exception.SystemException)t;
+			}
+
+			if (t instanceof org.opencps.dossiermgt.NoSuchDossierStatusException) {
+				throw (org.opencps.dossiermgt.NoSuchDossierStatusException)t;
+			}
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+	}
+
+	@Override
 	public org.opencps.dossiermgt.model.DossierFile fetchByTemplateFileNoDossierId_First(
 		long dossierId, java.lang.String templateFileNo)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName45,
-					_methodParameterTypes45,
+			returnObj = _invokableLocalService.invokeMethod(_methodName48,
+					_methodParameterTypes48,
 					new Object[] {
 						dossierId,
 						
@@ -2149,8 +2274,8 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName46,
-					_methodParameterTypes46,
+			returnObj = _invokableLocalService.invokeMethod(_methodName49,
+					_methodParameterTypes49,
 					new Object[] { ClpSerializer.translateInput(oid) });
 		}
 		catch (Throwable t) {
@@ -2265,4 +2390,10 @@ public class DossierFileLocalServiceClp implements DossierFileLocalService {
 	private String[] _methodParameterTypes45;
 	private String _methodName46;
 	private String[] _methodParameterTypes46;
+	private String _methodName47;
+	private String[] _methodParameterTypes47;
+	private String _methodName48;
+	private String[] _methodParameterTypes48;
+	private String _methodName49;
+	private String[] _methodParameterTypes49;
 }

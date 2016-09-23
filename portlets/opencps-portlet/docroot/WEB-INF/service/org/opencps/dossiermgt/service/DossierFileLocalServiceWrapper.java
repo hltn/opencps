@@ -660,11 +660,27 @@ public class DossierFileLocalServiceWrapper implements DossierFileLocalService,
 	* @throws SystemException
 	*/
 	@Override
-	public java.util.List<org.opencps.dossiermgt.model.DossierFile> findByF_D_S_R(
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> getDossierFileByGFID_DID_SS_R(
 		long fileGroupId, long dossierId, int syncStatus, int removed)
 		throws com.liferay.portal.kernel.exception.SystemException {
-		return _dossierFileLocalService.findByF_D_S_R(fileGroupId, dossierId,
-			syncStatus, removed);
+		return _dossierFileLocalService.getDossierFileByGFID_DID_SS_R(fileGroupId,
+			dossierId, syncStatus, removed);
+	}
+
+	/**
+	* @param dossierId
+	* @param syncStatus
+	* @param dossierPartId
+	* @param removed
+	* @return
+	* @throws SystemException
+	*/
+	@Override
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> getDossierFileByDID_SS_DPID_R(
+		long dossierId, int syncStatus, long dossierPartId, int removed)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _dossierFileLocalService.getDossierFileByDID_SS_DPID_R(dossierId,
+			syncStatus, dossierPartId, removed);
 	}
 
 	/**
@@ -706,10 +722,10 @@ public class DossierFileLocalServiceWrapper implements DossierFileLocalService,
 	* @throws SystemException
 	*/
 	@Override
-	public java.util.List<org.opencps.dossiermgt.model.DossierFile> getDossierFileByD_S_R(
+	public java.util.List<org.opencps.dossiermgt.model.DossierFile> getDossierFileByDID_SS_R(
 		long dossierId, int syncStatus, int removed)
 		throws com.liferay.portal.kernel.exception.SystemException {
-		return _dossierFileLocalService.getDossierFileByD_S_R(dossierId,
+		return _dossierFileLocalService.getDossierFileByDID_SS_R(dossierId,
 			syncStatus, removed);
 	}
 
@@ -907,6 +923,44 @@ public class DossierFileLocalServiceWrapper implements DossierFileLocalService,
 		return _dossierFileLocalService.updateDossierFile(dossierFileId,
 			folderId, sourceFileName, mimeType, title, description, changeLog,
 			is, size, serviceContext);
+	}
+
+	/**
+	* @param userId
+	* @param dossierId
+	* @param syncStatus
+	* @param worklows
+	* @throws SystemException
+	* @throws NoSuchDossierStatusException
+	* @throws PortalException
+	*/
+	@Override
+	public void updateDossierFileSyncStatus(long userId, long dossierId,
+		int syncStatus,
+		java.util.List<org.opencps.processmgt.model.WorkflowOutput> worklows)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException,
+			org.opencps.dossiermgt.NoSuchDossierStatusException {
+		_dossierFileLocalService.updateDossierFileSyncStatus(userId, dossierId,
+			syncStatus, worklows);
+	}
+
+	/**
+	* @param userId
+	* @param dossierId
+	* @param syncStatus
+	* @throws SystemException
+	* @throws NoSuchDossierStatusException
+	* @throws PortalException
+	*/
+	@Override
+	public void updateDossierFileSyncStatus(long userId, long dossierId,
+		long fileGroupId, int syncStatus)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException,
+			org.opencps.dossiermgt.NoSuchDossierStatusException {
+		_dossierFileLocalService.updateDossierFileSyncStatus(userId, dossierId,
+			fileGroupId, syncStatus);
 	}
 
 	@Override

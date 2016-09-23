@@ -181,6 +181,10 @@ public class TemplateFileLocalServiceClp implements TemplateFileLocalService {
 		_methodParameterTypes30 = new String[] {
 				"long", "long", "java.lang.String"
 			};
+
+		_methodName31 = "getTemplateFileByNo";
+
+		_methodParameterTypes31 = new String[] { "long", "java.lang.String" };
 	}
 
 	@Override
@@ -1172,6 +1176,36 @@ public class TemplateFileLocalServiceClp implements TemplateFileLocalService {
 		return ((Boolean)returnObj).booleanValue();
 	}
 
+	@Override
+	public org.opencps.servicemgt.model.TemplateFile getTemplateFileByNo(
+		long groupId, java.lang.String fileNo)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName31,
+					_methodParameterTypes31,
+					new Object[] { groupId, ClpSerializer.translateInput(fileNo) });
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
+				throw (com.liferay.portal.kernel.exception.SystemException)t;
+			}
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return (org.opencps.servicemgt.model.TemplateFile)ClpSerializer.translateOutput(returnObj);
+	}
+
 	private InvokableLocalService _invokableLocalService;
 	private String _methodName0;
 	private String[] _methodParameterTypes0;
@@ -1233,4 +1267,6 @@ public class TemplateFileLocalServiceClp implements TemplateFileLocalService {
 	private String[] _methodParameterTypes29;
 	private String _methodName30;
 	private String[] _methodParameterTypes30;
+	private String _methodName31;
+	private String[] _methodParameterTypes31;
 }

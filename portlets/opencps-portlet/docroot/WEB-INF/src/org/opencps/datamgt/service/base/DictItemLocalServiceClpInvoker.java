@@ -106,129 +106,137 @@ public class DictItemLocalServiceClpInvoker {
 				"org.opencps.datamgt.model.DictItem"
 			};
 
-		_methodName46 = "getBeanIdentifier";
+		_methodName48 = "getBeanIdentifier";
 
-		_methodParameterTypes46 = new String[] {  };
+		_methodParameterTypes48 = new String[] {  };
 
-		_methodName47 = "setBeanIdentifier";
+		_methodName49 = "setBeanIdentifier";
 
-		_methodParameterTypes47 = new String[] { "java.lang.String" };
-
-		_methodName52 = "addDictItem";
-
-		_methodParameterTypes52 = new String[] {
-				"long", "long", "long", "java.lang.String", "java.util.Map",
-				"long", "com.liferay.portal.service.ServiceContext"
-			};
-
-		_methodName53 = "addDictItem";
-
-		_methodParameterTypes53 = new String[] {
-				"long", "long", "java.lang.String", "java.util.Map", "long",
-				"com.liferay.portal.service.ServiceContext"
-			};
+		_methodParameterTypes49 = new String[] { "java.lang.String" };
 
 		_methodName54 = "addDictItem";
 
 		_methodParameterTypes54 = new String[] {
+				"long", "long", "long", "java.lang.String", "java.util.Map",
+				"long", "com.liferay.portal.service.ServiceContext"
+			};
+
+		_methodName55 = "addDictItem";
+
+		_methodParameterTypes55 = new String[] {
+				"long", "long", "java.lang.String", "java.util.Map", "long",
+				"com.liferay.portal.service.ServiceContext"
+			};
+
+		_methodName56 = "addDictItem";
+
+		_methodParameterTypes56 = new String[] {
 				"long", "long", "java.lang.String", "java.util.Map",
 				"java.util.Map", "long",
 				"com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName55 = "countByDictCollectionId";
-
-		_methodParameterTypes55 = new String[] { "long" };
-
-		_methodName56 = "countByDictCollectionId";
-
-		_methodParameterTypes56 = new String[] { "long", "java.lang.String[][]" };
-
-		_methodName57 = "deleteDictItemById";
+		_methodName57 = "countByDictCollectionId";
 
 		_methodParameterTypes57 = new String[] { "long" };
 
-		_methodName58 = "getDicItemByTreeIndex";
+		_methodName58 = "countByDictCollectionId";
 
-		_methodParameterTypes58 = new String[] { "java.lang.String" };
+		_methodParameterTypes58 = new String[] { "long", "java.lang.String[][]" };
 
-		_methodName59 = "getDictItem";
+		_methodName59 = "deleteDictItemById";
 
 		_methodParameterTypes59 = new String[] { "long" };
 
-		_methodName60 = "getDictItemInuseByItemCode";
+		_methodName60 = "getDicItemByTreeIndex";
 
-		_methodParameterTypes60 = new String[] { "long", "java.lang.String" };
+		_methodParameterTypes60 = new String[] { "java.lang.String" };
 
-		_methodName61 = "getDictItemInuseByItemCode";
+		_methodName61 = "getDictItem";
 
-		_methodParameterTypes61 = new String[] {
-				"long", "java.lang.String", "java.lang.String"
-			};
+		_methodParameterTypes61 = new String[] { "long" };
 
-		_methodName62 = "getDictItems";
+		_methodName62 = "getDictItemInuseByItemCode";
 
 		_methodParameterTypes62 = new String[] { "long", "java.lang.String" };
 
-		_methodName63 = "getDictItems";
+		_methodName63 = "getDictItemInuseByItemCode";
 
 		_methodParameterTypes63 = new String[] {
+				"long", "java.lang.String", "java.lang.String"
+			};
+
+		_methodName64 = "getDictItems";
+
+		_methodParameterTypes64 = new String[] { "long", "java.lang.String" };
+
+		_methodName65 = "getDictItems";
+
+		_methodParameterTypes65 = new String[] {
 				"long", "java.lang.String[][]", "int", "int",
 				"com.liferay.portal.kernel.util.OrderByComparator"
 			};
 
-		_methodName64 = "getDictItemsByDictCollectionId";
-
-		_methodParameterTypes64 = new String[] { "long" };
-
-		_methodName65 = "getDictItemsByDictCollectionId";
-
-		_methodParameterTypes65 = new String[] {
-				"long", "int", "int",
-				"com.liferay.portal.kernel.util.OrderByComparator"
-			};
-
-		_methodName66 = "getDictItemsByDictVersionId";
+		_methodName66 = "getDictItemsByDictCollectionId";
 
 		_methodParameterTypes66 = new String[] { "long" };
 
-		_methodName67 = "getDictItemsByParentItemId";
+		_methodName67 = "getDictItemsByDictCollectionId";
 
-		_methodParameterTypes67 = new String[] { "long" };
-
-		_methodName68 = "getDictItemsByParentItemId";
-
-		_methodParameterTypes68 = new String[] {
+		_methodParameterTypes67 = new String[] {
 				"long", "int", "int",
 				"com.liferay.portal.kernel.util.OrderByComparator"
 			};
 
-		_methodName69 = "getDictItemsInUseByDictCollectionId";
+		_methodName68 = "getDictItemsByDictVersionId";
+
+		_methodParameterTypes68 = new String[] { "long" };
+
+		_methodName69 = "getDictItemsByParentItemId";
 
 		_methodParameterTypes69 = new String[] { "long" };
 
-		_methodName70 = "getDictItemsInUseByDictCollectionIdAndParentItemId";
+		_methodName70 = "getDictItemsByParentItemId";
 
-		_methodParameterTypes70 = new String[] { "long", "long" };
+		_methodParameterTypes70 = new String[] {
+				"long", "int", "int",
+				"com.liferay.portal.kernel.util.OrderByComparator"
+			};
 
-		_methodName72 = "updateDictItem";
+		_methodName71 = "getDictItemsInUseByDictCollectionId";
 
-		_methodParameterTypes72 = new String[] {
+		_methodParameterTypes71 = new String[] { "long" };
+
+		_methodName72 = "getDictItemsInUseByDictCollectionIdAndParentItemId";
+
+		_methodParameterTypes72 = new String[] { "long", "long" };
+
+		_methodName74 = "updateDictItem";
+
+		_methodParameterTypes74 = new String[] {
 				"long", "long", "long", "java.lang.String", "java.util.Map",
 				"long", "com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName73 = "updateDictItem";
+		_methodName75 = "updateDictItem";
 
-		_methodParameterTypes73 = new String[] {
+		_methodParameterTypes75 = new String[] {
 				"long", "long", "long", "java.lang.String", "java.util.Map",
 				"java.util.Map", "long",
 				"com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName74 = "getDictItemByCode";
+		_methodName76 = "getDictItemByCode";
 
-		_methodParameterTypes74 = new String[] { "java.lang.String" };
+		_methodParameterTypes76 = new String[] { "java.lang.String" };
+
+		_methodName77 = "searchDictItemByName_like";
+
+		_methodParameterTypes77 = new String[] {
+				"java.lang.String", "java.lang.String", "java.lang.String",
+				"long", "int", "int",
+				"com.liferay.portal.kernel.util.OrderByComparator"
+			};
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -320,20 +328,20 @@ public class DictItemLocalServiceClpInvoker {
 			return DictItemLocalServiceUtil.updateDictItem((org.opencps.datamgt.model.DictItem)arguments[0]);
 		}
 
-		if (_methodName46.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes46, parameterTypes)) {
+		if (_methodName48.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes48, parameterTypes)) {
 			return DictItemLocalServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName47.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes47, parameterTypes)) {
+		if (_methodName49.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes49, parameterTypes)) {
 			DictItemLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
-		if (_methodName52.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes52, parameterTypes)) {
+		if (_methodName54.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes54, parameterTypes)) {
 			return DictItemLocalServiceUtil.addDictItem(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue(),
@@ -343,8 +351,8 @@ public class DictItemLocalServiceClpInvoker {
 				(com.liferay.portal.service.ServiceContext)arguments[6]);
 		}
 
-		if (_methodName53.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes53, parameterTypes)) {
+		if (_methodName55.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes55, parameterTypes)) {
 			return DictItemLocalServiceUtil.addDictItem(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				(java.lang.String)arguments[2],
@@ -353,8 +361,8 @@ public class DictItemLocalServiceClpInvoker {
 				(com.liferay.portal.service.ServiceContext)arguments[5]);
 		}
 
-		if (_methodName54.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes54, parameterTypes)) {
+		if (_methodName56.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes56, parameterTypes)) {
 			return DictItemLocalServiceUtil.addDictItem(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				(java.lang.String)arguments[2],
@@ -364,54 +372,54 @@ public class DictItemLocalServiceClpInvoker {
 				(com.liferay.portal.service.ServiceContext)arguments[6]);
 		}
 
-		if (_methodName55.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes55, parameterTypes)) {
+		if (_methodName57.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes57, parameterTypes)) {
 			return DictItemLocalServiceUtil.countByDictCollectionId(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName56.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes56, parameterTypes)) {
+		if (_methodName58.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes58, parameterTypes)) {
 			return DictItemLocalServiceUtil.countByDictCollectionId(((Long)arguments[0]).longValue(),
 				(java.lang.String[])arguments[1]);
 		}
 
-		if (_methodName57.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes57, parameterTypes)) {
+		if (_methodName59.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes59, parameterTypes)) {
 			DictItemLocalServiceUtil.deleteDictItemById(((Long)arguments[0]).longValue());
 
 			return null;
 		}
 
-		if (_methodName58.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes58, parameterTypes)) {
-			return DictItemLocalServiceUtil.getDicItemByTreeIndex((java.lang.String)arguments[0]);
-		}
-
-		if (_methodName59.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes59, parameterTypes)) {
-			return DictItemLocalServiceUtil.getDictItem(((Long)arguments[0]).longValue());
-		}
-
 		if (_methodName60.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes60, parameterTypes)) {
-			return DictItemLocalServiceUtil.getDictItemInuseByItemCode(((Long)arguments[0]).longValue(),
-				(java.lang.String)arguments[1]);
+			return DictItemLocalServiceUtil.getDicItemByTreeIndex((java.lang.String)arguments[0]);
 		}
 
 		if (_methodName61.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes61, parameterTypes)) {
-			return DictItemLocalServiceUtil.getDictItemInuseByItemCode(((Long)arguments[0]).longValue(),
-				(java.lang.String)arguments[1], (java.lang.String)arguments[2]);
+			return DictItemLocalServiceUtil.getDictItem(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName62.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes62, parameterTypes)) {
-			return DictItemLocalServiceUtil.getDictItems(((Long)arguments[0]).longValue(),
+			return DictItemLocalServiceUtil.getDictItemInuseByItemCode(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1]);
 		}
 
 		if (_methodName63.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes63, parameterTypes)) {
+			return DictItemLocalServiceUtil.getDictItemInuseByItemCode(((Long)arguments[0]).longValue(),
+				(java.lang.String)arguments[1], (java.lang.String)arguments[2]);
+		}
+
+		if (_methodName64.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes64, parameterTypes)) {
+			return DictItemLocalServiceUtil.getDictItems(((Long)arguments[0]).longValue(),
+				(java.lang.String)arguments[1]);
+		}
+
+		if (_methodName65.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes65, parameterTypes)) {
 			return DictItemLocalServiceUtil.getDictItems(((Long)arguments[0]).longValue(),
 				(java.lang.String[])arguments[1],
 				((Integer)arguments[2]).intValue(),
@@ -419,50 +427,50 @@ public class DictItemLocalServiceClpInvoker {
 				(com.liferay.portal.kernel.util.OrderByComparator)arguments[4]);
 		}
 
-		if (_methodName64.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes64, parameterTypes)) {
+		if (_methodName66.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes66, parameterTypes)) {
 			return DictItemLocalServiceUtil.getDictItemsByDictCollectionId(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName65.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes65, parameterTypes)) {
+		if (_methodName67.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes67, parameterTypes)) {
 			return DictItemLocalServiceUtil.getDictItemsByDictCollectionId(((Long)arguments[0]).longValue(),
 				((Integer)arguments[1]).intValue(),
 				((Integer)arguments[2]).intValue(),
 				(com.liferay.portal.kernel.util.OrderByComparator)arguments[3]);
 		}
 
-		if (_methodName66.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes66, parameterTypes)) {
+		if (_methodName68.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes68, parameterTypes)) {
 			return DictItemLocalServiceUtil.getDictItemsByDictVersionId(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName67.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes67, parameterTypes)) {
+		if (_methodName69.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes69, parameterTypes)) {
 			return DictItemLocalServiceUtil.getDictItemsByParentItemId(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName68.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes68, parameterTypes)) {
+		if (_methodName70.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes70, parameterTypes)) {
 			return DictItemLocalServiceUtil.getDictItemsByParentItemId(((Long)arguments[0]).longValue(),
 				((Integer)arguments[1]).intValue(),
 				((Integer)arguments[2]).intValue(),
 				(com.liferay.portal.kernel.util.OrderByComparator)arguments[3]);
 		}
 
-		if (_methodName69.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes69, parameterTypes)) {
+		if (_methodName71.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes71, parameterTypes)) {
 			return DictItemLocalServiceUtil.getDictItemsInUseByDictCollectionId(((Long)arguments[0]).longValue());
-		}
-
-		if (_methodName70.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes70, parameterTypes)) {
-			return DictItemLocalServiceUtil.getDictItemsInUseByDictCollectionIdAndParentItemId(((Long)arguments[0]).longValue(),
-				((Long)arguments[1]).longValue());
 		}
 
 		if (_methodName72.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes72, parameterTypes)) {
+			return DictItemLocalServiceUtil.getDictItemsInUseByDictCollectionIdAndParentItemId(((Long)arguments[0]).longValue(),
+				((Long)arguments[1]).longValue());
+		}
+
+		if (_methodName74.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes74, parameterTypes)) {
 			return DictItemLocalServiceUtil.updateDictItem(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue(),
@@ -472,8 +480,8 @@ public class DictItemLocalServiceClpInvoker {
 				(com.liferay.portal.service.ServiceContext)arguments[6]);
 		}
 
-		if (_methodName73.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes73, parameterTypes)) {
+		if (_methodName75.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes75, parameterTypes)) {
 			return DictItemLocalServiceUtil.updateDictItem(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue(),
@@ -484,9 +492,19 @@ public class DictItemLocalServiceClpInvoker {
 				(com.liferay.portal.service.ServiceContext)arguments[7]);
 		}
 
-		if (_methodName74.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes74, parameterTypes)) {
+		if (_methodName76.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes76, parameterTypes)) {
 			return DictItemLocalServiceUtil.getDictItemByCode((java.lang.String)arguments[0]);
+		}
+
+		if (_methodName77.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes77, parameterTypes)) {
+			return DictItemLocalServiceUtil.searchDictItemByName_like((java.lang.String)arguments[0],
+				(java.lang.String)arguments[1], (java.lang.String)arguments[2],
+				((Long)arguments[3]).longValue(),
+				((Integer)arguments[4]).intValue(),
+				((Integer)arguments[5]).intValue(),
+				(com.liferay.portal.kernel.util.OrderByComparator)arguments[6]);
 		}
 
 		throw new UnsupportedOperationException();
@@ -524,14 +542,10 @@ public class DictItemLocalServiceClpInvoker {
 	private String[] _methodParameterTypes14;
 	private String _methodName15;
 	private String[] _methodParameterTypes15;
-	private String _methodName46;
-	private String[] _methodParameterTypes46;
-	private String _methodName47;
-	private String[] _methodParameterTypes47;
-	private String _methodName52;
-	private String[] _methodParameterTypes52;
-	private String _methodName53;
-	private String[] _methodParameterTypes53;
+	private String _methodName48;
+	private String[] _methodParameterTypes48;
+	private String _methodName49;
+	private String[] _methodParameterTypes49;
 	private String _methodName54;
 	private String[] _methodParameterTypes54;
 	private String _methodName55;
@@ -566,10 +580,16 @@ public class DictItemLocalServiceClpInvoker {
 	private String[] _methodParameterTypes69;
 	private String _methodName70;
 	private String[] _methodParameterTypes70;
+	private String _methodName71;
+	private String[] _methodParameterTypes71;
 	private String _methodName72;
 	private String[] _methodParameterTypes72;
-	private String _methodName73;
-	private String[] _methodParameterTypes73;
 	private String _methodName74;
 	private String[] _methodParameterTypes74;
+	private String _methodName75;
+	private String[] _methodParameterTypes75;
+	private String _methodName76;
+	private String[] _methodParameterTypes76;
+	private String _methodName77;
+	private String[] _methodParameterTypes77;
 }

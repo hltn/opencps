@@ -608,4 +608,11 @@ public interface DictItemLocalService extends BaseLocalService,
 		java.lang.String itemCode)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public java.util.List<org.opencps.datamgt.model.DictItem> searchDictItemByName_like(
+		java.lang.String collectionCode, java.lang.String itemCode,
+		java.lang.String keyword, long groupId, int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator obc)
+		throws com.liferay.portal.kernel.exception.SystemException;
 }

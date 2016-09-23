@@ -180,6 +180,10 @@ public class TemplateFileLocalServiceClpInvoker {
 		_methodParameterTypes84 = new String[] {
 				"long", "long", "java.lang.String"
 			};
+
+		_methodName85 = "getTemplateFileByNo";
+
+		_methodParameterTypes85 = new String[] { "long", "java.lang.String" };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -364,6 +368,12 @@ public class TemplateFileLocalServiceClpInvoker {
 				((Long)arguments[1]).longValue(), (java.lang.String)arguments[2]);
 		}
 
+		if (_methodName85.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes85, parameterTypes)) {
+			return TemplateFileLocalServiceUtil.getTemplateFileByNo(((Long)arguments[0]).longValue(),
+				(java.lang.String)arguments[1]);
+		}
+
 		throw new UnsupportedOperationException();
 	}
 
@@ -427,4 +437,6 @@ public class TemplateFileLocalServiceClpInvoker {
 	private String[] _methodParameterTypes83;
 	private String _methodName84;
 	private String[] _methodParameterTypes84;
+	private String _methodName85;
+	private String[] _methodParameterTypes85;
 }

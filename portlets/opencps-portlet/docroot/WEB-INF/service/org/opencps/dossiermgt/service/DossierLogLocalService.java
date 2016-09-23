@@ -451,4 +451,9 @@ public interface DossierLogLocalService extends BaseLocalService,
 	public int countAnminLog(java.util.Date fromUpdateDatetime,
 		java.util.Date toUpdateDatetime, int level,
 		java.lang.String dossierStatus);
+
+	public java.util.List<org.opencps.dossiermgt.model.DossierLog> findDossierByRequestCommand(
+		long dossierId, java.lang.String requestCommand)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException;
 }

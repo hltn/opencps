@@ -245,7 +245,8 @@ public class ServiceFileTemplateUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static org.opencps.servicemgt.model.ServiceFileTemplate[] findByServiceinfoId_PrevAndNext(
-		ServiceFileTemplatePK serviceFileTemplatePK, long serviceinfoId,
+		org.opencps.servicemgt.service.persistence.ServiceFileTemplatePK serviceFileTemplatePK,
+		long serviceinfoId,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.servicemgt.NoSuchServiceFileTemplateException {
@@ -412,7 +413,8 @@ public class ServiceFileTemplateUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static org.opencps.servicemgt.model.ServiceFileTemplate[] findByTemplatefileId_PrevAndNext(
-		ServiceFileTemplatePK serviceFileTemplatePK, long templatefileId,
+		org.opencps.servicemgt.service.persistence.ServiceFileTemplatePK serviceFileTemplatePK,
+		long templatefileId,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.servicemgt.NoSuchServiceFileTemplateException {
@@ -471,7 +473,7 @@ public class ServiceFileTemplateUtil {
 	* @return the new service file template
 	*/
 	public static org.opencps.servicemgt.model.ServiceFileTemplate create(
-		ServiceFileTemplatePK serviceFileTemplatePK) {
+		org.opencps.servicemgt.service.persistence.ServiceFileTemplatePK serviceFileTemplatePK) {
 		return getPersistence().create(serviceFileTemplatePK);
 	}
 
@@ -484,7 +486,7 @@ public class ServiceFileTemplateUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static org.opencps.servicemgt.model.ServiceFileTemplate remove(
-		ServiceFileTemplatePK serviceFileTemplatePK)
+		org.opencps.servicemgt.service.persistence.ServiceFileTemplatePK serviceFileTemplatePK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.servicemgt.NoSuchServiceFileTemplateException {
 		return getPersistence().remove(serviceFileTemplatePK);
@@ -505,7 +507,7 @@ public class ServiceFileTemplateUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static org.opencps.servicemgt.model.ServiceFileTemplate findByPrimaryKey(
-		ServiceFileTemplatePK serviceFileTemplatePK)
+		org.opencps.servicemgt.service.persistence.ServiceFileTemplatePK serviceFileTemplatePK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.servicemgt.NoSuchServiceFileTemplateException {
 		return getPersistence().findByPrimaryKey(serviceFileTemplatePK);
@@ -519,7 +521,7 @@ public class ServiceFileTemplateUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static org.opencps.servicemgt.model.ServiceFileTemplate fetchByPrimaryKey(
-		ServiceFileTemplatePK serviceFileTemplatePK)
+		org.opencps.servicemgt.service.persistence.ServiceFileTemplatePK serviceFileTemplatePK)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		return getPersistence().fetchByPrimaryKey(serviceFileTemplatePK);
 	}

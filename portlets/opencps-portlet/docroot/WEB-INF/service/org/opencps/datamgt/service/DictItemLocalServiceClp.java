@@ -225,6 +225,14 @@ public class DictItemLocalServiceClp implements DictItemLocalService {
 		_methodName39 = "getDictItemByCode";
 
 		_methodParameterTypes39 = new String[] { "java.lang.String" };
+
+		_methodName40 = "searchDictItemByName_like";
+
+		_methodParameterTypes40 = new String[] {
+				"java.lang.String", "java.lang.String", "java.lang.String",
+				"long", "int", "int",
+				"com.liferay.portal.kernel.util.OrderByComparator"
+			};
 	}
 
 	@Override
@@ -1598,6 +1606,52 @@ public class DictItemLocalServiceClp implements DictItemLocalService {
 		return (org.opencps.datamgt.model.DictItem)ClpSerializer.translateOutput(returnObj);
 	}
 
+	@Override
+	public java.util.List<org.opencps.datamgt.model.DictItem> searchDictItemByName_like(
+		java.lang.String collectionCode, java.lang.String itemCode,
+		java.lang.String keyword, long groupId, int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator obc)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName40,
+					_methodParameterTypes40,
+					new Object[] {
+						ClpSerializer.translateInput(collectionCode),
+						
+					ClpSerializer.translateInput(itemCode),
+						
+					ClpSerializer.translateInput(keyword),
+						
+					groupId,
+						
+					start,
+						
+					end,
+						
+					ClpSerializer.translateInput(obc)
+					});
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
+				throw (com.liferay.portal.kernel.exception.SystemException)t;
+			}
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return (java.util.List<org.opencps.datamgt.model.DictItem>)ClpSerializer.translateOutput(returnObj);
+	}
+
 	private InvokableLocalService _invokableLocalService;
 	private String _methodName0;
 	private String[] _methodParameterTypes0;
@@ -1677,4 +1731,6 @@ public class DictItemLocalServiceClp implements DictItemLocalService {
 	private String[] _methodParameterTypes38;
 	private String _methodName39;
 	private String[] _methodParameterTypes39;
+	private String _methodName40;
+	private String[] _methodParameterTypes40;
 }

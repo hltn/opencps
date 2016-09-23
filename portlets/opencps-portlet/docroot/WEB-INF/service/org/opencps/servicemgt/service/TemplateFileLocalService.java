@@ -388,4 +388,18 @@ public interface TemplateFileLocalService extends BaseLocalService,
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public boolean isFolderExist(long scopeGroupId, long parentFolderId,
 		java.lang.String folderName);
+
+	/**
+	* get templateFile by FileNo
+	*
+	* @param groupId
+	* @param fileName
+	* @return
+	* @throws PortalException
+	* @throws SystemException
+	*/
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public org.opencps.servicemgt.model.TemplateFile getTemplateFileByNo(
+		long groupId, java.lang.String fileNo)
+		throws com.liferay.portal.kernel.exception.SystemException;
 }

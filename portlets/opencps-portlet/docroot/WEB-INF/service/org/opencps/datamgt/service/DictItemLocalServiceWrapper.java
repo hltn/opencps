@@ -705,6 +705,16 @@ public class DictItemLocalServiceWrapper implements DictItemLocalService,
 		return _dictItemLocalService.getDictItemByCode(itemCode);
 	}
 
+	@Override
+	public java.util.List<org.opencps.datamgt.model.DictItem> searchDictItemByName_like(
+		java.lang.String collectionCode, java.lang.String itemCode,
+		java.lang.String keyword, long groupId, int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator obc)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _dictItemLocalService.searchDictItemByName_like(collectionCode,
+			itemCode, keyword, groupId, start, end, obc);
+	}
+
 	/**
 	 * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
 	 */

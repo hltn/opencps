@@ -164,6 +164,16 @@ public class DictItemServiceUtil {
 			groupId);
 	}
 
+	public static com.liferay.portal.kernel.json.JSONObject getDictItemsByItemCodeDataSourceFitter(
+		java.lang.String collectionCode, java.lang.String itemCode,
+		java.lang.String keywords, long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return getService()
+				   .getDictItemsByItemCodeDataSourceFitter(collectionCode,
+			itemCode, keywords, groupId);
+	}
+
 	public static void clearService() {
 		_service = null;
 	}

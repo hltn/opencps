@@ -34,6 +34,7 @@ import com.liferay.portal.service.persistence.UserPersistence;
 import org.opencps.datamgt.model.DictItem;
 import org.opencps.datamgt.service.DictItemLocalService;
 import org.opencps.datamgt.service.persistence.DictCollectionPersistence;
+import org.opencps.datamgt.service.persistence.DictItemFinder;
 import org.opencps.datamgt.service.persistence.DictItemPersistence;
 import org.opencps.datamgt.service.persistence.DictVersionPersistence;
 
@@ -392,6 +393,24 @@ public abstract class DictItemLocalServiceBaseImpl extends BaseLocalServiceImpl
 	}
 
 	/**
+	 * Returns the dict item finder.
+	 *
+	 * @return the dict item finder
+	 */
+	public DictItemFinder getDictItemFinder() {
+		return dictItemFinder;
+	}
+
+	/**
+	 * Sets the dict item finder.
+	 *
+	 * @param dictItemFinder the dict item finder
+	 */
+	public void setDictItemFinder(DictItemFinder dictItemFinder) {
+		this.dictItemFinder = dictItemFinder;
+	}
+
+	/**
 	 * Returns the dict version local service.
 	 *
 	 * @return the dict version local service
@@ -636,6 +655,8 @@ public abstract class DictItemLocalServiceBaseImpl extends BaseLocalServiceImpl
 	protected org.opencps.datamgt.service.DictItemService dictItemService;
 	@BeanReference(type = DictItemPersistence.class)
 	protected DictItemPersistence dictItemPersistence;
+	@BeanReference(type = DictItemFinder.class)
+	protected DictItemFinder dictItemFinder;
 	@BeanReference(type = org.opencps.datamgt.service.DictVersionLocalService.class)
 	protected org.opencps.datamgt.service.DictVersionLocalService dictVersionLocalService;
 	@BeanReference(type = org.opencps.datamgt.service.DictVersionService.class)

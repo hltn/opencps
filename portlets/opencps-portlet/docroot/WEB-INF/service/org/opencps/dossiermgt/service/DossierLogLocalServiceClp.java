@@ -208,6 +208,10 @@ public class DossierLogLocalServiceClp implements DossierLogLocalService {
 		_methodParameterTypes34 = new String[] {
 				"java.util.Date", "java.util.Date", "int", "java.lang.String"
 			};
+
+		_methodName35 = "findDossierByRequestCommand";
+
+		_methodParameterTypes35 = new String[] { "long", "java.lang.String" };
 	}
 
 	@Override
@@ -1405,6 +1409,45 @@ public class DossierLogLocalServiceClp implements DossierLogLocalService {
 		return ((Integer)returnObj).intValue();
 	}
 
+	@Override
+	public java.util.List<org.opencps.dossiermgt.model.DossierLog> findDossierByRequestCommand(
+		long dossierId, java.lang.String requestCommand)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName35,
+					_methodParameterTypes35,
+					new Object[] {
+						dossierId,
+						
+					ClpSerializer.translateInput(requestCommand)
+					});
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof com.liferay.portal.kernel.exception.PortalException) {
+				throw (com.liferay.portal.kernel.exception.PortalException)t;
+			}
+
+			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
+				throw (com.liferay.portal.kernel.exception.SystemException)t;
+			}
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return (java.util.List<org.opencps.dossiermgt.model.DossierLog>)ClpSerializer.translateOutput(returnObj);
+	}
+
 	private InvokableLocalService _invokableLocalService;
 	private String _methodName0;
 	private String[] _methodParameterTypes0;
@@ -1474,4 +1517,6 @@ public class DossierLogLocalServiceClp implements DossierLogLocalService {
 	private String[] _methodParameterTypes33;
 	private String _methodName34;
 	private String[] _methodParameterTypes34;
+	private String _methodName35;
+	private String[] _methodParameterTypes35;
 }

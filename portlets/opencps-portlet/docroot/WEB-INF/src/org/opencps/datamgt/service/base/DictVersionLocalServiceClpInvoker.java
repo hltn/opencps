@@ -106,59 +106,59 @@ public class DictVersionLocalServiceClpInvoker {
 				"org.opencps.datamgt.model.DictVersion"
 			};
 
-		_methodName46 = "getBeanIdentifier";
+		_methodName48 = "getBeanIdentifier";
 
-		_methodParameterTypes46 = new String[] {  };
+		_methodParameterTypes48 = new String[] {  };
 
-		_methodName47 = "setBeanIdentifier";
+		_methodName49 = "setBeanIdentifier";
 
-		_methodParameterTypes47 = new String[] { "java.lang.String" };
+		_methodParameterTypes49 = new String[] { "java.lang.String" };
 
-		_methodName52 = "addDictVersion";
+		_methodName54 = "addDictVersion";
 
-		_methodParameterTypes52 = new String[] {
+		_methodParameterTypes54 = new String[] {
 				"long", "org.opencps.datamgt.model.DictCollection",
 				"java.lang.String", "java.lang.String", "java.util.Date",
 				"java.util.Date", "com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName53 = "deleteDictVersionByDictVersionId";
+		_methodName55 = "deleteDictVersionByDictVersionId";
 
-		_methodParameterTypes53 = new String[] { "long" };
+		_methodParameterTypes55 = new String[] { "long" };
 
-		_methodName54 = "updateDictVersion";
+		_methodName56 = "updateDictVersion";
 
-		_methodParameterTypes54 = new String[] {
+		_methodParameterTypes56 = new String[] {
 				"long", "long", "org.opencps.datamgt.model.DictCollection",
 				"java.lang.String", "java.lang.String", "java.util.Date",
 				"java.util.Date", "com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName55 = "getDictVersion";
+		_methodName57 = "getDictVersion";
 
-		_methodParameterTypes55 = new String[] { "long" };
+		_methodParameterTypes57 = new String[] { "long" };
 
-		_methodName56 = "getDictVersion";
+		_methodName58 = "getDictVersion";
 
-		_methodParameterTypes56 = new String[] {
+		_methodParameterTypes58 = new String[] {
 				"int", "int", "com.liferay.portal.kernel.util.OrderByComparator"
 			};
 
-		_methodName57 = "countAll";
+		_methodName59 = "countAll";
 
-		_methodParameterTypes57 = new String[] {  };
+		_methodParameterTypes59 = new String[] {  };
 
-		_methodName58 = "makeDictVersionInUse";
+		_methodName60 = "makeDictVersionInUse";
 
-		_methodParameterTypes58 = new String[] { "int" };
+		_methodParameterTypes60 = new String[] { "int" };
 
-		_methodName59 = "getDictVersions";
+		_methodName61 = "getDictVersions";
 
-		_methodParameterTypes59 = new String[] { "int" };
+		_methodParameterTypes61 = new String[] { "int" };
 
-		_methodName60 = "getDictVersionInUse";
+		_methodName62 = "getDictVersionInUse";
 
-		_methodParameterTypes60 = new String[] {
+		_methodParameterTypes62 = new String[] {
 				"org.opencps.datamgt.model.DictCollection"
 			};
 	}
@@ -252,20 +252,20 @@ public class DictVersionLocalServiceClpInvoker {
 			return DictVersionLocalServiceUtil.updateDictVersion((org.opencps.datamgt.model.DictVersion)arguments[0]);
 		}
 
-		if (_methodName46.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes46, parameterTypes)) {
+		if (_methodName48.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes48, parameterTypes)) {
 			return DictVersionLocalServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName47.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes47, parameterTypes)) {
+		if (_methodName49.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes49, parameterTypes)) {
 			DictVersionLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
-		if (_methodName52.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes52, parameterTypes)) {
+		if (_methodName54.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes54, parameterTypes)) {
 			return DictVersionLocalServiceUtil.addDictVersion(((Long)arguments[0]).longValue(),
 				(org.opencps.datamgt.model.DictCollection)arguments[1],
 				(java.lang.String)arguments[2], (java.lang.String)arguments[3],
@@ -273,15 +273,15 @@ public class DictVersionLocalServiceClpInvoker {
 				(com.liferay.portal.service.ServiceContext)arguments[6]);
 		}
 
-		if (_methodName53.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes53, parameterTypes)) {
+		if (_methodName55.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes55, parameterTypes)) {
 			DictVersionLocalServiceUtil.deleteDictVersionByDictVersionId(((Long)arguments[0]).longValue());
 
 			return null;
 		}
 
-		if (_methodName54.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes54, parameterTypes)) {
+		if (_methodName56.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes56, parameterTypes)) {
 			return DictVersionLocalServiceUtil.updateDictVersion(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				(org.opencps.datamgt.model.DictCollection)arguments[2],
@@ -290,35 +290,35 @@ public class DictVersionLocalServiceClpInvoker {
 				(com.liferay.portal.service.ServiceContext)arguments[7]);
 		}
 
-		if (_methodName55.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes55, parameterTypes)) {
+		if (_methodName57.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes57, parameterTypes)) {
 			return DictVersionLocalServiceUtil.getDictVersion(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName56.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes56, parameterTypes)) {
+		if (_methodName58.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes58, parameterTypes)) {
 			return DictVersionLocalServiceUtil.getDictVersion(((Integer)arguments[0]).intValue(),
 				((Integer)arguments[1]).intValue(),
 				(com.liferay.portal.kernel.util.OrderByComparator)arguments[2]);
 		}
 
-		if (_methodName57.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes57, parameterTypes)) {
-			return DictVersionLocalServiceUtil.countAll();
-		}
-
-		if (_methodName58.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes58, parameterTypes)) {
-			return DictVersionLocalServiceUtil.makeDictVersionInUse(((Integer)arguments[0]).intValue());
-		}
-
 		if (_methodName59.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes59, parameterTypes)) {
-			return DictVersionLocalServiceUtil.getDictVersions(((Integer)arguments[0]).intValue());
+			return DictVersionLocalServiceUtil.countAll();
 		}
 
 		if (_methodName60.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes60, parameterTypes)) {
+			return DictVersionLocalServiceUtil.makeDictVersionInUse(((Integer)arguments[0]).intValue());
+		}
+
+		if (_methodName61.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes61, parameterTypes)) {
+			return DictVersionLocalServiceUtil.getDictVersions(((Integer)arguments[0]).intValue());
+		}
+
+		if (_methodName62.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes62, parameterTypes)) {
 			return DictVersionLocalServiceUtil.getDictVersionInUse((org.opencps.datamgt.model.DictCollection)arguments[0]);
 		}
 
@@ -357,14 +357,10 @@ public class DictVersionLocalServiceClpInvoker {
 	private String[] _methodParameterTypes14;
 	private String _methodName15;
 	private String[] _methodParameterTypes15;
-	private String _methodName46;
-	private String[] _methodParameterTypes46;
-	private String _methodName47;
-	private String[] _methodParameterTypes47;
-	private String _methodName52;
-	private String[] _methodParameterTypes52;
-	private String _methodName53;
-	private String[] _methodParameterTypes53;
+	private String _methodName48;
+	private String[] _methodParameterTypes48;
+	private String _methodName49;
+	private String[] _methodParameterTypes49;
 	private String _methodName54;
 	private String[] _methodParameterTypes54;
 	private String _methodName55;
@@ -379,4 +375,8 @@ public class DictVersionLocalServiceClpInvoker {
 	private String[] _methodParameterTypes59;
 	private String _methodName60;
 	private String[] _methodParameterTypes60;
+	private String _methodName61;
+	private String[] _methodParameterTypes61;
+	private String _methodName62;
+	private String[] _methodParameterTypes62;
 }

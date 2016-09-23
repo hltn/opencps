@@ -544,6 +544,15 @@ public class DossierLogLocalServiceWrapper implements DossierLogLocalService,
 			toUpdateDatetime, level, dossierStatus);
 	}
 
+	@Override
+	public java.util.List<org.opencps.dossiermgt.model.DossierLog> findDossierByRequestCommand(
+		long dossierId, java.lang.String requestCommand)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _dossierLogLocalService.findDossierByRequestCommand(dossierId,
+			requestCommand);
+	}
+
 	/**
 	 * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
 	 */

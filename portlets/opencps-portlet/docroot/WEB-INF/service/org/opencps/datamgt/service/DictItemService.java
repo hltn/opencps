@@ -151,4 +151,13 @@ public interface DictItemService extends BaseService, InvokableService {
 		java.lang.String collectionCode, java.lang.String itemCode, long groupId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
+
+	@com.liferay.portal.kernel.jsonwebservice.JSONWebService(value = "get-dictitems_itemCode_keywords_datasource")
+	@com.liferay.portal.security.ac.AccessControlled(guestAccessEnabled = true)
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public com.liferay.portal.kernel.json.JSONObject getDictItemsByItemCodeDataSourceFitter(
+		java.lang.String collectionCode, java.lang.String itemCode,
+		java.lang.String keywords, long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException;
 }

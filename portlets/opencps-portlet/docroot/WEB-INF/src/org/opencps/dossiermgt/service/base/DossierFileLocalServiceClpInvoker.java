@@ -214,84 +214,98 @@ public class DossierFileLocalServiceClpInvoker {
 
 		_methodParameterTypes113 = new String[] { "long", "long" };
 
-		_methodName114 = "findByF_D_S_R";
+		_methodName114 = "getDossierFileByGFID_DID_SS_R";
 
 		_methodParameterTypes114 = new String[] { "long", "long", "int", "int" };
 
-		_methodName115 = "getDossierFileByD_GF";
+		_methodName115 = "getDossierFileByDID_SS_DPID_R";
 
-		_methodParameterTypes115 = new String[] { "long", "long" };
+		_methodParameterTypes115 = new String[] { "long", "int", "long", "int" };
 
-		_methodName116 = "getDossierFileByDossierId";
+		_methodName116 = "getDossierFileByD_GF";
 
-		_methodParameterTypes116 = new String[] { "long" };
+		_methodParameterTypes116 = new String[] { "long", "long" };
 
-		_methodName117 = "getDossierFileByD_S_R";
+		_methodName117 = "getDossierFileByDossierId";
 
-		_methodParameterTypes117 = new String[] { "long", "int", "int" };
+		_methodParameterTypes117 = new String[] { "long" };
 
-		_methodName118 = "getDossierFileInUse";
+		_methodName118 = "getDossierFileByDID_SS_R";
 
-		_methodParameterTypes118 = new String[] { "long", "long" };
+		_methodParameterTypes118 = new String[] { "long", "int", "int" };
 
-		_methodName119 = "getDossierFileInUseByGroupFileId";
+		_methodName119 = "getDossierFileInUse";
 
-		_methodParameterTypes119 = new String[] { "long", "long", "long" };
+		_methodParameterTypes119 = new String[] { "long", "long" };
 
-		_methodName120 = "searchDossierFile";
+		_methodName120 = "getDossierFileInUseByGroupFileId";
 
-		_methodParameterTypes120 = new String[] {
+		_methodParameterTypes120 = new String[] { "long", "long", "long" };
+
+		_methodName121 = "searchDossierFile";
+
+		_methodParameterTypes121 = new String[] {
 				"long", "long", "long", "java.lang.String", "java.lang.String",
 				"int", "int", "int",
 				"com.liferay.portal.kernel.util.OrderByComparator"
 			};
 
-		_methodName121 = "searchDossierFile";
+		_methodName122 = "searchDossierFile";
 
-		_methodParameterTypes121 = new String[] {
+		_methodParameterTypes122 = new String[] {
 				"long", "java.lang.String", "long", "long", "boolean", "int",
 				"int", "com.liferay.portal.kernel.util.OrderByComparator"
 			};
 
-		_methodName122 = "searchDossierFileAdvance";
+		_methodName123 = "searchDossierFileAdvance";
 
-		_methodParameterTypes122 = new String[] {
+		_methodParameterTypes123 = new String[] {
 				"long", "long", "long", "java.lang.String", "java.lang.String",
 				"int", "int", "int", "int", "int",
 				"com.liferay.portal.kernel.util.OrderByComparator"
 			};
 
-		_methodName123 = "updateDossierFile";
-
-		_methodParameterTypes123 = new String[] {
-				"long", "long", "long", "long", "java.lang.String"
-			};
-
 		_methodName124 = "updateDossierFile";
 
 		_methodParameterTypes124 = new String[] {
+				"long", "long", "long", "long", "java.lang.String"
+			};
+
+		_methodName125 = "updateDossierFile";
+
+		_methodParameterTypes125 = new String[] {
 				"long", "long", "long", "long", "java.lang.String", "long",
 				"long", "long", "java.lang.String", "java.lang.String", "long",
 				"int", "int", "java.lang.String", "java.util.Date", "int", "int",
 				"com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName125 = "updateDossierFile";
+		_methodName126 = "updateDossierFile";
 
-		_methodParameterTypes125 = new String[] {
+		_methodParameterTypes126 = new String[] {
 				"long", "long", "java.lang.String", "java.lang.String",
 				"java.lang.String", "java.lang.String", "java.lang.String",
 				"java.io.InputStream", "long",
 				"com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName126 = "fetchByTemplateFileNoDossierId_First";
+		_methodName127 = "updateDossierFileSyncStatus";
 
-		_methodParameterTypes126 = new String[] { "long", "java.lang.String" };
+		_methodParameterTypes127 = new String[] {
+				"long", "long", "int", "java.util.List"
+			};
 
-		_methodName127 = "getByOid";
+		_methodName128 = "updateDossierFileSyncStatus";
 
-		_methodParameterTypes127 = new String[] { "java.lang.String" };
+		_methodParameterTypes128 = new String[] { "long", "long", "long", "int" };
+
+		_methodName129 = "fetchByTemplateFileNoDossierId_First";
+
+		_methodParameterTypes129 = new String[] { "long", "java.lang.String" };
+
+		_methodName130 = "getByOid";
+
+		_methodParameterTypes130 = new String[] { "java.lang.String" };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -571,7 +585,7 @@ public class DossierFileLocalServiceClpInvoker {
 
 		if (_methodName114.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes114, parameterTypes)) {
-			return DossierFileLocalServiceUtil.findByF_D_S_R(((Long)arguments[0]).longValue(),
+			return DossierFileLocalServiceUtil.getDossierFileByGFID_DID_SS_R(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Integer)arguments[2]).intValue(),
 				((Integer)arguments[3]).intValue());
@@ -579,37 +593,45 @@ public class DossierFileLocalServiceClpInvoker {
 
 		if (_methodName115.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes115, parameterTypes)) {
-			return DossierFileLocalServiceUtil.getDossierFileByD_GF(((Long)arguments[0]).longValue(),
-				((Long)arguments[1]).longValue());
+			return DossierFileLocalServiceUtil.getDossierFileByDID_SS_DPID_R(((Long)arguments[0]).longValue(),
+				((Integer)arguments[1]).intValue(),
+				((Long)arguments[2]).longValue(),
+				((Integer)arguments[3]).intValue());
 		}
 
 		if (_methodName116.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes116, parameterTypes)) {
-			return DossierFileLocalServiceUtil.getDossierFileByDossierId(((Long)arguments[0]).longValue());
+			return DossierFileLocalServiceUtil.getDossierFileByD_GF(((Long)arguments[0]).longValue(),
+				((Long)arguments[1]).longValue());
 		}
 
 		if (_methodName117.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes117, parameterTypes)) {
-			return DossierFileLocalServiceUtil.getDossierFileByD_S_R(((Long)arguments[0]).longValue(),
-				((Integer)arguments[1]).intValue(),
-				((Integer)arguments[2]).intValue());
+			return DossierFileLocalServiceUtil.getDossierFileByDossierId(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName118.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes118, parameterTypes)) {
-			return DossierFileLocalServiceUtil.getDossierFileInUse(((Long)arguments[0]).longValue(),
-				((Long)arguments[1]).longValue());
+			return DossierFileLocalServiceUtil.getDossierFileByDID_SS_R(((Long)arguments[0]).longValue(),
+				((Integer)arguments[1]).intValue(),
+				((Integer)arguments[2]).intValue());
 		}
 
 		if (_methodName119.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes119, parameterTypes)) {
+			return DossierFileLocalServiceUtil.getDossierFileInUse(((Long)arguments[0]).longValue(),
+				((Long)arguments[1]).longValue());
+		}
+
+		if (_methodName120.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes120, parameterTypes)) {
 			return DossierFileLocalServiceUtil.getDossierFileInUseByGroupFileId(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue());
 		}
 
-		if (_methodName120.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes120, parameterTypes)) {
+		if (_methodName121.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes121, parameterTypes)) {
 			return DossierFileLocalServiceUtil.searchDossierFile(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue(),
@@ -620,8 +642,8 @@ public class DossierFileLocalServiceClpInvoker {
 				(com.liferay.portal.kernel.util.OrderByComparator)arguments[8]);
 		}
 
-		if (_methodName121.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes121, parameterTypes)) {
+		if (_methodName122.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes122, parameterTypes)) {
 			return DossierFileLocalServiceUtil.searchDossierFile(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1],
 				((Long)arguments[2]).longValue(),
@@ -632,8 +654,8 @@ public class DossierFileLocalServiceClpInvoker {
 				(com.liferay.portal.kernel.util.OrderByComparator)arguments[7]);
 		}
 
-		if (_methodName122.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes122, parameterTypes)) {
+		if (_methodName123.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes123, parameterTypes)) {
 			return DossierFileLocalServiceUtil.searchDossierFileAdvance(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue(),
@@ -646,16 +668,16 @@ public class DossierFileLocalServiceClpInvoker {
 				(com.liferay.portal.kernel.util.OrderByComparator)arguments[10]);
 		}
 
-		if (_methodName123.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes123, parameterTypes)) {
+		if (_methodName124.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes124, parameterTypes)) {
 			return DossierFileLocalServiceUtil.updateDossierFile(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue(),
 				((Long)arguments[3]).longValue(), (java.lang.String)arguments[4]);
 		}
 
-		if (_methodName124.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes124, parameterTypes)) {
+		if (_methodName125.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes125, parameterTypes)) {
 			return DossierFileLocalServiceUtil.updateDossierFile(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue(),
@@ -674,8 +696,8 @@ public class DossierFileLocalServiceClpInvoker {
 				(com.liferay.portal.service.ServiceContext)arguments[17]);
 		}
 
-		if (_methodName125.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes125, parameterTypes)) {
+		if (_methodName126.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes126, parameterTypes)) {
 			return DossierFileLocalServiceUtil.updateDossierFile(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				(java.lang.String)arguments[2], (java.lang.String)arguments[3],
@@ -686,14 +708,34 @@ public class DossierFileLocalServiceClpInvoker {
 				(com.liferay.portal.service.ServiceContext)arguments[9]);
 		}
 
-		if (_methodName126.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes126, parameterTypes)) {
+		if (_methodName127.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes127, parameterTypes)) {
+			DossierFileLocalServiceUtil.updateDossierFileSyncStatus(((Long)arguments[0]).longValue(),
+				((Long)arguments[1]).longValue(),
+				((Integer)arguments[2]).intValue(),
+				(java.util.List<org.opencps.processmgt.model.WorkflowOutput>)arguments[3]);
+
+			return null;
+		}
+
+		if (_methodName128.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes128, parameterTypes)) {
+			DossierFileLocalServiceUtil.updateDossierFileSyncStatus(((Long)arguments[0]).longValue(),
+				((Long)arguments[1]).longValue(),
+				((Long)arguments[2]).longValue(),
+				((Integer)arguments[3]).intValue());
+
+			return null;
+		}
+
+		if (_methodName129.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes129, parameterTypes)) {
 			return DossierFileLocalServiceUtil.fetchByTemplateFileNoDossierId_First(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1]);
 		}
 
-		if (_methodName127.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes127, parameterTypes)) {
+		if (_methodName130.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes130, parameterTypes)) {
 			return DossierFileLocalServiceUtil.getByOid((java.lang.String)arguments[0]);
 		}
 
@@ -792,4 +834,10 @@ public class DossierFileLocalServiceClpInvoker {
 	private String[] _methodParameterTypes126;
 	private String _methodName127;
 	private String[] _methodParameterTypes127;
+	private String _methodName128;
+	private String[] _methodParameterTypes128;
+	private String _methodName129;
+	private String[] _methodParameterTypes129;
+	private String _methodName130;
+	private String[] _methodParameterTypes130;
 }

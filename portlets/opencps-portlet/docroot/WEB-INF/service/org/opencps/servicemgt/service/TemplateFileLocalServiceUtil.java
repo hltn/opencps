@@ -436,6 +436,21 @@ public class TemplateFileLocalServiceUtil {
 				   .isFolderExist(scopeGroupId, parentFolderId, folderName);
 	}
 
+	/**
+	* get templateFile by FileNo
+	*
+	* @param groupId
+	* @param fileName
+	* @return
+	* @throws PortalException
+	* @throws SystemException
+	*/
+	public static org.opencps.servicemgt.model.TemplateFile getTemplateFileByNo(
+		long groupId, java.lang.String fileNo)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().getTemplateFileByNo(groupId, fileNo);
+	}
+
 	public static void clearService() {
 		_service = null;
 	}

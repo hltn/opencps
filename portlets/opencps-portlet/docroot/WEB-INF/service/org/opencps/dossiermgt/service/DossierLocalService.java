@@ -760,36 +760,6 @@ public interface DossierLocalService extends BaseLocalService,
 
 	/**
 	* @param userId
-	* @param dossierId
-	* @param syncStatus
-	* @param worklows
-	* @throws SystemException
-	* @throws NoSuchDossierStatusException
-	* @throws PortalException
-	*/
-	public void updateDossierStatus(long userId, long dossierId,
-		int syncStatus,
-		java.util.List<org.opencps.processmgt.model.WorkflowOutput> worklows)
-		throws com.liferay.portal.kernel.exception.PortalException,
-			com.liferay.portal.kernel.exception.SystemException,
-			org.opencps.dossiermgt.NoSuchDossierStatusException;
-
-	/**
-	* @param userId
-	* @param dossierId
-	* @param syncStatus
-	* @throws SystemException
-	* @throws NoSuchDossierStatusException
-	* @throws PortalException
-	*/
-	public void updateDossierStatus(long userId, long dossierId,
-		long fileGroupId, int syncStatus)
-		throws com.liferay.portal.kernel.exception.PortalException,
-			com.liferay.portal.kernel.exception.SystemException,
-			org.opencps.dossiermgt.NoSuchDossierStatusException;
-
-	/**
-	* @param userId
 	* @param groupId
 	* @param companyId
 	* @param dossierId
