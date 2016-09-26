@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .alpaca-field legend {
   margin-bottom: none !important;
   font-size: 100% !important;
@@ -271,7 +272,7 @@ tr.alpaca-field-tablerow > td.alpaca-container-item input {
   padding: 5px 25px 5px 25px; }
 
 .alpaca-array-toolbar-action.btn.btn-default.btn-sm::after {
-  content: "New text";
+  content: "Thêm mới";
   text-indent: 0;
   display: block;
   line-height: 0;
