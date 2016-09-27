@@ -22,6 +22,7 @@ import java.util.List;
 
 import org.opencps.paymentmgt.model.PaymentFile;
 import org.opencps.paymentmgt.model.impl.PaymentFileImpl;
+import org.opencps.paymentmgt.service.PaymentFileLocalServiceUtil;
 import org.opencps.processmgt.model.ServiceProcess;
 import org.opencps.processmgt.model.impl.ServiceProcessImpl;
 import org.opencps.processmgt.service.persistence.ServiceProcessFinder;
@@ -62,7 +63,7 @@ implements PaymentFileFinder {
 	 * @return
 				 */
 	public List<PaymentFile> searchPaymentFiles(
-		   long groupId, String paymentStatus, String keywords, int start, int end) {
+		   long groupId, int paymentStatus, String keywords, int start, int end) {
 
 		String[] names = null;
 		boolean andOperator = false;
@@ -87,7 +88,7 @@ implements PaymentFileFinder {
 	 * @param keywords
 	 * @return
 	 */
-	public int countPaymentFiles(long groupId, String paymentStatus, String keywords) {
+	public int countPaymentFiles(long groupId, int paymentStatus, String keywords) {
 		String[] names = null;
 		boolean andOperator = false;
 		if (Validator.isNotNull(keywords)) {
@@ -104,24 +105,31 @@ implements PaymentFileFinder {
 	}
 
 	private List<PaymentFile> _searchPaymentFiles(
-		long groupId, String paymentStatus, boolean andOperator, String[] keywords, int start, int end) {
+		long groupId, int paymentStatus, boolean andOperator, String[] keywords, int start, int end) {
 		
 		Session session = null;
 		try {
 			session = openSession();
  			String sql = CustomSQLUtil.get(SQL_PAYMENT_FINDER);
+ 			
+ 			if(Validator.isNotNull(keywords) && keywords.length >0){
 			
-			sql = CustomSQLUtil.replaceKeywords(sql, "lower(opencps_payment_file.receptionNo)",StringPool.LIKE, true, keywords);
+				sql = CustomSQLUtil.replaceKeywords(sql, "lower(opencps_payment_file.receptionNo)",StringPool.LIKE, true, keywords);
+				
+				
+				sql = CustomSQLUtil.replaceKeywords(sql, "lower(opencps_payment_file.paymentName)",StringPool.LIKE, true, keywords);
+				
+				
+				sql = CustomSQLUtil.replaceKeywords(sql, "lower(opencps_acc_citizen.fullName)",StringPool.LIKE, true, keywords);
+				
+				sql = CustomSQLUtil.replaceKeywords(sql, "lower(opencps_acc_business.name)",StringPool.LIKE, true, keywords);
+ 			}else{
+ 				sql = StringUtil.replace(sql,
+ 						"AND ((lower(opencps_dossier.receptionNo) LIKE ? [$AND_OR_NULL_CHECK$]) OR (lower(opencps_payment_file.paymentName) LIKE ? [$AND_OR_NULL_CHECK$]) OR (lower(opencps_acc_citizen.fullName) LIKE ? [$AND_OR_NULL_CHECK$]) OR (lower(opencps_acc_business.name) LIKE ? [$AND_OR_NULL_CHECK$]))"
+ 						,StringPool.BLANK);
+ 			}
 			
-			
-			sql = CustomSQLUtil.replaceKeywords(sql, "lower(opencps_payment_file.paymentName)",StringPool.LIKE, true, keywords);
-			
-			
-			sql = CustomSQLUtil.replaceKeywords(sql, "lower(opencps_acc_citizen.fullName)",StringPool.LIKE, true, keywords);
-			
-			sql = CustomSQLUtil.replaceKeywords(sql, "lower(opencps_acc_business.name)",StringPool.LIKE, true, keywords);
-			
-			if(paymentStatus.equals("-1") || Validator.isNull(paymentStatus)) {
+			if(paymentStatus < 0) {
 				sql = StringUtil.replace(sql, "AND (opencps_payment_file.paymentStatus = ?)", StringPool.BLANK);
 			}		
 			
@@ -134,11 +142,12 @@ implements PaymentFileFinder {
 			q.addEntity("PaymentFile", PaymentFileImpl.class);
 
 			QueryPos qPos = QueryPos.getInstance(q);
+			
+			if(Validator.isNotNull(keywords) && keywords.length >0){
 
-			qPos.add(keywords, 8);
-			
-			
-			if(Validator.isNotNull(paymentStatus) && !paymentStatus.equals("-1")) {
+				qPos.add(keywords, 8);
+			}
+			if(paymentStatus >-1) {
 				qPos.add(paymentStatus);
 			}
 			
@@ -159,28 +168,35 @@ implements PaymentFileFinder {
 		}
 
 	private int _countPaymentFiles(
-		long groupId, String paymentStatus, boolean andOperator, String[] keywords) {
+		long groupId, int paymentStatus, boolean andOperator, String[] keywords) {
 
 		Session session = null;
 		try {
 			session = openSession();
 			String sql = CustomSQLUtil.get(SQL_PAYMENT_COUNT);
 			
-			sql = CustomSQLUtil.replaceKeywords(sql, "lower(opencps_payment_file.receptionNo)",StringPool.LIKE, true, keywords);
+			if(Validator.isNotNull(keywords) && keywords.length >0){
 			
-			sql = CustomSQLUtil.replaceKeywords(
-						        sql, "lower(opencps_payment_file.paymentName)",
-						        StringPool.LIKE, true, keywords);
+				sql = CustomSQLUtil.replaceKeywords(sql, "lower(opencps_payment_file.receptionNo)",StringPool.LIKE, true, keywords);
+				
+				sql = CustomSQLUtil.replaceKeywords(
+							        sql, "lower(opencps_payment_file.paymentName)",
+							        StringPool.LIKE, true, keywords);
+				
+				sql = CustomSQLUtil.replaceKeywords(
+			        sql, "lower(opencps_acc_citizen.fullName)",
+			        StringPool.LIKE, true, keywords);
+				
+				sql = CustomSQLUtil.replaceKeywords(
+			        sql, "lower(opencps_acc_business.name)",
+			        StringPool.LIKE, true, keywords);
+			}else{
+	 				sql = StringUtil.replace(sql,
+	 						"AND ((lower(opencps_dossier.receptionNo) LIKE ? [$AND_OR_NULL_CHECK$]) OR (lower(opencps_payment_file.paymentName) LIKE ? [$AND_OR_NULL_CHECK$]) OR (lower(opencps_acc_citizen.fullName) LIKE ? [$AND_OR_NULL_CHECK$]) OR (lower(opencps_acc_business.name) LIKE ? [$AND_OR_NULL_CHECK$]))"
+	 						,StringPool.BLANK);
+	 			}
 			
-			sql = CustomSQLUtil.replaceKeywords(
-		        sql, "lower(opencps_acc_citizen.fullName)",
-		        StringPool.LIKE, true, keywords);
-			
-			sql = CustomSQLUtil.replaceKeywords(
-		        sql, "lower(opencps_acc_business.name)",
-		        StringPool.LIKE, true, keywords);
-			
-			if(paymentStatus.equals("-1") || Validator.isNull(paymentStatus)) {
+			if(paymentStatus <0) {
 				sql = StringUtil.replace(sql, "AND (opencps_payment_file.paymentStatus = ?)", StringPool.BLANK);
 			}
 			
@@ -194,9 +210,12 @@ implements PaymentFileFinder {
 
 			QueryPos qPos = QueryPos.getInstance(q);
 
-			qPos.add(keywords, 8);
+			if(Validator.isNotNull(keywords) && keywords.length >0){
 
-			if(Validator.isNotNull(paymentStatus) && !paymentStatus.equals("-1")) {
+				qPos.add(keywords, 8);
+			}
+
+			if(paymentStatus>-1) {
 				qPos.add(paymentStatus);
 			}
 			

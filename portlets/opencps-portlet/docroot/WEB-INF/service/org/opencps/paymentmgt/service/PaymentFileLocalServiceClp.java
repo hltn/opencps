@@ -159,14 +159,12 @@ public class PaymentFileLocalServiceClp implements PaymentFileLocalService {
 		_methodName28 = "searchPaymentFiles";
 
 		_methodParameterTypes28 = new String[] {
-				"long", "java.lang.String", "java.lang.String", "int", "int"
+				"long", "int", "java.lang.String", "int", "int"
 			};
 
 		_methodName29 = "countPaymentFiles";
 
-		_methodParameterTypes29 = new String[] {
-				"long", "java.lang.String", "java.lang.String"
-			};
+		_methodParameterTypes29 = new String[] { "long", "int", "java.lang.String" };
 
 		_methodName30 = "countCustomerPaymentFile";
 
@@ -1111,8 +1109,8 @@ public class PaymentFileLocalServiceClp implements PaymentFileLocalService {
 
 	@Override
 	public java.util.List<org.opencps.paymentmgt.model.PaymentFile> searchPaymentFiles(
-		long groupId, java.lang.String paymentStatus,
-		java.lang.String keywords, int start, int end) {
+		long groupId, int paymentStatus, java.lang.String keywords, int start,
+		int end) {
 		Object returnObj = null;
 
 		try {
@@ -1121,7 +1119,7 @@ public class PaymentFileLocalServiceClp implements PaymentFileLocalService {
 					new Object[] {
 						groupId,
 						
-					ClpSerializer.translateInput(paymentStatus),
+					paymentStatus,
 						
 					ClpSerializer.translateInput(keywords),
 						
@@ -1146,7 +1144,7 @@ public class PaymentFileLocalServiceClp implements PaymentFileLocalService {
 	}
 
 	@Override
-	public int countPaymentFiles(long groupId, java.lang.String paymentStatus,
+	public int countPaymentFiles(long groupId, int paymentStatus,
 		java.lang.String keywords) {
 		Object returnObj = null;
 
@@ -1156,7 +1154,7 @@ public class PaymentFileLocalServiceClp implements PaymentFileLocalService {
 					new Object[] {
 						groupId,
 						
-					ClpSerializer.translateInput(paymentStatus),
+					paymentStatus,
 						
 					ClpSerializer.translateInput(keywords)
 					});

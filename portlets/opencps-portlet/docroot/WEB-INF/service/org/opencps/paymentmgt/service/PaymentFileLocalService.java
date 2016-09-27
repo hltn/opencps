@@ -366,10 +366,10 @@ public interface PaymentFileLocalService extends BaseLocalService,
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public java.util.List<org.opencps.paymentmgt.model.PaymentFile> searchPaymentFiles(
-		long groupId, java.lang.String paymentStatus,
-		java.lang.String keywords, int start, int end);
+		long groupId, int paymentStatus, java.lang.String keywords, int start,
+		int end);
 
-	public int countPaymentFiles(long groupId, java.lang.String paymentStatus,
+	public int countPaymentFiles(long groupId, int paymentStatus,
 		java.lang.String keywords);
 
 	public int countCustomerPaymentFile(long groupId, java.lang.String keyword,

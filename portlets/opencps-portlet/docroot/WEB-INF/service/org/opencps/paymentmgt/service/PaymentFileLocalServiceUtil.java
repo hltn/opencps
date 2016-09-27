@@ -401,15 +401,15 @@ public class PaymentFileLocalServiceUtil {
 	}
 
 	public static java.util.List<org.opencps.paymentmgt.model.PaymentFile> searchPaymentFiles(
-		long groupId, java.lang.String paymentStatus,
-		java.lang.String keywords, int start, int end) {
+		long groupId, int paymentStatus, java.lang.String keywords, int start,
+		int end) {
 		return getService()
 				   .searchPaymentFiles(groupId, paymentStatus, keywords, start,
 			end);
 	}
 
-	public static int countPaymentFiles(long groupId,
-		java.lang.String paymentStatus, java.lang.String keywords) {
+	public static int countPaymentFiles(long groupId, int paymentStatus,
+		java.lang.String keywords) {
 		return getService().countPaymentFiles(groupId, paymentStatus, keywords);
 	}
 

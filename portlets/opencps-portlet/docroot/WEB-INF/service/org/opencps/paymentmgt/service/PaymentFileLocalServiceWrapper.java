@@ -428,14 +428,14 @@ public class PaymentFileLocalServiceWrapper implements PaymentFileLocalService,
 
 	@Override
 	public java.util.List<org.opencps.paymentmgt.model.PaymentFile> searchPaymentFiles(
-		long groupId, java.lang.String paymentStatus,
-		java.lang.String keywords, int start, int end) {
+		long groupId, int paymentStatus, java.lang.String keywords, int start,
+		int end) {
 		return _paymentFileLocalService.searchPaymentFiles(groupId,
 			paymentStatus, keywords, start, end);
 	}
 
 	@Override
-	public int countPaymentFiles(long groupId, java.lang.String paymentStatus,
+	public int countPaymentFiles(long groupId, int paymentStatus,
 		java.lang.String keywords) {
 		return _paymentFileLocalService.countPaymentFiles(groupId,
 			paymentStatus, keywords);

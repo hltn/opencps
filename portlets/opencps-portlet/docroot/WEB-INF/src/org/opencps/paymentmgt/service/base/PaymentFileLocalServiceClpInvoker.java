@@ -158,14 +158,12 @@ public class PaymentFileLocalServiceClpInvoker {
 		_methodName79 = "searchPaymentFiles";
 
 		_methodParameterTypes79 = new String[] {
-				"long", "java.lang.String", "java.lang.String", "int", "int"
+				"long", "int", "java.lang.String", "int", "int"
 			};
 
 		_methodName80 = "countPaymentFiles";
 
-		_methodParameterTypes80 = new String[] {
-				"long", "java.lang.String", "java.lang.String"
-			};
+		_methodParameterTypes80 = new String[] { "long", "int", "java.lang.String" };
 
 		_methodName81 = "countCustomerPaymentFile";
 
@@ -395,7 +393,8 @@ public class PaymentFileLocalServiceClpInvoker {
 		if (_methodName79.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes79, parameterTypes)) {
 			return PaymentFileLocalServiceUtil.searchPaymentFiles(((Long)arguments[0]).longValue(),
-				(java.lang.String)arguments[1], (java.lang.String)arguments[2],
+				((Integer)arguments[1]).intValue(),
+				(java.lang.String)arguments[2],
 				((Integer)arguments[3]).intValue(),
 				((Integer)arguments[4]).intValue());
 		}
@@ -403,7 +402,8 @@ public class PaymentFileLocalServiceClpInvoker {
 		if (_methodName80.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes80, parameterTypes)) {
 			return PaymentFileLocalServiceUtil.countPaymentFiles(((Long)arguments[0]).longValue(),
-				(java.lang.String)arguments[1], (java.lang.String)arguments[2]);
+				((Integer)arguments[1]).intValue(),
+				(java.lang.String)arguments[2]);
 		}
 
 		if (_methodName81.equals(name) &&
