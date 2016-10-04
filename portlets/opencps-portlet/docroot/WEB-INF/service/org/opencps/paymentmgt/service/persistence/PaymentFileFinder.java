@@ -20,10 +20,11 @@ package org.opencps.paymentmgt.service.persistence;
 public interface PaymentFileFinder {
 	public java.util.List<org.opencps.paymentmgt.model.PaymentFile> searchPaymentFiles(
 		long groupId, int paymentStatus, java.lang.String keywords, int start,
-		int end);
+		int end) throws com.liferay.portal.kernel.exception.SystemException;
 
 	public int countPaymentFiles(long groupId, int paymentStatus,
-		java.lang.String keywords);
+		java.lang.String keywords)
+		throws com.liferay.portal.kernel.exception.SystemException;
 
 	public int countCustomerPaymentFile(long groupId, java.lang.String keyword,
 		boolean isCitizen, long customerId, int paymentStatus);

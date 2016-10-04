@@ -23,14 +23,15 @@ import com.liferay.portal.kernel.util.ReferenceRegistry;
 public class PaymentFileFinderUtil {
 	public static java.util.List<org.opencps.paymentmgt.model.PaymentFile> searchPaymentFiles(
 		long groupId, int paymentStatus, java.lang.String keywords, int start,
-		int end) {
+		int end) throws com.liferay.portal.kernel.exception.SystemException {
 		return getFinder()
 				   .searchPaymentFiles(groupId, paymentStatus, keywords, start,
 			end);
 	}
 
 	public static int countPaymentFiles(long groupId, int paymentStatus,
-		java.lang.String keywords) {
+		java.lang.String keywords)
+		throws com.liferay.portal.kernel.exception.SystemException {
 		return getFinder().countPaymentFiles(groupId, paymentStatus, keywords);
 	}
 
