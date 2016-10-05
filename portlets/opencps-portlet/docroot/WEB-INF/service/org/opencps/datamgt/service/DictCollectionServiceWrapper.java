@@ -62,14 +62,14 @@ public class DictCollectionServiceWrapper implements DictCollectionService,
 	* <p> Get DictCollection </p>
 	*
 	* @param groupId
-	là mã UserGroup của người đăng nhập
+	lÃƒÂ  mÃƒÂ£ UserGroup cÃ¡Â»Â§a ngÃ†Â°Ã¡Â»ï¿½i Ã„â€˜Ã„Æ’ng nhÃ¡ÂºÂ­p
 	* @param collectionCode
-	là mã của DictCollection
-	* @return trả về đối tượng DictCollection theo dictCollectionId
+	lÃƒÂ  mÃƒÂ£ cÃ¡Â»Â§a DictCollection
+	* @return trÃ¡ÂºÂ£ vÃ¡Â»ï¿½ Ã„â€˜Ã¡Â»â€˜i tÃ†Â°Ã¡Â»Â£ng DictCollection theo dictCollectionId
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra
+	NÃ¡ÂºÂ¿u ngoÃ¡ÂºÂ¡i lÃ¡Â»â€¡ hÃ¡Â»â€¡ thÃ¡Â»â€˜ng xÃ¡ÂºÂ£y ra
 	* @throws NoSuchDictCollectionException
-	Khi xảy ra lỗi không tìm thấy DictCollection
+	Khi xÃ¡ÂºÂ£y ra lÃ¡Â»â€”i khÃƒÂ´ng tÃƒÂ¬m thÃ¡ÂºÂ¥y DictCollection
 	*/
 	@Override
 	public org.opencps.datamgt.model.DictCollection getDictCollection(

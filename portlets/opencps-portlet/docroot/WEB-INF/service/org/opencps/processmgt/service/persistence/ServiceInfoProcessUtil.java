@@ -250,7 +250,8 @@ public class ServiceInfoProcessUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static org.opencps.processmgt.model.ServiceInfoProcess[] findByServiceProcessId_PrevAndNext(
-		ServiceInfoProcessPK serviceInfoProcessPK, long serviceProcessId,
+		org.opencps.processmgt.service.persistence.ServiceInfoProcessPK serviceInfoProcessPK,
+		long serviceProcessId,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.processmgt.NoSuchServiceInfoProcessException {
@@ -452,7 +453,7 @@ public class ServiceInfoProcessUtil {
 	* @return the new service info process
 	*/
 	public static org.opencps.processmgt.model.ServiceInfoProcess create(
-		ServiceInfoProcessPK serviceInfoProcessPK) {
+		org.opencps.processmgt.service.persistence.ServiceInfoProcessPK serviceInfoProcessPK) {
 		return getPersistence().create(serviceInfoProcessPK);
 	}
 
@@ -465,7 +466,7 @@ public class ServiceInfoProcessUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static org.opencps.processmgt.model.ServiceInfoProcess remove(
-		ServiceInfoProcessPK serviceInfoProcessPK)
+		org.opencps.processmgt.service.persistence.ServiceInfoProcessPK serviceInfoProcessPK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.processmgt.NoSuchServiceInfoProcessException {
 		return getPersistence().remove(serviceInfoProcessPK);
@@ -486,7 +487,7 @@ public class ServiceInfoProcessUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static org.opencps.processmgt.model.ServiceInfoProcess findByPrimaryKey(
-		ServiceInfoProcessPK serviceInfoProcessPK)
+		org.opencps.processmgt.service.persistence.ServiceInfoProcessPK serviceInfoProcessPK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.processmgt.NoSuchServiceInfoProcessException {
 		return getPersistence().findByPrimaryKey(serviceInfoProcessPK);
@@ -500,7 +501,7 @@ public class ServiceInfoProcessUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static org.opencps.processmgt.model.ServiceInfoProcess fetchByPrimaryKey(
-		ServiceInfoProcessPK serviceInfoProcessPK)
+		org.opencps.processmgt.service.persistence.ServiceInfoProcessPK serviceInfoProcessPK)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		return getPersistence().fetchByPrimaryKey(serviceInfoProcessPK);
 	}

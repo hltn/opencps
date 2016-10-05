@@ -281,18 +281,18 @@ public class DictCollectionLocalServiceUtil {
 	* <p> Add DictCollection </p>
 	*
 	* @param userId
-	là id của người đăng nhập
+	lÃƒÂ  id cÃ¡Â»Â§a ngÃ†Â°Ã¡Â»ï¿½i Ã„â€˜Ã„Æ’ng nhÃ¡ÂºÂ­p
 	* @param collectionCode
-	là thuộc tính mã của DictCollection
+	lÃƒÂ  thuÃ¡Â»â„¢c tÃƒÂ­nh mÃƒÂ£ cÃ¡Â»Â§a DictCollection
 	* @param collectionName
-	là thuộc tính tên của DictCollection
+	lÃƒÂ  thuÃ¡Â»â„¢c tÃƒÂ­nh tÃƒÂªn cÃ¡Â»Â§a DictCollection
 	* @param serviceContext
-	Có thể lấy ra các userId, GroupId, CompanyId
+	CÃƒÂ³ thÃ¡Â»Æ’ lÃ¡ÂºÂ¥y ra cÃƒÂ¡c userId, GroupId, CompanyId
 	* @param description
-	Mô tả
-	* @return trả về đối tượng DictCollection
+	MÃƒÂ´ tÃ¡ÂºÂ£
+	* @return trÃ¡ÂºÂ£ vÃ¡Â»ï¿½ Ã„â€˜Ã¡Â»â€˜i tÃ†Â°Ã¡Â»Â£ng DictCollection
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra
+	NÃ¡ÂºÂ¿u ngoÃ¡ÂºÂ¡i lÃ¡Â»â€¡ hÃ¡Â»â€¡ thÃ¡Â»â€˜ng xÃ¡ÂºÂ£y ra
 	*/
 	public static org.opencps.datamgt.model.DictCollection addDictCollection(
 		long userId, java.lang.String collectionCode,
@@ -331,11 +331,11 @@ public class DictCollectionLocalServiceUtil {
 	* lien quan trong bang DictVersion va DictItem thi khong xoa </p>
 	*
 	* @param dictCollectionId
-	là DictCollection
+	lÃƒÂ  DictCollection
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra
+	NÃ¡ÂºÂ¿u ngoÃ¡ÂºÂ¡i lÃ¡Â»â€¡ hÃ¡Â»â€¡ thÃ¡Â»â€˜ng xÃ¡ÂºÂ£y ra
 	* @throws NoSuchDictCollectionException
-	Khi xảy ra lỗi không tìm thấy DictCollection
+	Khi xÃ¡ÂºÂ£y ra lÃ¡Â»â€”i khÃƒÂ´ng tÃƒÂ¬m thÃ¡ÂºÂ¥y DictCollection
 	*/
 	public static void deleteCollection(long dictCollectionId)
 		throws com.liferay.portal.kernel.exception.SystemException,
@@ -347,14 +347,14 @@ public class DictCollectionLocalServiceUtil {
 	* <p> Get DictCollection </p>
 	*
 	* @param groupId
-	là mã UserGroup của người đăng nhập
+	lÃƒÂ  mÃƒÂ£ UserGroup cÃ¡Â»Â§a ngÃ†Â°Ã¡Â»ï¿½i Ã„â€˜Ã„Æ’ng nhÃ¡ÂºÂ­p
 	* @param collectionCode
-	là mã của DictCollection
-	* @return trả về đối tượng DictCollection theo dictCollectionId
+	lÃƒÂ  mÃƒÂ£ cÃ¡Â»Â§a DictCollection
+	* @return trÃ¡ÂºÂ£ vÃ¡Â»ï¿½ Ã„â€˜Ã¡Â»â€˜i tÃ†Â°Ã¡Â»Â£ng DictCollection theo dictCollectionId
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra
+	NÃ¡ÂºÂ¿u ngoÃ¡ÂºÂ¡i lÃ¡Â»â€¡ hÃ¡Â»â€¡ thÃ¡Â»â€˜ng xÃ¡ÂºÂ£y ra
 	* @throws NoSuchDictCollectionException
-	Khi xảy ra lỗi không tìm thấy DictCollection
+	Khi xÃ¡ÂºÂ£y ra lÃ¡Â»â€”i khÃƒÂ´ng tÃƒÂ¬m thÃ¡ÂºÂ¥y DictCollection
 	*/
 	public static org.opencps.datamgt.model.DictCollection getDictCollection(
 		long groupId, java.lang.String collectionCode)
@@ -366,11 +366,11 @@ public class DictCollectionLocalServiceUtil {
 	/**
 	* <p> Lay tat ca doi tuong DictCollection trong CSDL </p>
 	*
-	* @return trả về tập hợp các đối tượng DictCollection
+	* @return trÃ¡ÂºÂ£ vÃ¡Â»ï¿½ tÃ¡ÂºÂ­p hÃ¡Â»Â£p cÃƒÂ¡c Ã„â€˜Ã¡Â»â€˜i tÃ†Â°Ã¡Â»Â£ng DictCollection
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra
+	NÃ¡ÂºÂ¿u ngoÃ¡ÂºÂ¡i lÃ¡Â»â€¡ hÃ¡Â»â€¡ thÃ¡Â»â€˜ng xÃ¡ÂºÂ£y ra
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra
+	NÃ¡ÂºÂ¿u ngoÃ¡ÂºÂ¡i lÃ¡Â»â€¡ hÃ¡Â»â€¡ thÃ¡Â»â€˜ng xÃ¡ÂºÂ£y ra
 	*/
 	public static java.util.List<org.opencps.datamgt.model.DictCollection> getDictCollections()
 		throws com.liferay.portal.kernel.exception.SystemException {
@@ -394,10 +394,10 @@ public class DictCollectionLocalServiceUtil {
 	* <p> Lay tat doi tuong DictCollection </p>
 	*
 	* @param groupId
-	là id của UserGroup
-	* @return trả về đối tượng DictCollection theo groupId
+	lÃƒÂ  id cÃ¡Â»Â§a UserGroup
+	* @return trÃ¡ÂºÂ£ vÃ¡Â»ï¿½ Ã„â€˜Ã¡Â»â€˜i tÃ†Â°Ã¡Â»Â£ng DictCollection theo groupId
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra
+	NÃ¡ÂºÂ¿u ngoÃ¡ÂºÂ¡i lÃ¡Â»â€¡ hÃ¡Â»â€¡ thÃ¡Â»â€˜ng xÃ¡ÂºÂ£y ra
 	*/
 	public static java.util.List<org.opencps.datamgt.model.DictCollection> getDictCollections(
 		long groupId)
@@ -426,22 +426,22 @@ public class DictCollectionLocalServiceUtil {
 	* <p> Cap nhat DictCollection </p>
 	*
 	* @param dictCollectionId
-	là id của DictCollection
+	lÃƒÂ  id cÃ¡Â»Â§a DictCollection
 	* @param userId
-	là id của người đăng nhập
+	lÃƒÂ  id cÃ¡Â»Â§a ngÃ†Â°Ã¡Â»ï¿½i Ã„â€˜Ã„Æ’ng nhÃ¡ÂºÂ­p
 	* @param collectionCode
-	là thuộc tính mã của DictCollection
+	lÃƒÂ  thuÃ¡Â»â„¢c tÃƒÂ­nh mÃƒÂ£ cÃ¡Â»Â§a DictCollection
 	* @param collectionName
-	là thuộc tính tên của DictCollection
+	lÃƒÂ  thuÃ¡Â»â„¢c tÃƒÂ­nh tÃƒÂªn cÃ¡Â»Â§a DictCollection
 	* @param serviceContext
-	Có thể lấy ra các userId, GroupId, CompanyId
+	CÃƒÂ³ thÃ¡Â»Æ’ lÃ¡ÂºÂ¥y ra cÃƒÂ¡c userId, GroupId, CompanyId
 	* @param description
-	Mô tả
-	* @return trả về đối tượng DictCollection
+	MÃƒÂ´ tÃ¡ÂºÂ£
+	* @return trÃ¡ÂºÂ£ vÃ¡Â»ï¿½ Ã„â€˜Ã¡Â»â€˜i tÃ†Â°Ã¡Â»Â£ng DictCollection
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra
+	NÃ¡ÂºÂ¿u ngoÃ¡ÂºÂ¡i lÃ¡Â»â€¡ hÃ¡Â»â€¡ thÃ¡Â»â€˜ng xÃ¡ÂºÂ£y ra
 	* @throws NoSuchDictCollectionException
-	Khi xảy ra lỗi không tìm thấy DictCollection
+	Khi xÃ¡ÂºÂ£y ra lÃ¡Â»â€”i khÃƒÂ´ng tÃƒÂ¬m thÃ¡ÂºÂ¥y DictCollection
 	*/
 	public static org.opencps.datamgt.model.DictCollection updateDictCollection(
 		long dictCollectionId, long userId, java.lang.String collectionCode,

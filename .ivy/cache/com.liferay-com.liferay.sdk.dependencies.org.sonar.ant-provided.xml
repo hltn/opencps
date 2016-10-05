@@ -4,10 +4,10 @@
 	<info
 		organisation="com.liferay"
 		module="com.liferay.sdk.dependencies.org.sonar.ant"
-		revision="working@localhost.localdomain"
+		revision="working@DESKTOP-795NKUV"
 		conf="provided"
 		confs="default, internal, provided"
-		date="20160915145442"/>
+		date="20161005180028"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>

@@ -4,10 +4,10 @@
 	<info
 		organisation="com.liferay"
 		module="org.apache.maven.maven.ant.tasks"
-		revision="working@localhost.localdomain"
+		revision="working@DESKTOP-795NKUV"
 		conf="internal"
 		confs="default, internal, provided"
-		date="20160915145038"/>
+		date="20161005180028"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>

@@ -262,22 +262,22 @@ public interface DictVersionLocalService extends BaseLocalService,
 	* </p>
 	*
 	* @param userId
-	là id của người đăng nhập
+	lÃ  id cá»§a ngÆ°á»�i Ä‘Äƒng nháº­p
 	* @param dictCollection
-	là đối tượng DictCollection
+	lÃ  Ä‘á»‘i tÆ°á»£ng DictCollection
 	* @param version
-	là thuộc tính phiên bản của DictVersion
+	lÃ  thuá»™c tÃ­nh phiÃªn báº£n cá»§a DictVersion
 	* @param serviceContext
-	Có thể lấy ra các userId, GroupId, CompanyId
+	CÃ³ thá»ƒ láº¥y ra cÃ¡c userId, GroupId, CompanyId
 	* @param validatedFrom
-	Ngày phê bắt đầu phê duyệt
+	NgÃ y phÃª báº¯t Ä‘áº§u phÃª duyá»‡t
 	* @param validatedTo
-	Ngày kết thúc phê duyệt
+	NgÃ y káº¿t thÃºc phÃª duyá»‡t
 	* @param description
-	Mô tả
-	* @return trả về đối tượng DictVersion
+	MÃ´ táº£
+	* @return tráº£ vá»� Ä‘á»‘i tÆ°á»£ng DictVersion
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra
+	Náº¿u ngoáº¡i lá»‡ há»‡ thá»‘ng xáº£y ra
 	* @throws ExistDraftException
 	*/
 	public org.opencps.datamgt.model.DictVersion addDictVersion(long userId,
@@ -294,11 +294,11 @@ public interface DictVersionLocalService extends BaseLocalService,
 	* </p>
 	*
 	* @param dictVersionId
-	là id cuả DictVersion
+	lÃ  id cuáº£ DictVersion
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra
+	Náº¿u ngoáº¡i lá»‡ há»‡ thá»‘ng xáº£y ra
 	* @throws NoSuchDictVersionException
-	Khi xảy ra lỗi không tìm thấy DictVersion
+	Khi xáº£y ra lá»—i khÃ´ng tÃ¬m tháº¥y DictVersion
 	*/
 	public void deleteDictVersionByDictVersionId(long dictVersionId)
 		throws com.liferay.portal.kernel.exception.SystemException,
@@ -310,26 +310,26 @@ public interface DictVersionLocalService extends BaseLocalService,
 	* </p>
 	*
 	* @param dictVersionId
-	là id của DictVersion
+	lÃ  id cá»§a DictVersion
 	* @param userId
-	là id của người đăng nhập
+	lÃ  id cá»§a ngÆ°á»�i Ä‘Äƒng nháº­p
 	* @param dictCollection
-	là đối tượng DictCollection
+	lÃ  Ä‘á»‘i tÆ°á»£ng DictCollection
 	* @param version
-	là thuộc tính phiên bản của DictVersion
+	lÃ  thuá»™c tÃ­nh phiÃªn báº£n cá»§a DictVersion
 	* @param serviceContext
-	Có thể lấy ra các userId, GroupId, CompanyId
+	CÃ³ thá»ƒ láº¥y ra cÃ¡c userId, GroupId, CompanyId
 	* @param validatedFrom
-	Ngày phê bắt đầu phê duyệt
+	NgÃ y phÃª báº¯t Ä‘áº§u phÃª duyá»‡t
 	* @param validatedTo
-	Ngày kết thúc phê duyệt
+	NgÃ y káº¿t thÃºc phÃª duyá»‡t
 	* @param description
-	Mô tả
-	* @return trả về đối tượng DictVersion
+	MÃ´ táº£
+	* @return tráº£ vá»� Ä‘á»‘i tÆ°á»£ng DictVersion
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra
+	Náº¿u ngoáº¡i lá»‡ há»‡ thá»‘ng xáº£y ra
 	* @throws NoSuchDictVersionException
-	Khi xảy ra lỗi không tìm thấy DictVersion
+	Khi xáº£y ra lá»—i khÃ´ng tÃ¬m tháº¥y DictVersion
 	*/
 	public org.opencps.datamgt.model.DictVersion updateDictVersion(
 		long dictVersionId, long userId,
@@ -355,14 +355,14 @@ public interface DictVersionLocalService extends BaseLocalService,
 	* </p>
 	*
 	* @param dictVersionId
-	là DictVersion
-	* @return đối tượng DictVersions
+	lÃ  DictVersion
+	* @return Ä‘á»‘i tÆ°á»£ng DictVersions
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra Chuyển trạng thái version từ
-	drafting sang inuse, khi đó phiên bản đang sử dụng sẽ tự động
-	được chuyển thành hết hạn
+	Náº¿u ngoáº¡i lá»‡ há»‡ thá»‘ng xáº£y ra Chuyá»ƒn tráº¡ng thÃ¡i version tá»«
+	drafting sang inuse, khi Ä‘Ã³ phiÃªn báº£n Ä‘ang sá»­ dá»¥ng sáº½ tá»± Ä‘á»™ng
+	Ä‘Æ°á»£c chuyá»ƒn thÃ nh háº¿t háº¡n
 	* @throws NoSuchDictVersionException
-	Khi xảy ra lỗi không tìm thấy DictVersion
+	Khi xáº£y ra lá»—i khÃ´ng tÃ¬m tháº¥y DictVersion
 	*/
 	public org.opencps.datamgt.model.DictVersion makeDictVersionInUse(
 		int dictVersionId)
@@ -375,12 +375,12 @@ public interface DictVersionLocalService extends BaseLocalService,
 	* </p>
 	*
 	* @param dictCollectionId
-	là id DictVersion
-	* @return tập hợp đối tượng DictVersion
+	lÃ  id DictVersion
+	* @return táº­p há»£p Ä‘á»‘i tÆ°á»£ng DictVersion
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra
+	Náº¿u ngoáº¡i lá»‡ há»‡ thá»‘ng xáº£y ra
 	* @throws NoSuchDictVersionException
-	Khi xảy ra lỗi không tìm thấy DictVersion
+	Khi xáº£y ra lá»—i khÃ´ng tÃ¬m tháº¥y DictVersion
 	*/
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public java.util.List<org.opencps.datamgt.model.DictVersion> getDictVersions(
@@ -393,13 +393,13 @@ public interface DictVersionLocalService extends BaseLocalService,
 	* </p>
 	*
 	* @param dictCollection
-	là đối tượng dictCollection đã được xác định
-	* @return Lấy version đang sử dụng của một collection, mỗi collection chỉ
-	có tối đa 1 version đang sử dụng
+	lÃ  Ä‘á»‘i tÆ°á»£ng dictCollection Ä‘Ã£ Ä‘Æ°á»£c xÃ¡c Ä‘á»‹nh
+	* @return Láº¥y version Ä‘ang sá»­ dá»¥ng cá»§a má»™t collection, má»—i collection chá»‰
+	cÃ³ tá»‘i Ä‘a 1 version Ä‘ang sá»­ dá»¥ng
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra
+	Náº¿u ngoáº¡i lá»‡ há»‡ thá»‘ng xáº£y ra
 	* @throws NoSuchDictVersionException
-	Khi xảy ra lỗi không tìm thấy DictVersion
+	Khi xáº£y ra lá»—i khÃ´ng tÃ¬m tháº¥y DictVersion
 	*/
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public org.opencps.datamgt.model.DictVersion getDictVersionInUse(

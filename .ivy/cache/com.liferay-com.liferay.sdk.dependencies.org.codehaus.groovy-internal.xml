@@ -4,10 +4,10 @@
 	<info
 		organisation="com.liferay"
 		module="com.liferay.sdk.dependencies.org.codehaus.groovy"
-		revision="working@localhost.localdomain"
+		revision="working@DESKTOP-795NKUV"
 		conf="internal"
 		confs="default, internal, provided"
-		date="20160915145338"/>
+		date="20161005180028"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>

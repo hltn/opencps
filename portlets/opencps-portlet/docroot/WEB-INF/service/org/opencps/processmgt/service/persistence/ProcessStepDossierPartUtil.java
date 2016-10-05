@@ -246,7 +246,8 @@ public class ProcessStepDossierPartUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static org.opencps.processmgt.model.ProcessStepDossierPart[] findByProcessStepId_PrevAndNext(
-		ProcessStepDossierPartPK processStepDossierPartPK, long processStepId,
+		org.opencps.processmgt.service.persistence.ProcessStepDossierPartPK processStepDossierPartPK,
+		long processStepId,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.processmgt.NoSuchProcessStepDossierPartException {
@@ -305,7 +306,7 @@ public class ProcessStepDossierPartUtil {
 	* @return the new process step dossier part
 	*/
 	public static org.opencps.processmgt.model.ProcessStepDossierPart create(
-		ProcessStepDossierPartPK processStepDossierPartPK) {
+		org.opencps.processmgt.service.persistence.ProcessStepDossierPartPK processStepDossierPartPK) {
 		return getPersistence().create(processStepDossierPartPK);
 	}
 
@@ -318,7 +319,7 @@ public class ProcessStepDossierPartUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static org.opencps.processmgt.model.ProcessStepDossierPart remove(
-		ProcessStepDossierPartPK processStepDossierPartPK)
+		org.opencps.processmgt.service.persistence.ProcessStepDossierPartPK processStepDossierPartPK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.processmgt.NoSuchProcessStepDossierPartException {
 		return getPersistence().remove(processStepDossierPartPK);
@@ -339,7 +340,7 @@ public class ProcessStepDossierPartUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static org.opencps.processmgt.model.ProcessStepDossierPart findByPrimaryKey(
-		ProcessStepDossierPartPK processStepDossierPartPK)
+		org.opencps.processmgt.service.persistence.ProcessStepDossierPartPK processStepDossierPartPK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.processmgt.NoSuchProcessStepDossierPartException {
 		return getPersistence().findByPrimaryKey(processStepDossierPartPK);
@@ -353,7 +354,7 @@ public class ProcessStepDossierPartUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static org.opencps.processmgt.model.ProcessStepDossierPart fetchByPrimaryKey(
-		ProcessStepDossierPartPK processStepDossierPartPK)
+		org.opencps.processmgt.service.persistence.ProcessStepDossierPartPK processStepDossierPartPK)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		return getPersistence().fetchByPrimaryKey(processStepDossierPartPK);
 	}

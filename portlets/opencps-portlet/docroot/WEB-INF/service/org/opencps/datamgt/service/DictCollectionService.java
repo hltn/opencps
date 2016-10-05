@@ -69,14 +69,14 @@ public interface DictCollectionService extends BaseService, InvokableService {
 	* <p> Get DictCollection </p>
 	*
 	* @param groupId
-	là mã UserGroup của người đăng nhập
+	lÃ  mÃ£ UserGroup cá»§a ngÆ°á»�i Ä‘Äƒng nháº­p
 	* @param collectionCode
-	là mã của DictCollection
-	* @return trả về đối tượng DictCollection theo dictCollectionId
+	lÃ  mÃ£ cá»§a DictCollection
+	* @return tráº£ vá»� Ä‘á»‘i tÆ°á»£ng DictCollection theo dictCollectionId
 	* @throws SystemException
-	Nếu ngoại lệ hệ thống xảy ra
+	Náº¿u ngoáº¡i lá»‡ há»‡ thá»‘ng xáº£y ra
 	* @throws NoSuchDictCollectionException
-	Khi xảy ra lỗi không tìm thấy DictCollection
+	Khi xáº£y ra lá»—i khÃ´ng tÃ¬m tháº¥y DictCollection
 	*/
 	@com.liferay.portal.kernel.jsonwebservice.JSONWebService(value = "get-dictcollection-by-gc")
 	@com.liferay.portal.security.ac.AccessControlled(guestAccessEnabled = true)

@@ -151,7 +151,8 @@ public interface ProcessStepDossierPartPersistence extends BasePersistence<Proce
 	* @throws SystemException if a system exception occurred
 	*/
 	public org.opencps.processmgt.model.ProcessStepDossierPart[] findByProcessStepId_PrevAndNext(
-		ProcessStepDossierPartPK processStepDossierPartPK, long processStepId,
+		org.opencps.processmgt.service.persistence.ProcessStepDossierPartPK processStepDossierPartPK,
+		long processStepId,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.processmgt.NoSuchProcessStepDossierPartException;
@@ -198,7 +199,7 @@ public interface ProcessStepDossierPartPersistence extends BasePersistence<Proce
 	* @return the new process step dossier part
 	*/
 	public org.opencps.processmgt.model.ProcessStepDossierPart create(
-		ProcessStepDossierPartPK processStepDossierPartPK);
+		org.opencps.processmgt.service.persistence.ProcessStepDossierPartPK processStepDossierPartPK);
 
 	/**
 	* Removes the process step dossier part with the primary key from the database. Also notifies the appropriate model listeners.
@@ -209,7 +210,7 @@ public interface ProcessStepDossierPartPersistence extends BasePersistence<Proce
 	* @throws SystemException if a system exception occurred
 	*/
 	public org.opencps.processmgt.model.ProcessStepDossierPart remove(
-		ProcessStepDossierPartPK processStepDossierPartPK)
+		org.opencps.processmgt.service.persistence.ProcessStepDossierPartPK processStepDossierPartPK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.processmgt.NoSuchProcessStepDossierPartException;
 
@@ -226,7 +227,7 @@ public interface ProcessStepDossierPartPersistence extends BasePersistence<Proce
 	* @throws SystemException if a system exception occurred
 	*/
 	public org.opencps.processmgt.model.ProcessStepDossierPart findByPrimaryKey(
-		ProcessStepDossierPartPK processStepDossierPartPK)
+		org.opencps.processmgt.service.persistence.ProcessStepDossierPartPK processStepDossierPartPK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			org.opencps.processmgt.NoSuchProcessStepDossierPartException;
 
@@ -238,7 +239,7 @@ public interface ProcessStepDossierPartPersistence extends BasePersistence<Proce
 	* @throws SystemException if a system exception occurred
 	*/
 	public org.opencps.processmgt.model.ProcessStepDossierPart fetchByPrimaryKey(
-		ProcessStepDossierPartPK processStepDossierPartPK)
+		org.opencps.processmgt.service.persistence.ProcessStepDossierPartPK processStepDossierPartPK)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	/**
