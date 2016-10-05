@@ -6727,7 +6727,8 @@ table.payment tr td:nth-last-of-type(-n+2):after {
 .payment-ld .content .box50 > div, .payment-ld .content .box100 > div {
   border-bottom: 1px solid #ccc;
   padding: 15px 30px 5px;
-  overflow: hidden; }
+  overflow: hidden;
+  box-sizing: border-box; }
 
 .payment-ld .content .box50:nth-child(1) p span:first-child {
   font-family: 'Roboto-Bold';
