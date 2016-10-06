@@ -5651,7 +5651,7 @@ body:first-of-type .portlet-content:hover .lfr-icon-actions .taglib-text {
   text-transform: uppercase; }
 
 .fa-file-text-o::before {
-  content: ""; }
+  content: "?"; }
 
 .blue {
   color: #0690fb !important; }
@@ -6727,7 +6727,6 @@ table.payment tr td:nth-last-of-type(-n+2):after {
 .payment-ld .content .box50 > div, .payment-ld .content .box100 > div {
   border-bottom: 1px solid #ccc;
   padding: 15px 30px 5px;
-  overflow: hidden;
   box-sizing: border-box; }
 
 .payment-ld .content .box50:nth-child(1) p span:first-child {
@@ -6989,7 +6988,7 @@ div.payment-ld:nth-child(2) {
   text-transform: uppercase; }
 
 .fa-file-text-o::before {
-  content: ""; }
+  content: "?"; }
 
 .blue {
   color: #0690fb !important; }
