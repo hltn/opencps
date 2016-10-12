@@ -1,1 +1,6 @@
 /service.properties
+/META-INF/
+/content/
+/custom-sql/
+/org/
+/resource-actions/

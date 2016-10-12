@@ -45,7 +45,7 @@ public class MsgInBackOffice implements MessageListener {
 
 	private void _doReceive(Message message) {
 
-		System.out.println("doRevice MsgInBackOffice/////////////////////////");
+		//System.out.println("doRevice MsgInBackOffice/////////////////////////");
 
 		long[] companyIds = PortalUtil.getCompanyIds();
 

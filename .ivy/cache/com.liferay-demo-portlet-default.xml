@@ -4,10 +4,10 @@
 	<info
 		organisation="com.liferay"
 		module="demo-portlet"
-		revision="working@localhost.localdomain"
+		revision="working@DESKTOP-795NKUV"
 		conf="default"
 		confs="default, internal, provided, runtime, test"
-		date="20160927144843"/>
+		date="20161007092716"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>

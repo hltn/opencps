@@ -54,7 +54,7 @@ public class MsgInFrontOffice implements MessageListener {
 
 	private void _doReceive(Message message) {
 
-		System.out.println("MsgInFrontOffice/////////////////////////////////");
+		//System.out.println("MsgInFrontOffice/////////////////////////////////");
 
 		long[] companyIds = PortalUtil.getCompanyIds();
 
@@ -122,7 +122,7 @@ public class MsgInFrontOffice implements MessageListener {
 
 		}
 		else {
-			_log.info("Cannot create connection to JMS Queue..................");
+			//_log.info("Cannot create connection to JMS Queue..................");
 		}
 
 	}
